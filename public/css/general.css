@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  text-decoration: none;
+  font-family: Roboto;
+}
+
+body {
+  background-color: #527FFF!important;
+}
+
+.titulo {
+  font-family: Rubik;
+  padding: 15px;
+}
+
+.container {
+  margin: 25px auto;
+  text-align: center;
+  background-color: mintcream;
+}
+
+.oferta {
+  color: #18bc9c;
+  font-weight: 600;
+}
+
+.centrado {
+  text-align: center;
+}
