@@ -13,24 +13,25 @@ class CategoriesSeeder extends Seeder
     {
       DB::table('categories')->insert(
         [
-          "name" => "deportivas",
+          "name" => "Deportivas",
         ]
       );
 
       DB::table('categories')->insert(
         [
-          "name" => "urbanas",
+          "name" => "Urbanas",
         ]
       );
 
       DB::table('categories')->insert(
         [
-          "name" => "ojotas",
+          "name" => "Ojotas",
         ]
       );
+      
       DB::table('categories')->insert(
         [
-          "name" => "botas",
+          "name" => "Botas",
         ]
       );
     }

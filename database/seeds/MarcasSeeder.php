@@ -23,27 +23,27 @@ class MarcasSeeder extends Seeder
       );
       DB::table('marcas')->insert(
         [
-          "name" => "new balance",
+          "name" => "New Balance",
         ]
       );
       DB::table('marcas')->insert(
         [
-          "name" => "reebok",
+          "name" => "Reebok",
         ]
       );
       DB::table('marcas')->insert(
         [
-          "name" => "fila",
+          "name" => "Fila",
         ]
       );
       DB::table('marcas')->insert(
         [
-          "name" => "crocs",
+          "name" => "Crocs",
         ]
       );
       DB::table('marcas')->insert(
         [
-          "name" => "havaianas",
+          "name" => "Havaianas",
         ]
       );
     }
