@@ -17,7 +17,8 @@
     <!-- Mi css Socialbar --><link rel="stylesheet" href="/css/socialbar.css">
     <!-- Icono del logo en pestana --><link rel="icon" type="image/png" href="/img/ilnato.png" />
     <!-- Mi css General --><link rel="stylesheet" href="/css/general.css">
-    <!-- Mi css General --><link rel="stylesheet" href="/css/nav.css">
+    <!-- Mi css General --><link rel="stylesheet" href="/css/header.css">
+    <!-- Mi css General --><link rel="stylesheet" href="/css/footer.css">
     <title>@yield('titulo')</title>
     <link rel="stylesheet" href="/css/@yield('css').css">
 
@@ -57,11 +58,12 @@
         <div class="logo">
 
           <a class="navbar-brand" href="/"><span class="logo-bebas">IL NATO</span><span class="logo-permanent"> Urban Store</span></a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
 
         </div>
+
+        <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="burger fas fa-bars"></i>
+        </button>
 
         <div class="panel-usuario collapse navbar-collapse" id="navbarSupportedContent">
 
@@ -94,7 +96,17 @@
     </div>
 
     <footer>
-
+      <div class="copyright">
+        <div>
+          <span>Copyright ®</span>
+        </div>
+        <div>
+          <span>IL Nato © 2019</span>
+        </div>
+        <div class="">
+          <span>Programacion y diseño <a class="creador" href="https://www.linkedin.com/in/rodriguez-alan/">Taten</a> - <a class="creador" href="https://www.linkedin.com/in/juliancaminaur/">Jcaminaur</a></span>
+        </div>
+      </div>
     </footer>
 
     <div class="padre">

@@ -12,6 +12,14 @@ nav {
   /* background: radial-gradient(circle, rgba(2,0,36,1) 7%, rgba(0,0,0,0.7794468129048494) 81%, rgba(115,108,108,1) 100%); */
 }
 
+.navbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10000;
+}
+
 nav ul {
   align-items: center;
 }
@@ -43,7 +51,7 @@ div.menu-principal {
 }
 
 div.panel-usuario {
-  justify-content: space-around;
+  justify-content: flex-end;
 }
 
 div.logo {
@@ -52,4 +60,29 @@ div.logo {
 
 img.bag-icon {
   width: 30px;
+}
+
+.burger {
+  color: white;
+}
+
+.celu {
+  display: block;
+}
+
+.desktop {
+  display: none;
+}
+
+@media (min-width: 992px) {
+
+  .celu {
+    display: none;
+  }
+
+  .desktop {
+    display: none;
+  }
+
+
 }

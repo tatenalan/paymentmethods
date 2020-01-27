@@ -1,0 +1,19 @@
+.copyright {
+  display: flex;
+  color: white;
+  justify-content: space-between;
+  background-color: #525252;
+  padding: 10px;
+  font-size: 12px;
+}
+
+.creador {
+  color: rgba(218, 162, 65, 1);
+}
+
+.toTop {
+    background-color: #EBEBEB30;
+    padding-bottom: 47px;
+    cursor: pointer;
+    text-align: center;
+}

@@ -35,6 +35,10 @@ div.socialBar ul li a:hover {
 	background: #000;
 }
 
+ion-icon {
+    font-size: 25px;
+}
+
 
 
 /* Media queries */
@@ -67,7 +71,7 @@ div.socialBar ul li a:hover {
 }
 
 	.padre {
-		background-color: #982C55;
+		background-color: #525252;
 		height: 50.6px;
 		width: 100%;
 }
