@@ -1,0 +1,55 @@
+/* Navbar */
+
+a.navbar-brand {
+  display: flex;
+  flex-direction: column;
+  line-height: 20px;
+}
+
+nav {
+  background-color: rgb(37,38,42);
+  /* background: rgb(2,0,36); */
+  /* background: radial-gradient(circle, rgba(2,0,36,1) 7%, rgba(0,0,0,0.7794468129048494) 81%, rgba(115,108,108,1) 100%); */
+}
+
+nav ul {
+  align-items: center;
+}
+
+a.nav-link {
+  color: white;
+  font-family: 'Oswald', sans-serif;
+}
+
+a.nav-link:hover {
+  color: #ffffffb5;
+}
+
+span.logo-bebas {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 36px;
+  color: white;
+}
+
+span.logo-permanent {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 18px;
+  margin-left: 40px;
+  color: rgba(218, 162, 65, 1);
+}
+
+div.menu-principal {
+  justify-content: space-around;
+}
+
+div.panel-usuario {
+  justify-content: space-around;
+}
+
+div.logo {
+  justify-content: center;
+}
+
+img.bag-icon {
+  width: 30px;
+}
