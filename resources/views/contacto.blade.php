@@ -17,17 +17,17 @@ form
 
 					<div class="wrap-input2 validate-input" data-validate="Name is required">
 						<input class="input2" type="text" name="name">
-						<span class="focus-input2" data-placeholder="NAME"></span>
+						<span class="focus-input2" data-placeholder="NAME *"></span>
 					</div>
 
 					<div class="wrap-input2 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
 						<input class="input2" type="text" name="email">
-						<span class="focus-input2" data-placeholder="EMAIL"></span>
+						<span class="focus-input2" data-placeholder="EMAIL *"></span>
 					</div>
 
 					<div class="wrap-input2 validate-input" data-validate = "Message is required">
 						<textarea class="input2" name="content"></textarea>
-						<span class="focus-input2" data-placeholder="MENSAJE"></span>
+						<span class="focus-input2" data-placeholder="MENSAJE *"></span>
 					</div>
 
 					<div class="container-contact2-form-btn">

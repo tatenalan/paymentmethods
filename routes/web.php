@@ -30,12 +30,16 @@ Route::get('/contacto', function() {
   return view('contacto');
 });
 
+Route::get('/', function() {
+  return view('welcome');
+});
+
 // Route::post('/contacto', function(Request $request){
 //   Mail::send(new ContactMail($request));
 //   return redirect ('/');
 // });
 
-Route::get('/', 'ProductController@directory');
+// Route::get('/', 'ProductController@directory');
 
 Route::get('/productos', 'ProductController@directory');
 

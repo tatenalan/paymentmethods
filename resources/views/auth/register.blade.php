@@ -1,77 +1,129 @@
-@extends('layouts.app')
-
-@section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
-
-                <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
-                        @csrf
-
-                        <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
-
-                                @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
-
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
-
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
-                            </div>
-                        </div>
-
-                        <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Register') }}
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+@extends('plantilla')
+@section('titulo')
+Registro
 @endsection
+@section('css')
+form
+@endsection('css')
+@section('main')
+  <div class="container-contact100">
+  		<div class="wrap-contact100">
+  			<form class="contact100-form validate-form" method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
+          @csrf
+  				<span class="contact100-form-title">
+  					Registro
+  				</span>
+
+
+  				<div class="wrap-input100 validate-input" data-validate="Ingresa tu nombre">
+  					<label class="label-input100" for="name">Nombre completo *</label>
+  					<input id="name" class="input100" type="text" name="name" value="{{ old('name') }}" placeholder="Nombre completo...">
+  					<span class="focus-input100"></span>
+            @error('name')
+              <p class="errorForm">{{ $message }}</p>
+            @enderror
+  				</div>
+
+
+  				<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+  					<label class="label-input100" for="email">Email *</label>
+  					<input id="email" class="input100" type="text" name="email" value="{{ old('email') }}" placeholder="Ingresa tu email...">
+  					<span class="focus-input100"></span>
+            @error('email')
+              <p class="errorForm">{{ $message }}</p>
+            @enderror
+  				</div>
+
+          <div class="wrap-input100 validate-input" data-validate="">
+  					<label class="label-input100" for="password">Contraseña *</label>
+  					<input id="password" class="input100" type="password" name="password" value="" placeholder="Ingresa tu contraseña...">
+  					<span class="focus-input100"></span>
+            @error('password')
+              <p class="errorForm">{{ $message }}</p>
+            @enderror
+  				</div>
+
+          <div class="wrap-input100 validate-input" data-validate="">
+  					<label class="label-input100" for="password">Confirmar Contraseña *</label>
+  					<input id="password-confirm" class="input100" type="password-confirm" name="password-confirm" value="" placeholder="Confirma tu contraseña...">
+  					<span class="focus-input100"></span>
+            @error('password-confirm')
+              <p class="errorForm">{{ $message }}</p>
+            @enderror
+  				</div>
+
+          <br><br><small id="emailHelp" class="form-text text-muted">Los valores con un * son obligatorios.</small>
+
+  				<div class="container-contact100-form-btn">
+  					<button class="contact100-form-btn">
+  						Registrarse
+  					</button>
+  				</div>
+
+
+
+  				<div class="contact100-form-social flex-c-m">
+  					<a href="register/#" class="contact100-form-social-item flex-c-m bg1 m-r-5">
+  						<i class="fa fa-facebook-f" aria-hidden="true"></i>
+  					</a>
+
+  					<a href="register/#" class="contact100-form-social-item flex-c-m bg2 m-r-5">
+  						<i class="fa fa-twitter" aria-hidden="true"></i>
+  					</a>
+
+  					<a href="register/#" class="contact100-form-social-item flex-c-m bg3">
+  						<i class="fa fa-youtube-play" aria-hidden="true"></i>
+  					</a>
+  				</div>
+  			</form>
+
+  			<div class="contact100-more flex-col-c-m" style="background-image: url('register/images/bg-01.jpg');">
+  			</div>
+  		</div>
+  	</div>
+@endsection
+
+<!--===============================================================================================-->
+	<script src="register/vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="register/vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="register/vendor/bootstrap/js/popper.js"></script>
+	<script src="register/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="register/vendor/select2/select2.min.js"></script>
+	<script>
+		$(".js-select2").each(function(){
+			$(this).select2({
+				minimumResultsForSearch: 20,
+				dropdownParent: $(this).next('.dropDownSelect2')
+			});
+		})
+		$(".js-select2").each(function(){
+			$(this).on('select2:open', function (e){
+				$(this).parent().next().addClass('eff-focus-selection');
+			});
+		});
+		$(".js-select2").each(function(){
+			$(this).on('select2:close', function (e){
+				$(this).parent().next().removeClass('eff-focus-selection');
+			});
+		});
+
+	</script>
+<!--===============================================================================================-->
+	<script src="register/vendor/daterangepicker/moment.min.js"></script>
+	<script src="register/vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="register/vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="register/js/main.js"></script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-23581568-13');
+	</script>
