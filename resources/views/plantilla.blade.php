@@ -14,8 +14,29 @@
     <!-- ionicons JS --><script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
     <!-- Bootstrap CSS --><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- Google Fonts --><link href="https://fonts.googleapis.com/css?family=Bebas+Neue|Oswald|Permanent+Marker&display=swap" rel="stylesheet">
-    <!-- Mi css Socialbar --><link rel="stylesheet" href="/css/socialbar.css">
     <!-- Icono del logo en pestana --><link rel="icon" type="image/png" href="/img/ilnato.png" />
+
+
+    {{-- FORM CONTACTO --}}
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
+
+
+    <!-- Mi css Socialbar --><link rel="stylesheet" href="/css/socialbar.css">
     <!-- Mi css General --><link rel="stylesheet" href="/css/general.css">
     <!-- Mi css General --><link rel="stylesheet" href="/css/header.css">
     <!-- Mi css General --><link rel="stylesheet" href="/css/footer.css">
@@ -48,7 +69,7 @@
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="#contacto" id="contacto-nav">Contactanos</a>
+                <a class="nav-link" href="/contacto" id="contacto-nav">Contactanos</a>
               </li>
 
             </ul>
@@ -91,9 +112,9 @@
       @yield('main')
     </main>
 
-    <div class="toTop">
+    {{-- <div class="toTop">
       <a onclick="scrollToTop()" class="toTop" title="Go to top"><i class="fas fa-angle-double-up"></i></a>
-    </div>
+    </div> --}}
 
     <footer>
       <div class="copyright">
@@ -103,7 +124,7 @@
         <div>
           <span>IL Nato © 2019</span>
         </div>
-        <div class="">
+        <div>
           <span>Programacion y diseño <a class="creador" href="https://www.linkedin.com/in/rodriguez-alan/">Taten</a> - <a class="creador" href="https://www.linkedin.com/in/juliancaminaur/">Jcaminaur</a></span>
         </div>
       </div>
