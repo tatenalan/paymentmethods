@@ -7,6 +7,8 @@ use App\Product;
 use App\Category;
 use App\Genre;
 use App\Image;
+use App\Brand;
+use App\Size;
 use App\Stock;
 class ProductController extends Controller
 {
@@ -21,5 +23,17 @@ class ProductController extends Controller
        return view('/index',$vac);
      }
 
-
+   public function addProduct()
+   {
+      $genres = Genre::all();
+      $categories = Category::all();
+      $brands = Brand::all();
+      $sizes = Size::all();
+      $vac = compact('genres','brands','categories','sizes');
+      return view('/addproduct',$vac);
+   }
+   public function store()
+   {
+     
+   }
 }
