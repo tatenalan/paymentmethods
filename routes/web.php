@@ -24,14 +24,14 @@ Auth::routes();
 
 */
 
-// form
+
+
+Route::get('/', function() {
+  return view('index');
+});
 
 Route::get('/contacto', function() {
   return view('contacto');
-});
-
-Route::get('/', function() {
-  return view('welcome');
 });
 
 // Route::post('/contacto', function(Request $request){
@@ -39,7 +39,15 @@ Route::get('/', function() {
 //   return redirect ('/');
 // });
 
-// Route::get('/', 'ProductController@directory');
+Route::get('/nosotros', function() {
+  return view('nosotros');
+});
+
+Route::get('/FAQs', function() {
+  return view('FAQs');
+});
+
+// Productos
 
 Route::get('/productos', 'ProductController@directory');
 

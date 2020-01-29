@@ -8,8 +8,6 @@ a.navbar-brand {
 
 nav {
   background-color: rgb(37,38,42);
-  /* background: rgb(2,0,36); */
-  /* background: radial-gradient(circle, rgba(2,0,36,1) 7%, rgba(0,0,0,0.7794468129048494) 81%, rgba(115,108,108,1) 100%); */
 }
 
 .navbar {
@@ -17,7 +15,7 @@ nav {
   top: 0;
   right: 0;
   left: 0;
-  z-index: 10000;
+  z-index: 100;
 }
 
 nav ul {
@@ -27,6 +25,7 @@ nav ul {
 a.nav-link {
   color: white;
   font-family: 'Oswald', sans-serif;
+  font-size: 16px;
 }
 
 a.nav-link:hover {
@@ -54,6 +53,24 @@ div.panel-usuario {
   justify-content: flex-end;
 }
 
+div.modal-dialog {
+  position: relative;
+  width: 90%;
+  top: 100px;
+}
+
+div.modal-header {
+  background-image: url('/img/yeezy4.png');
+  height: 99px;
+  background-size: cover;
+  background-position: center;
+}
+
+.modal-content {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
 div.logo {
   justify-content: center;
 }
@@ -74,6 +91,68 @@ img.bag-icon {
   display: none;
 }
 
+.label-input100, .form-text, .form-text a, .modal-title {
+  font-family: Poppins-Regular, sans-serif;
+}
+
+.form-text a: {color: #977d2f9e;}.form-text a:hover {color: #977d2f9e;opacity: 0.5;}
+
+.modal-title {
+  color: white;
+}
+
+button span {
+  color: white;
+}
+
+.modal-footer {
+  justify-content: flex-start;
+}
+
+.btn-secondary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  background: #977d2f9e;
+  font-family: Montserrat-Bold;
+  font-size: 12px;
+  color: #fff;
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+  outline: none !important;
+  border: none;
+}
+
+.btn-secondary:hover {
+  background: #404b46;
+}
+
+.btn-modal {
+  font-family: 'Oswald', sans-serif;
+  color: white;
+  overflow: visible;
+  width: auto;
+  background: none;
+  margin: 0;
+  padding: 0px 6px;
+  border: none;
+  position: relative;
+  top: 1px;
+}
+
+.btn-modal:hover {
+  color: #ffffffb5;
+}
+
 @media (min-width: 992px) {
 
   .celu {
@@ -82,6 +161,10 @@ img.bag-icon {
 
   .desktop {
     display: none;
+  }
+
+  div.modal-dialog {
+    width: 55%;
   }
 
 

@@ -4,7 +4,7 @@
   text-align: center;
   color: white;
   justify-content: space-between;
-  background-color: #525252;
+  background-color: #000000;
   padding: 10px;
   font-size: 12px;
 }
@@ -12,6 +12,11 @@
 .creador {
   color: rgba(218, 162, 65, 1);
   font-size: 12px;
+}
+
+.creador:hover {
+  opacity: 0.55;
+  color: rgba(218, 162, 65, 1);
 }
 
 .toTop {

@@ -25,7 +25,7 @@ form
   				</div>
 
 
-  				<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+  				<div class="wrap-input100 validate-input" data-validate = "Ingresa un email valido: ex@abc.xyz">
   					<label class="label-input100" for="email">Email *</label>
   					<input id="email" class="input100" type="text" name="email" value="{{ old('email') }}" placeholder="Ingresa tu email...">
   					<span class="focus-input100"></span>
@@ -52,7 +52,7 @@ form
             @enderror
   				</div>
 
-          <br><br><small id="emailHelp" class="form-text text-muted">Los valores con un * son obligatorios.</small>
+          <br><br><small class="form-text text-muted">Los valores con un * son obligatorios.</small>
 
   				<div class="container-contact100-form-btn">
   					<button class="contact100-form-btn">
@@ -63,35 +63,35 @@ form
 
 
   				<div class="contact100-form-social flex-c-m">
-  					<a href="register/#" class="contact100-form-social-item flex-c-m bg1 m-r-5">
+  					<a href="registro/#" class="contact100-form-social-item flex-c-m bg1 m-r-5">
   						<i class="fa fa-facebook-f" aria-hidden="true"></i>
   					</a>
 
-  					<a href="register/#" class="contact100-form-social-item flex-c-m bg2 m-r-5">
+  					<a href="registro/#" class="contact100-form-social-item flex-c-m bg2 m-r-5">
   						<i class="fa fa-twitter" aria-hidden="true"></i>
   					</a>
 
-  					<a href="register/#" class="contact100-form-social-item flex-c-m bg3">
+  					<a href="registro/#" class="contact100-form-social-item flex-c-m bg3">
   						<i class="fa fa-youtube-play" aria-hidden="true"></i>
   					</a>
   				</div>
   			</form>
 
-  			<div class="contact100-more flex-col-c-m" style="background-image: url('register/images/bg-01.jpg');">
+  			<div class="contact100-more flex-col-c-m" style="background-image: url('img/yeezy3.jpg');">
   			</div>
   		</div>
   	</div>
 @endsection
 
 <!--===============================================================================================-->
-	<script src="register/vendor/jquery/jquery-3.2.1.min.js"></script>
+	{{-- <script src="registro/vendor/jquery/jquery-3.2.1.min.js"></script> lo comente porque me generaba conflicto con el menu hamburguesa--}}
 <!--===============================================================================================-->
-	<script src="register/vendor/animsition/js/animsition.min.js"></script>
+	<script src="registro/vendor/animsition/js/animsition.min.js"></script>
 <!--===============================================================================================-->
-	<script src="register/vendor/bootstrap/js/popper.js"></script>
-	<script src="register/vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="registro/vendor/bootstrap/js/popper.js"></script>
+	<script src="registro/vendor/bootstrap/js/bootstrap.min.js"></script>
 <!--===============================================================================================-->
-	<script src="register/vendor/select2/select2.min.js"></script>
+	<script src="registro/vendor/select2/select2.min.js"></script>
 	<script>
 		$(".js-select2").each(function(){
 			$(this).select2({
@@ -112,12 +112,12 @@ form
 
 	</script>
 <!--===============================================================================================-->
-	<script src="register/vendor/daterangepicker/moment.min.js"></script>
-	<script src="register/vendor/daterangepicker/daterangepicker.js"></script>
+	<script src="registro/vendor/daterangepicker/moment.min.js"></script>
+	<script src="registro/vendor/daterangepicker/daterangepicker.js"></script>
 <!--===============================================================================================-->
-	<script src="register/vendor/countdowntime/countdowntime.js"></script>
+	<script src="registro/vendor/countdowntime/countdowntime.js"></script>
 <!--===============================================================================================-->
-	<script src="register/js/main.js"></script>
+	<script src="registro/js/main.js"></script>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
 	<script>
