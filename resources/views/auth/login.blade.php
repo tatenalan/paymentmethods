@@ -11,12 +11,12 @@ form
   			<form class="contact100-form validate-form" method="POST" action="{{ route('login') }}" enctype="multipart/form-data">
           @csrf
   				<span class="contact100-form-title">
-  					Login
+  					Ingresar
   				</span>
 
   				<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
   					<label class="label-input100" for="email">Email *</label>
-  					<input id="email" class="input100" type="text" name="email" value="{{ old('email') }}" placeholder="correo@dominio.com">
+  					<input id="email" type="email" class="input100" placeholder="correo@dominio.com" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
   					<span class="focus-input100"></span>
             @error('email')
               <p class="errorForm">{{ $message }}</p>
@@ -25,7 +25,7 @@ form
 
           <div class="wrap-input100 validate-input" data-validate="">
   					<label class="label-input100" for="password">Contraseña *</label>
-  					<input id="password" class="input100" type="password" name="password" value="" placeholder="Ingresa tu contraseña...">
+  					<input id="password" type="password" class="input100" placeholder="Ingresa tu contraseña ..." name="password" required autocomplete="current-password">
   					<span class="focus-input100"></span>
             @error('password')
               <p class="errorForm">{{ $message }}</p>
@@ -34,15 +34,13 @@ form
 
           <div class="field-group remember-me">
             <input type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-            <label for="remember-me"><h6>Recordarme</h6></label>
+            <label class="recordarme" for="remember-me"><small class="text-muted">Recordarme</small></label>
           </div>
 
-          <br><br><small id="emailHelp" class="form-text text-muted">Los valores con un * son obligatorios.</small>
+          <br><br><small class="form-text text-muted">Los valores con un * son obligatorios.</small>
 
   				<div class="container-contact100-form-btn">
-  					<button class="contact100-form-btn">
-  						Ingresar
-  					</button>
+  					<button type="submit" class="contact100-form-btn">Ingresar</button>
   				</div>
 
 
@@ -62,7 +60,7 @@ form
   				</div>
   			</form>
 
-  			<div class="contact100-more flex-col-c-m" style="background-image: url('register/images/bg-01.jpg');">
+  			<div class="contact100-more flex-col-c-m" style="background-image: url('/img/nikeairmax.jpg');">
   			</div>
   		</div>
   	</div>
