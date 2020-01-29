@@ -13,173 +13,173 @@ class SizeSeeder extends Seeder
     {
       DB::table('sizes')->insert(
         [
-          "name" => "34",
+          "name" => "S34",
         ]
       );
       DB::table('sizes')->insert(
         [
-          "name" => "34½",
+          "name" => "S34½",
         ]
       );
       DB::table('sizes')->insert(
         [
-          "name" => "35",
+          "name" => "S35",
         ]
       );
       DB::table('sizes')->insert(
         [
-          "name" => "35½",
+          "name" => "S35½",
         ]
       );
 
       DB::table('sizes')->insert(
         [
-          "name" => "36",
+          "name" => "S36",
         ]
       );
       DB::table('sizes')->insert(
         [
-          "name" => "36½",
+          "name" => "S36½",
         ]
       );
       DB::table('sizes')->insert(
         [
-          "name" => "37",
+          "name" => "S37",
         ]
       );
       DB::table('sizes')->insert(
         [
-          "name" => "37½",
+          "name" => "S37½",
         ]
       );
       DB::table('sizes')->insert(
         [
-          "name" => "38",
+          "name" => "S38",
         ]
       );
       DB::table('sizes')->insert(
         [
-          "name" => "38½",
+          "name" => "S38½",
         ]
       );
       DB::table('sizes')->insert(
         [
-          "name" => "39",
+          "name" => "S39",
         ]
       );
       DB::table('sizes')->insert(
         [
-          "name" => "39½",
+          "name" => "S39½",
         ]
       );
       DB::table('sizes')->insert(
         [
-          "name" => "40",
+          "name" => "S40",
         ]
       );
       DB::table('sizes')->insert(
         [
-          "name" => "40½",
+          "name" => "S40½",
         ]
       );
       DB::table('sizes')->insert(
         [
-          "name" => "41",
+          "name" => "S41",
         ]
       );
       DB::table('sizes')->insert(
         [
-          "name" => "41½",
+          "name" => "S41½",
         ]
       );
       DB::table('sizes')->insert(
         [
-          "name" => "42",
+          "name" => "S42",
         ]
       );
       DB::table('sizes')->insert(
         [
-          "name" => "42½",
+          "name" => "S42½",
         ]
       );
       DB::table('sizes')->insert(
         [
-          "name" => "43",
+          "name" => "S43",
         ]
       );
       DB::table('sizes')->insert(
         [
-          "name" => "43½",
+          "name" => "S43½",
         ]
       );
       DB::table('sizes')->insert(
         [
-          "name" => "44",
+          "name" => "S44",
         ]
       );
       DB::table('sizes')->insert(
         [
-          "name" => "44½",
+          "name" => "S44½",
         ]
       );
       DB::table('sizes')->insert(
         [
-          "name" => "45",
+          "name" => "S45",
         ]
       );
       DB::table('sizes')->insert(
         [
-          "name" => "45½",
+          "name" => "S45½",
         ]
       );
       DB::table('sizes')->insert(
         [
-          "name" => "46",
+          "name" => "S46",
         ]
       );
       DB::table('sizes')->insert(
         [
-          "name" => "46½",
+          "name" => "S46½",
         ]
       );
       DB::table('sizes')->insert(
         [
-          "name" => "47",
+          "name" => "S47",
         ]
       );
       DB::table('sizes')->insert(
         [
-          "name" => "47½",
+          "name" => "S47½",
         ]
       );
       DB::table('sizes')->insert(
         [
-          "name" => "48",
+          "name" => "S48",
         ]
       );
       DB::table('sizes')->insert(
         [
-          "name" => "48½",
+          "name" => "S48½",
         ]
       );
       DB::table('sizes')->insert(
         [
-          "name" => "49",
+          "name" => "S49",
         ]
       );
       DB::table('sizes')->insert(
         [
-          "name" => "49½",
+          "name" => "S49½",
         ]
       );
       DB::table('sizes')->insert(
         [
-          "name" => "50",
+          "name" => "S50",
         ]
       );
       DB::table('sizes')->insert(
         [
-          "name" => "50½",
+          "name" => "S50½",
         ]
       );
     }
