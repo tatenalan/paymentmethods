@@ -7,7 +7,7 @@ home
 @endsection('css')
 @section('main')
 
-  <div class="pimg1">
+  <div id="main" class="pimg1">
         <div class="ptext">
           {{-- <span class="texto-parallax">IL NATO</span> --}}
         </div>

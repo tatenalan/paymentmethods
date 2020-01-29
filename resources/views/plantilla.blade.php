@@ -14,8 +14,49 @@
     <!-- ionicons JS --><script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
     <!-- Bootstrap CSS --><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- Google Fonts --><link href="https://fonts.googleapis.com/css?family=Bebas+Neue|Oswald|Permanent+Marker&display=swap" rel="stylesheet">
-    <!-- Mi css Socialbar --><link rel="stylesheet" href="/css/socialbar.css">
     <!-- Icono del logo en pestana --><link rel="icon" type="image/png" href="/img/ilnato.png" />
+
+
+    {{-- FORM CONTACTO --}}
+<!--===============================================================================================-->
+	{{-- <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css"> --}}
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
+
+  {{-- registro --}}
+<!--===============================================================================================-->
+	{{-- <link rel="stylesheet" type="text/css" href="registro/vendor/bootstrap/css/bootstrap.min.css"> --}}
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="registro/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="registro/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+<!--===============================================================================================-->
+	{{-- <link rel="stylesheet" type="text/css" href="registro/vendor/animate/animate.css"> --}}
+<!--===============================================================================================-->
+	{{-- <link rel="stylesheet" type="text/css" href="registro/vendor/css-hamburgers/hamburgers.min.css"> --}}
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="registro/vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="registro/vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="registro/vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="registro/css/util.css">
+	<link rel="stylesheet" type="text/css" href="registro/css/main.css">
+<!--===============================================================================================-->
+
+
+    <!-- Mi css Socialbar --><link rel="stylesheet" href="/css/socialbar.css">
     <!-- Mi css General --><link rel="stylesheet" href="/css/general.css">
     <!-- Mi css General --><link rel="stylesheet" href="/css/header.css">
     <!-- Mi css General --><link rel="stylesheet" href="/css/footer.css">
@@ -36,19 +77,19 @@
             <ul class="navbar-nav">
 
               <li class="nav-item">
-                <a class="nav-link" id='quienes-somos-nav' href="#quienes-somos">Productos</a>
+                <a class="nav-link" href="/productos">Productos</a>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="#nuestro-equipo" id='nuestro-equipo-nav'>Nosotros</a>
+                <a class="nav-link" href="/nosotros">Nosotros</a>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="#clientes" id='clientes-nav'>Ayuda</a>
+                <a class="nav-link" href="/FAQs">Ayuda</a>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="#contacto" id="contacto-nav">Contactanos</a>
+                <a class="nav-link" href="/contacto">Contactanos</a>
               </li>
 
             </ul>
@@ -57,7 +98,7 @@
 
         <div class="logo">
 
-          <a class="navbar-brand" href="/"><span class="logo-bebas">IL NATO</span><span class="logo-permanent"> Urban Store</span></a>
+          <a class="navbar-brand" href="/#main"><span class="logo-bebas">IL NATO</span><span class="logo-permanent"> Urban Store</span></a>
 
         </div>
 
@@ -69,16 +110,20 @@
 
             <ul class="navbar-nav">
 
+
               <li class="nav-item">
-                <a class="nav-link" id='quienes-somos-nav' href="#quienes-somos">Registrarse</a>
+                <a class="nav-link" href="/register">Registrarse</a>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="#nuestro-equipo" id='nuestro-equipo-nav'>Iniciar Sesion</a>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn-modal" data-toggle="modal" data-target="#exampleModal">
+                  Iniciar Sesion
+                </button>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="#clientes" id='clientes-nav'><img class="bag-icon" src="/img/shopbag2.ico" alt=""></a>
+                <a class="nav-link" href="#clientes"><img class="bag-icon" src="/img/shopbag2.ico" alt=""></a>
               </li>
 
             </ul>
@@ -88,12 +133,55 @@
       </nav>
     </header>
     <main>
+
+
       @yield('main')
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">INICIAR SESION</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="wrap-input100 validate-input" data-validate = "Ingresa un email valido: ex@abc.xyz">
+      					<label class="label-input100" for="email">Email *</label>
+      					<input id="correo" class="input100" type="text" name="email" value="{{ old('email') }}" placeholder="Ingresa tu email...">
+      					<span class="focus-input100"></span>
+                @error('email')
+                  <p class="errorForm">{{ $message }}</p>
+                @enderror
+      				</div>
+
+              <div class="wrap-input100 validate-input" data-validate="">
+      					<label class="label-input100" for="password">Contraseña *</label>
+      					<input id="pass" class="input100" type="password" name="password" value="" placeholder="Ingresa tu contraseña...">
+      					<span class="focus-input100"></span>
+                @error('password')
+                  <p class="errorForm">{{ $message }}</p>
+                @enderror
+      				</div>
+
+              <small class="form-text text-muted">No tienes una cuenta? <a href="/register"> Crear cuenta</a></small>
+              @if (Route::has('password.request'))
+                <small class="form-text text-muted">Olvidaste tu password? <a href="{{ route('password.request') }}"> Recuperar password</a></small>
+              @endif
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary">INGRESAR</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
 
-    <div class="toTop">
+    {{-- <div class="toTop">
       <a onclick="scrollToTop()" class="toTop" title="Go to top"><i class="fas fa-angle-double-up"></i></a>
-    </div>
+    </div> --}}
 
     <footer>
       <div class="copyright">
@@ -103,7 +191,7 @@
         <div>
           <span>IL Nato © 2019</span>
         </div>
-        <div class="">
+        <div>
           <span>Programacion y diseño <a class="creador" href="https://www.linkedin.com/in/rodriguez-alan/">Taten</a> - <a class="creador" href="https://www.linkedin.com/in/juliancaminaur/">Jcaminaur</a></span>
         </div>
       </div>
@@ -122,5 +210,6 @@
         </div>
 
       </div>
+
   </body>
 </html>
