@@ -51,24 +51,23 @@ Route::get('/FAQs', function() {
 
 Route::get('/productos', 'ProductController@directory');
 
-// Auth
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Route::get('/addproduct', 'ProductController@addproduct');
+Route::get('/addproduct', 'ProductController@new');
 
 Route::post('/addproduct', 'ProductController@store');
 
-Route::get('/editproduct/{id}', 'ProductController@editview');
+Route::get('/producto/{id}', 'ProductController@show');
 
-Route::put('/editproduct/{id}', 'ProductController@editproduct');
+Route::get('/editproduct/{id}', 'ProductController@edit');
+
+Route::put('/producto/{id}', 'ProductController@update');
 
 Route::post('/delete/product/{id}', 'ProductController@deleteproduct');
 
+Route::post('/addimage', 'ProductController@addImage');
+
 Route::post('/deleteimage', 'ProductController@deleteImage');
 
+<<<<<<< HEAD
 Route::post('/agregarimagen', 'ProductController@addImage');
 
 Route::Get('/editbrands', 'BrandController@index');
@@ -78,3 +77,11 @@ Route::put('/editbrands', 'BrandController@edit');
 Route::post('/addbrand', 'BrandController@store');
 
 Route::post('/deletebrand', 'BrandController@destroy');
+=======
+
+// Auth
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+>>>>>>> 9df6b295c99dbb4166bbc4408742ad5b215677a6

@@ -19,7 +19,7 @@ form
   					<input id="email" type="email" class="input100" placeholder="correo@dominio.com" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
   					<span class="focus-input100"></span>
             @error('email')
-              <p class="errorForm">{{ $message }}</p>
+              <p class="centrado errorForm">{{ $message }}</p>
             @enderror
   				</div>
 
@@ -28,7 +28,7 @@ form
   					<input id="password" type="password" class="input100" placeholder="Ingresa tu contraseña ..." name="password" required autocomplete="current-password">
   					<span class="focus-input100"></span>
             @error('password')
-              <p class="errorForm">{{ $message }}</p>
+              <p class="centrado errorForm">{{ $message }}</p>
             @enderror
   				</div>
 

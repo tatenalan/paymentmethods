@@ -6,25 +6,26 @@
 form
 @endsection
 @section('main')
+
   <h2>Agregar Producto</h2>
   <form class="" action="/addproduct" method="post" enctype="multipart/form-data">
     @csrf
     <div class="">
-      <label for="title">Nombre: </label>
+      <label>Nombre: </label>
       <input type="text" name="title" value="">
       @error('title')
             <p class="errorForm">{{ $message }}</p>
       @enderror
     </div>
     <div class="">
-      <label for="price">Precio: </label>
+      <label>Precio: </label>
       <input type="number" name="price" step="100" value="500" min="100">
       @error('price')
             <p class="errorForm">{{ $message }}</p>
       @enderror
     </div>
     <div class="">
-      <label for="onSale">¿Esta en oferta?</label>
+      <label>¿Esta en oferta?</label>
       <select id='oferta' class="" name="onSale">
         <option value=0>No esta en oferta</option>
         <option value=1>Esta en oferta</option>
@@ -34,14 +35,23 @@ form
       @enderror
     </div>
     <div class="discountDiv" hidden>
+<<<<<<< HEAD
       <label for="discount_id">Descuento</label>
       <input id="discount_id" type="number" name="discount_id" value="0" step="5" min="0" max="70">
+=======
+      <label>Descuento</label>
+      <input id="discount_id" type="number" name="discount" value="0" step="5" min="0" max="70">
+>>>>>>> 9df6b295c99dbb4166bbc4408742ad5b215677a6
       @error('discount')
             <p class="errorForm">{{ $message }}</p>
       @enderror
     </div>
     <div class="">
+<<<<<<< HEAD
       <label for="genre_id">Genero</label>
+=======
+      <label>Genero</label>
+>>>>>>> 9df6b295c99dbb4166bbc4408742ad5b215677a6
       <select class="" name="genre_id">
         <option value="">Seleccione una opcion</option>
         @foreach ($genres as $genre)
@@ -53,8 +63,8 @@ form
       @enderror
     </div>
     <div class="">
-      <label for="category">Categoria: </label>
-      <select class="" name="category">
+      <label>Categoria: </label>
+      <select class="" name="category_id">
         <option value="">Seleccione una categoria</option>
         @foreach ($categories as $category)
           <option value="{{$category->id}}" {{($category->id == old('category_id'))?'selected': '' }}>{{$category->name}}</option>
@@ -65,7 +75,11 @@ form
       @enderror
     </div>
     <div class="">
+<<<<<<< HEAD
       <label for="brand_id">Marca</label>
+=======
+      <label>Marca</label>
+>>>>>>> 9df6b295c99dbb4166bbc4408742ad5b215677a6
       <select class="" name="brand_id">
         <option value="">Seleccione una marca</option>
         @foreach ($brands as $brand)
@@ -77,15 +91,15 @@ form
       @enderror
     </div>
     <div class="">
-      <label for="">Stock</label>
+      <label>Stock</label>
       @foreach ($sizes as $size)
         <label for="">{{$size->name}}</label>
         <input type="number" name="{{$size->name}}" min=0 value="0">
         <br>
-      @endforeach
-      @error('sizes')
+      @error('{{$size->name}}')
             <p class="errorForm">{{ $message }}</p>
       @enderror
+      @endforeach
     </div>
     <div class="">
           <label for="">Agregue la/s imagenes del producto:</label>
