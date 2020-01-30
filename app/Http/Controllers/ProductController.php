@@ -20,7 +20,7 @@ class ProductController extends Controller
        $categories = Category::all();
        $images = Image::all();
        $vac = compact('products','categories','images');
-       return view('/index',$vac);
+       return view('/productos',$vac);
      }
 
   public function editview($id)
@@ -68,6 +68,7 @@ class ProductController extends Controller
    }
    public function store(Request $request)
    {
+<<<<<<< HEAD
      $reglas = [
         'title' => 'required|string|min:1|max:50',
         'price' => 'required|integer|min:50|max:150000',
@@ -148,6 +149,9 @@ class ProductController extends Controller
         return redirect('/')
         ->with('status', 'Producto creado exitosamente!!!')
         ->with('operation', 'success');
+=======
+
+>>>>>>> 4d83ab0368470bb408efbf71b19bf26cdc5cf283
    }
   public function deleteImage(Request $request)
   {

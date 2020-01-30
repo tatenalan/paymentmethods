@@ -1,3 +1,22 @@
+<<<<<<< HEAD
 .errorForm{
   color: red; 
+=======
+.remember-me {
+  display: flex;
+  align-items: center;
+  padding: 0px 15px;
+}
+
+label.remember-me {
+  padding: 10px;
+}
+
+.recordarme {
+  padding: 0 5px;
+}
+
+.contact100-more {
+  background-position: right;
+>>>>>>> 4d83ab0368470bb408efbf71b19bf26cdc5cf283
 }

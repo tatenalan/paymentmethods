@@ -3,35 +3,19 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no">
+    <!-- ionicons CSS --><link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
     <!-- ionicons JS --><script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
     <!-- ionicons JS --><script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
-    <!-- ionicons CSS --><link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <!-- ionicons JS --><script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
+    <!-- ionicons JS --><script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
     <!-- FontAwesome CSS --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
-    <!-- Bootstrap JS --><script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Bootstrap CSS --><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- Bootstrap JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <!-- Bootstrap JS --><script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <!-- ionicons JS --><script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
-    <!-- ionicons JS --><script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
-    <!-- Bootstrap CSS --><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Bootstrap JS --><script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <!-- Google Fonts --><link href="https://fonts.googleapis.com/css?family=Bebas+Neue|Oswald|Permanent+Marker&display=swap" rel="stylesheet">
     <!-- Icono del logo en pestana --><link rel="icon" type="image/png" href="/img/ilnato.png" />
 
-
-    {{-- FORM CONTACTO --}}
-<!--===============================================================================================-->
-	{{-- <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css"> --}}
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="css/util.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-<!--===============================================================================================-->
 
   {{-- registro --}}
 <!--===============================================================================================-->
@@ -39,25 +23,36 @@
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="registro/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="registro/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+	{{-- <link rel="stylesheet" type="text/css" href="registro/fonts/Linearicons-Free-v1.0.0/icon-font.min.css"> --}}
 <!--===============================================================================================-->
 	{{-- <link rel="stylesheet" type="text/css" href="registro/vendor/animate/animate.css"> --}}
 <!--===============================================================================================-->
 	{{-- <link rel="stylesheet" type="text/css" href="registro/vendor/css-hamburgers/hamburgers.min.css"> --}}
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="registro/vendor/animsition/css/animsition.min.css">
+	{{-- <link rel="stylesheet" type="text/css" href="registro/vendor/animsition/css/animsition.min.css"> --}}
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="registro/vendor/select2/select2.min.css">
+	{{-- <link rel="stylesheet" type="text/css" href="registro/vendor/select2/select2.min.css"> --}}
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="registro/vendor/daterangepicker/daterangepicker.css">
+	{{-- <link rel="stylesheet" type="text/css" href="registro/vendor/daterangepicker/daterangepicker.css"> --}}
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="registro/css/util.css">
 	<link rel="stylesheet" type="text/css" href="registro/css/main.css">
 <!--===============================================================================================-->
 
+{{-- FORM CONTACTO --}}
+<!--===============================================================================================-->
+{{-- <script src="vendor/jquery/jquery-3.2.1.min.js"></script> Comentado xq genera conflicto con menu hamburguesa --}}
+<!--===============================================================================================-->
+{{-- <script src="vendor/bootstrap/js/popper.js"></script> --}}
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+{{-- <script src="vendor/select2/select2.min.js"></script> --}}
+<!--===============================================================================================-->
+{{-- <script src="js/main.js"></script> --}}
 
-    <!-- Mi css Socialbar --><link rel="stylesheet" href="/css/socialbar.css">
+
     <!-- Mi css General --><link rel="stylesheet" href="/css/general.css">
+    <!-- Mi css Socialbar --><link rel="stylesheet" href="/css/socialbar.css">
     <!-- Mi css General --><link rel="stylesheet" href="/css/header.css">
     <!-- Mi css General --><link rel="stylesheet" href="/css/footer.css">
     <title>@yield('titulo')</title>
@@ -110,17 +105,32 @@
 
             <ul class="navbar-nav">
 
+            @if (Auth::user())
+
+              <li>
+                <a class="nav-link" href="/profile"><i class="fas fa-user"></i> {{auth::user()->name}} </a>
+              </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="/register">Registrarse</a>
+                <form class="" action="/logout" method="post">
+                  @csrf
+                  <p class="cerrar-sesion-responsive"><button class="nav-link" type="submit" name="button"><i class="fas fa-sign-out-alt"></i><span> Cerrar Sesion</span></button></p>
+                </form>
+              </li>
+
+            @else
+              <li class="nav-item">
+                <a class="nav-link" href="/register"><i class="fas fa-user-plus"></i> Registrarse</a>
               </li>
 
               <li class="nav-item">
                 <!-- Button trigger modal -->
                 <button type="button" class="btn-modal" data-toggle="modal" data-target="#exampleModal">
-                  Iniciar Sesion
+                  <i class="fas fa-sign-in-alt"></i> Iniciar Sesion
                 </button>
               </li>
+
+            @endif
 
               <li class="nav-item">
                 <a class="nav-link" href="#clientes"><img class="bag-icon" src="/img/shopbag2.ico" alt=""></a>
@@ -136,47 +146,59 @@
 
 
       @yield('main')
+
       <!-- Modal -->
-      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">INICIAR SESION</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <form class="contact100-form validate-form" method="POST" action="{{ route('login') }}" enctype="multipart/form-data">
+            <div class="modal-content">
+                  @csrf
+
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">INICIAR SESION</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="wrap-input100 validate-input" data-validate = "Ingresa un email valido: ex@abc.xyz">
+          					<label class="label-input100" for="email">Email *</label>
+          					<input id="correo" class="input100" type="text" name="email" value="{{ old('email') }}" placeholder="Ingresa tu email..." required autocomplete="email" autofocus>
+          					<span class="focus-input100"></span>
+                    @error('email')
+                      <p class="errorForm">{{ $message }}</p>
+                    @enderror
+          				</div>
+
+                  <div class="wrap-input100 validate-input" data-validate="">
+          					<label class="label-input100" for="password">Contraseña *</label>
+          					<input id="pass" class="input100" type="password" name="password" value="" placeholder="Ingresa tu contraseña..." required autocomplete="current-password">
+          					<span class="focus-input100"></span>
+                    @error('password')
+                      <p class="errorForm">{{ $message }}</p>
+                    @enderror
+          				</div>
+
+                  <small class="form-text text-muted">No tienes una cuenta? <a href="/register"> Crear cuenta</a></small>
+                  @if (Route::has('password.request'))
+                    <small class="form-text text-muted">Olvidaste tu password? <a href="{{ route('password.request') }}"> Recuperar password</a></small>
+                  @endif
+
+                </div>
+                <div class="modal-footer">
+                  <button type="submit" class="btn btn-secondary">INGRESAR</button>
+                </div>
+
             </div>
-            <div class="modal-body">
-              <div class="wrap-input100 validate-input" data-validate = "Ingresa un email valido: ex@abc.xyz">
-      					<label class="label-input100" for="email">Email *</label>
-      					<input id="correo" class="input100" type="text" name="email" value="{{ old('email') }}" placeholder="Ingresa tu email...">
-      					<span class="focus-input100"></span>
-                @error('email')
-                  <p class="errorForm">{{ $message }}</p>
-                @enderror
-      				</div>
-
-              <div class="wrap-input100 validate-input" data-validate="">
-      					<label class="label-input100" for="password">Contraseña *</label>
-      					<input id="pass" class="input100" type="password" name="password" value="" placeholder="Ingresa tu contraseña...">
-      					<span class="focus-input100"></span>
-                @error('password')
-                  <p class="errorForm">{{ $message }}</p>
-                @enderror
-      				</div>
-
-              <small class="form-text text-muted">No tienes una cuenta? <a href="/register"> Crear cuenta</a></small>
-              @if (Route::has('password.request'))
-                <small class="form-text text-muted">Olvidaste tu password? <a href="{{ route('password.request') }}"> Recuperar password</a></small>
-              @endif
-
-            </div>
+<<<<<<< HEAD
             <div class="modal-footer">
               <button id="iniciarSesion" type="button" class="btn btn-secondary">INGRESAR</button>
             </div>
+=======
+          </form>
+>>>>>>> 4d83ab0368470bb408efbf71b19bf26cdc5cf283
           </div>
         </div>
-      </div>
     </main>
 
     {{-- <div class="toTop">
@@ -189,7 +211,7 @@
           <span>Copyright ®</span>
         </div>
         <div>
-          <span>IL Nato © 2019</span>
+          <span>IL Nato © 2020</span>
         </div>
         <div>
           <span>Programacion y diseño <a class="creador" href="https://www.linkedin.com/in/rodriguez-alan/">Taten</a> - <a class="creador" href="https://www.linkedin.com/in/juliancaminaur/">Jcaminaur</a></span>

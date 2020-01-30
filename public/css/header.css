@@ -8,6 +8,7 @@ a.navbar-brand {
 
 nav {
   background-color: rgb(37,38,42);
+  box-shadow: 0 0 7px black;
 }
 
 .navbar {
@@ -22,13 +23,17 @@ nav ul {
   align-items: center;
 }
 
-a.nav-link {
+.nav-link {
   color: white;
   font-family: 'Oswald', sans-serif;
   font-size: 16px;
 }
 
-a.nav-link:hover {
+.nav-link:hover, button.nav-link:hover {
+  color: #ffffffb5;
+}
+
+.nav-item:hover {
   color: #ffffffb5;
 }
 
@@ -152,6 +157,18 @@ button span {
 .btn-modal:hover {
   color: #ffffffb5;
 }
+
+.contact100-form {
+    padding: 0px 30px 55px 30px;
+}
+
+.fas {
+color: white;
+}
+
+/* button:hover {
+  color: #ffffffb5;
+} */
 
 @media (min-width: 992px) {
 
