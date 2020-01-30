@@ -154,52 +154,47 @@
         {{-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog" role="document">
             <form class="contact100-form validate-form" method="POST" action="{{ route('login') }}" enctype="multipart/form-data">
-            <div class="modal-content">
-                  @csrf
+              <div class="modal-content">
+                    @csrf
 
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">INICIAR SESION</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  <div class="wrap-input100 validate-input" data-validate = "Ingresa un email valido: ex@abc.xyz">
-          					<label class="label-input100" for="email">Email *</label>
-          					<input id="correo" class="input100" type="text" name="email" value="{{ old('email') }}" placeholder="Ingresa tu email..." required autocomplete="email" autofocus>
-          					<span class="focus-input100"></span>
-                    @error('email')
-                      <p class="errorForm">{{ $message }}</p>
-                    @enderror
-          				</div>
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">INICIAR SESION</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="wrap-input100 validate-input" data-validate = "Ingresa un email valido: ex@abc.xyz">
+            					<label class="label-input100" for="email">Email *</label>
+            					<input id="correo" class="input100" type="text" name="email" value="{{ old('email') }}" placeholder="Ingresa tu email..." required autocomplete="email" autofocus>
+            					<span class="focus-input100"></span>
+                      @error('email')
+                        <p class="errorForm">{{ $message }}</p>
+                      @enderror
+            				</div>
 
-                  <div class="wrap-input100 validate-input" data-validate="">
-          					<label class="label-input100" for="password">Contraseña *</label>
-          					<input id="pass" class="input100" type="password" name="password" value="" placeholder="Ingresa tu contraseña..." required autocomplete="current-password">
-          					<span class="focus-input100"></span>
-                    @error('password')
-                      <p class="errorForm">{{ $message }}</p>
-                    @enderror
-          				</div>
+                    <div class="wrap-input100 validate-input" data-validate="">
+            					<label class="label-input100" for="password">Contraseña *</label>
+            					<input id="pass" class="input100" type="password" name="password" value="" placeholder="Ingresa tu contraseña..." required autocomplete="current-password">
+            					<span class="focus-input100"></span>
+                      @error('password')
+                        <p class="errorForm">{{ $message }}</p>
+                      @enderror
+            				</div>
 
-                  <small class="form-text text-muted">No tienes una cuenta? <a href="/register"> Crear cuenta</a></small>
-                  @if (Route::has('password.request'))
-                    <small class="form-text text-muted">Olvidaste tu password? <a href="{{ route('password.request') }}"> Recuperar password</a></small>
-                  @endif
+                    <small class="form-text text-muted">No tienes una cuenta? <a href="/register"> Crear cuenta</a></small>
+                    @if (Route::has('password.request'))
+                      <small class="form-text text-muted">Olvidaste tu password? <a href="{{ route('password.request') }}"> Recuperar password</a></small>
+                    @endif
 
-                </div>
-                <div class="modal-footer">
-                  <button type="submit" class="btn btn-secondary">INGRESAR</button>
-                </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="submit" class="btn btn-secondary">INGRESAR</button>
+                  </div>
 
-            </div>
-<<<<<<< HEAD
-            <div class="modal-footer">
-              <button id="iniciarSesion" type="button" class="btn btn-secondary">INGRESAR</button>
-            </div>
-=======
-          </form>
->>>>>>> 4d83ab0368470bb408efbf71b19bf26cdc5cf283
+              </div>
+
+            </form>
           </div>
         </div> --}}
     </main>
