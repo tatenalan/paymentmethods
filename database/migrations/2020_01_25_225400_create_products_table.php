@@ -21,14 +21,14 @@ class CreateProductsTable extends Migration
           $table->integer('discount')->nullable();
           $table->string('model', 50)->nullable();
 
-          $table->bigInteger('genre_id')->nullable()->unsigned();
-          $table->foreign('genre_id')->references('id')->on('genres')->onDelete('cascade')->onUpdate('cascade');
+          $table->bigInteger('genre_id')->unsigned()->nullable();
+          $table->foreign('genre_id')->references('id')->on('genres')->onDelete('set null')->onUpdate('cascade');
 
-          $table->bigInteger('category_id')->nullable()->unsigned();
-          $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade')->onUpdate('cascade');
+          $table->bigInteger('category_id')->unsigned()->nullable();
+          $table->foreign('category_id')->references('id')->on('categories')->onDelete('set null')->onUpdate('cascade');
 
-          $table->bigInteger('brand_id')->nullable()->unsigned();
-          $table->foreign('brand_id')->references('id')->on('brands')->onDelete('cascade')->onUpdate('cascade');
+          $table->bigInteger('brand_id')->unsigned()->nullable();
+          $table->foreign('brand_id')->references('id')->on('brands')->onDelete('set null')->onUpdate('cascade');
 
           $table->timestamps();
         });
