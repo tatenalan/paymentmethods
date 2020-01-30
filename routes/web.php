@@ -70,3 +70,11 @@ Route::post('/delete/product/{id}', 'ProductController@deleteproduct');
 Route::post('/deleteimage', 'ProductController@deleteImage');
 
 Route::post('/agregarimagen', 'ProductController@addImage');
+
+Route::Get('/editbrands', 'BrandController@index');
+
+Route::put('/editbrands', 'BrandController@edit');
+
+Route::post('/addbrand', 'BrandController@store');
+
+Route::post('/deletebrand', 'BrandController@destroy');

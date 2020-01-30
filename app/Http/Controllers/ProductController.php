@@ -72,8 +72,8 @@ class ProductController extends Controller
      $reglas = [
         'title' => 'required|string|min:1|max:50',
         'price' => 'required|integer|min:50|max:150000',
-        'discount' => 'integer|min:10|max:80', // para hacer required discount hay que tenerlo hidden siempre
-        'genre' => 'required',
+        'discount_id' => 'integer|min:10|max:80', // para hacer required discount hay que tenerlo hidden siempre
+        'genre_id' => 'required',
         "images" => "required|array|min:1",
         "images.*" => 'image|mimes:jpg,jpeg,png|max:2048',
         'brand_id' => 'required',
@@ -82,7 +82,7 @@ class ProductController extends Controller
           "title.required" => "Ingrese el nombre del producto",
           "price.required" => "Ingrese el precio del producto",
           "brand_id.required" => "Seleccione la marca del producto",
-          "genre.required" => "Seleccione el genero",
+          "genre_id.required" => "Seleccione el genero",
           'string' => "El campo :attribute debe ser un texto",
           "price.min" => "El precio debe ser mayor a $50",
           "min" => "El campo :attribute tiene un minimo de :min caracteres",
@@ -92,7 +92,7 @@ class ProductController extends Controller
           "images.*.max" => 'La imagen es muy pesada',
           "images.min" => "Debes subir al menos una imagen",
           "images.required" => "Sube una imagen del producto",
-          "discount.min" => "Debe tener al menos un 10% de descuento",
+          "discount_id.min" => "Debe tener al menos un 10% de descuento",
         ];
 
           $this->validate($request, $reglas, $mensajes);
@@ -189,9 +189,9 @@ class ProductController extends Controller
         $product->price = $request->price;
         $product->onSale = $request->onSale;
         $product->discount = $request->discount;
-        $product->genre_id = $request->genre;
-        $product->category_id = $request->category;
-        $product->brand_id = $request->brand;
+        $product->genre_id = $request->genre_id;
+        $product->category_id = $request->category_id;
+        $product->brand_id = $request->brand_id;
         $product->save();
 
         $genres = Genre::all();

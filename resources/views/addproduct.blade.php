@@ -1,6 +1,6 @@
-@php
-  // dd($errors);
-@endphp
+{{-- @php
+  dd($errors);
+@endphp --}}
 @extends('plantilla')
 @section('css')
 form
@@ -34,15 +34,15 @@ form
       @enderror
     </div>
     <div class="discountDiv" hidden>
-      <label for="discount">Descuento</label>
-      <input id="discount_id" type="number" name="discount" value="0" step="5" min="0" max="70">
+      <label for="discount_id">Descuento</label>
+      <input id="discount_id" type="number" name="discount_id" value="0" step="5" min="0" max="70">
       @error('discount')
             <p class="errorForm">{{ $message }}</p>
       @enderror
     </div>
     <div class="">
-      <label for="genre">Genero</label>
-      <select class="" name="genre">
+      <label for="genre_id">Genero</label>
+      <select class="" name="genre_id">
         <option value="">Seleccione una opcion</option>
         @foreach ($genres as $genre)
           <option value="{{$genre->id}}" {{($genre->id == old('genre_id'))?'selected': '' }}>{{$genre->name}}</option>
@@ -65,14 +65,14 @@ form
       @enderror
     </div>
     <div class="">
-      <label for="brand">Marca</label>
-      <select class="" name="brand">
+      <label for="brand_id">Marca</label>
+      <select class="" name="brand_id">
         <option value="">Seleccione una marca</option>
         @foreach ($brands as $brand)
           <option value="{{$brand->id}}" {{($brand->id == old('brand_id'))?'selected': '' }}>{{$brand->name}}</option>
         @endforeach
       </select>
-      @error('brand')
+      @error('brand_id')
             <p class="errorForm">{{ $message }}</p>
       @enderror
     </div>
