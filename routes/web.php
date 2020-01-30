@@ -60,3 +60,11 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/addproduct', 'ProductController@addproduct');
 
 Route::post('/addproduct', 'ProductController@store');
+
+Route::get('/editproduct/{id}', 'ProductController@editview');
+
+Route::put('/editproduct/{id}', 'ProductController@editproduct');
+
+Route::post('/delete/product/{id}', 'ProductController@deleteproduct');
+
+Route::post('/deleteimage', 'ProductController@deleteImage');

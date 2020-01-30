@@ -13,7 +13,7 @@ class CreateStockTable extends Migration
      */
     public function up()
     {
-        Schema::create('stock', function (Blueprint $table) {
+        Schema::create('stocks', function (Blueprint $table) {
           $table->bigIncrements('id');
           $table->bigInteger('quantity')->nullable();
 
@@ -36,6 +36,6 @@ class CreateStockTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('stock');
+        Schema::dropIfExists('stocks');
     }
 }

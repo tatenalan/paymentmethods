@@ -1,3 +1,6 @@
+@php
+  // dd($errors);
+@endphp
 @extends('plantilla')
 @section('css')
 form
@@ -9,7 +12,7 @@ form
     <div class="">
       <label for="title">Nombre: </label>
       <input type="text" name="title" value="">
-      @error('name')
+      @error('title')
             <p class="errorForm">{{ $message }}</p>
       @enderror
     </div>
@@ -45,7 +48,7 @@ form
           <option value="{{$genre->id}}" {{($genre->id == old('genre_id'))?'selected': '' }}>{{$genre->name}}</option>
         @endforeach
       </select>
-      @error('genre')
+      @error('genre_id')
             <p class="errorForm">{{ $message }}</p>
       @enderror
     </div>
@@ -77,7 +80,7 @@ form
       <label for="">Stock</label>
       @foreach ($sizes as $size)
         <label for="">{{$size->name}}</label>
-        <input type="number" name="{{$size->name}}" min=0 value="">
+        <input type="number" name="{{$size->name}}" min=0 value="0">
         <br>
       @endforeach
       @error('sizes')

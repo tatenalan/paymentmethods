@@ -23,6 +23,40 @@ class ProductController extends Controller
        return view('/index',$vac);
      }
 
+  public function editview($id)
+  {
+    $product = Product::find($id);
+    $genres = Genre::all();
+    $images = Image::where('product_id', '=', $id)->get();
+    $categories = Category::all();
+    $stock = Stock::find($id);
+    $sizes = Size::all();
+
+    return view('/edit', compact('product','genres', 'categories','images' ,'sizes', 'stock'));
+  }
+  public function deleteproduct(int $id){
+      // llamamos al producto a eliminar mediante su id
+      $product = Product::find($id);
+      $images = $product->images;
+      $stocks = Stock::where('product_id', '=', $id)->get();
+      foreach ($images as $image) {
+      // por cada imagen seleccionamos su path y si existe la borramos de storage
+      $image_path = storage_path('app/public/') . $image->path;
+      // verificamos si existe en la base de datos y en storage
+        if ($images && file_exists($image_path)) {
+          // elimina las imagenes de storage
+          unlink($image_path);
+          // borramos las imagenes de la bd utilizando la relacion del modelo
+          $image->delete();
+        }
+      }
+
+      $product->delete(); // borramos el producto
+      foreach ($stocks as $stock) {
+        $stock->delete();
+      }
+      return redirect("/");
+    }
    public function addProduct()
    {
       $genres = Genre::all();
@@ -35,17 +69,19 @@ class ProductController extends Controller
    public function store(Request $request)
    {
      $reglas = [
-        'name' => 'required|string|min:1|max:50',
+        'title' => 'required|string|min:1|max:50',
         'price' => 'required|integer|min:50|max:150000',
         'discount' => 'integer|min:10|max:80', // para hacer required discount hay que tenerlo hidden siempre
-        'genre_id' => 'required',
+        'genre' => 'required',
         "images" => "required|array|min:1",
         "images.*" => 'image|mimes:jpg,jpeg,png|max:2048',
+        'brand' => 'required',
         ];
         $mensajes = [
-          "name.required" => "Ingrese el nombre del producto",
+          "title.required" => "Ingrese el nombre del producto",
           "price.required" => "Ingrese el precio del producto",
-          "genre_id.required" => "Seleccione el genero",
+          "brand.required" => "Seleccione la marca del producto",
+          "genre.required" => "Seleccione el genero",
           'string' => "El campo :attribute debe ser un texto",
           "price.min" => "El precio debe ser mayor a $50",
           "min" => "El campo :attribute tiene un minimo de :min caracteres",
@@ -113,4 +149,18 @@ class ProductController extends Controller
         ->with('status', 'Producto creado exitosamente!!!')
         ->with('operation', 'success');
    }
+  public function deleteImage(Request $request)
+  {
+      $image = Image::find($request->imagenid);
+
+      unlink(storage_path('app/public/').$image->path);
+
+      $image->delete();
+
+      return back();
+  }
+  public function editproduct(Request $request, int $id)
+  {
+    return view('edit');
+  }
 }

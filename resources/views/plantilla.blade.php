@@ -172,7 +172,7 @@
 
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary">INGRESAR</button>
+              <button id="iniciarSesion" type="button" class="btn btn-secondary">INGRESAR</button>
             </div>
           </div>
         </div>
