@@ -67,6 +67,13 @@ Route::post('/addimage', 'ProductController@addImage');
 
 Route::post('/deleteimage', 'ProductController@deleteImage');
 
+Route::Get('/editbrands', 'BrandController@index');
+
+Route::put('/editbrands', 'BrandController@edit');
+
+Route::post('/addbrand', 'BrandController@store');
+
+Route::post('/deletebrand', 'BrandController@destroy');
 
 // Auth
 

@@ -10,5 +10,5 @@ producto
 
   <img id="imagenGran"class="imagen-producto" src="/storage/{{$product->images[0]->path}}" alt="">
 
-  
+
 @endsection

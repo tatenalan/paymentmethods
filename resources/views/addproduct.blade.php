@@ -1,6 +1,6 @@
-@php
+{{-- @php
   dd($errors);
-@endphp
+@endphp --}}
 @extends('plantilla')
 @section('css')
 form
@@ -42,7 +42,7 @@ form
       @enderror
     </div>
     <div class="">
-      <label>Genero</label>
+      <label for="genre_id">Genero</label>
       <select class="" name="genre_id">
         <option value="">Seleccione una opcion</option>
         @foreach ($genres as $genre)
@@ -66,7 +66,7 @@ form
       @enderror
     </div>
     <div class="">
-      <label>Marca</label>
+      <label for="brand_id">Marca</label>
       <select class="" name="brand_id">
         <option value="">Seleccione una marca</option>
         @foreach ($brands as $brand)

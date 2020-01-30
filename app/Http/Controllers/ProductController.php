@@ -78,9 +78,9 @@ class ProductController extends Controller
           $product->price = $request->price;
           $product->onSale = $request->onSale;
           $product->discount = $request->discount;
-          $product->genre_id = $request->genre;
-          $product->category_id = $request->category;
-          $product->brand_id = $request->brand;
+          $product->genre_id = $request->genre_id;
+          $product->category_id = $request->category_id;
+          $product->brand_id = $request->brand_id;
 
           // guardo en la base de datos
           $product->save();
