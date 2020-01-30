@@ -67,9 +67,6 @@ Route::post('/addimage', 'ProductController@addImage');
 
 Route::post('/deleteimage', 'ProductController@deleteImage');
 
-<<<<<<< HEAD
-Route::post('/agregarimagen', 'ProductController@addImage');
-
 Route::Get('/editbrands', 'BrandController@index');
 
 Route::put('/editbrands', 'BrandController@edit');
@@ -77,11 +74,9 @@ Route::put('/editbrands', 'BrandController@edit');
 Route::post('/addbrand', 'BrandController@store');
 
 Route::post('/deletebrand', 'BrandController@destroy');
-=======
 
 // Auth
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
->>>>>>> 9df6b295c99dbb4166bbc4408742ad5b215677a6

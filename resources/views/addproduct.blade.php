@@ -35,23 +35,14 @@ form
       @enderror
     </div>
     <div class="discountDiv" hidden>
-<<<<<<< HEAD
-      <label for="discount_id">Descuento</label>
-      <input id="discount_id" type="number" name="discount_id" value="0" step="5" min="0" max="70">
-=======
-      <label>Descuento</label>
-      <input id="discount_id" type="number" name="discount" value="0" step="5" min="0" max="70">
->>>>>>> 9df6b295c99dbb4166bbc4408742ad5b215677a6
+      <label for="discount">Descuento</label>
+      <input id="discount" type="number" name="discount" value="0" step="5" min="0" max="70">
       @error('discount')
             <p class="errorForm">{{ $message }}</p>
       @enderror
     </div>
     <div class="">
-<<<<<<< HEAD
       <label for="genre_id">Genero</label>
-=======
-      <label>Genero</label>
->>>>>>> 9df6b295c99dbb4166bbc4408742ad5b215677a6
       <select class="" name="genre_id">
         <option value="">Seleccione una opcion</option>
         @foreach ($genres as $genre)
@@ -75,11 +66,7 @@ form
       @enderror
     </div>
     <div class="">
-<<<<<<< HEAD
       <label for="brand_id">Marca</label>
-=======
-      <label>Marca</label>
->>>>>>> 9df6b295c99dbb4166bbc4408742ad5b215677a6
       <select class="" name="brand_id">
         <option value="">Seleccione una marca</option>
         @foreach ($brands as $brand)
