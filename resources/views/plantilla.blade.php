@@ -23,21 +23,32 @@
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="registro/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="registro/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+	{{-- <link rel="stylesheet" type="text/css" href="registro/fonts/Linearicons-Free-v1.0.0/icon-font.min.css"> --}}
 <!--===============================================================================================-->
 	{{-- <link rel="stylesheet" type="text/css" href="registro/vendor/animate/animate.css"> --}}
 <!--===============================================================================================-->
 	{{-- <link rel="stylesheet" type="text/css" href="registro/vendor/css-hamburgers/hamburgers.min.css"> --}}
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="registro/vendor/animsition/css/animsition.min.css">
+	{{-- <link rel="stylesheet" type="text/css" href="registro/vendor/animsition/css/animsition.min.css"> --}}
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="registro/vendor/select2/select2.min.css">
+	{{-- <link rel="stylesheet" type="text/css" href="registro/vendor/select2/select2.min.css"> --}}
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="registro/vendor/daterangepicker/daterangepicker.css">
+	{{-- <link rel="stylesheet" type="text/css" href="registro/vendor/daterangepicker/daterangepicker.css"> --}}
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="registro/css/util.css">
 	<link rel="stylesheet" type="text/css" href="registro/css/main.css">
 <!--===============================================================================================-->
+
+{{-- FORM CONTACTO --}}
+<!--===============================================================================================-->
+{{-- <script src="vendor/jquery/jquery-3.2.1.min.js"></script> Comentado xq genera conflicto con menu hamburguesa --}}
+<!--===============================================================================================-->
+{{-- <script src="vendor/bootstrap/js/popper.js"></script> --}}
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+{{-- <script src="vendor/select2/select2.min.js"></script> --}}
+<!--===============================================================================================-->
+{{-- <script src="js/main.js"></script> --}}
 
 
     <!-- Mi css General --><link rel="stylesheet" href="/css/general.css">
