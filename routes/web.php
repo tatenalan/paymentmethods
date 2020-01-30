@@ -67,11 +67,13 @@ Route::post('/addimage', 'ProductController@addImage');
 
 Route::post('/deleteimage', 'ProductController@deleteImage');
 
-Route::Get('/editbrands', 'BrandController@index');
+  // Marcas
 
-Route::put('/editbrands', 'BrandController@edit');
+Route::get('/editbrand', 'BrandController@edit');
 
 Route::post('/addbrand', 'BrandController@store');
+
+Route::put('/editbrand', 'BrandController@edit');
 
 Route::post('/deletebrand', 'BrandController@destroy');
 

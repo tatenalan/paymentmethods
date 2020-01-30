@@ -12,21 +12,13 @@ class BrandController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+
+
+    public function edit() // se muestran los datos del producto elegido listo para editar
     {
       $brands = Brand::all();
       $vac = compact('brands');
-      return view('/editbrands',$vac);
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
+      return view('/editbrand',$vac);
     }
 
     /**
@@ -35,7 +27,7 @@ class BrandController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request) // agrega una marca y te redirige a la lista de marcas
     {
        $reglas = [
        'name' => 'required|string|min:1|max:50',
@@ -52,7 +44,7 @@ class BrandController extends Controller
        $brand->save();
        $brands = Brand::all();
        $vac = compact('brands');
-       return view('/editbrands',$vac);
+       return view('/editbrand',$vac);
     }
 
     /**
@@ -72,7 +64,7 @@ class BrandController extends Controller
      * @param  \App\Brand  $brand
      * @return \Illuminate\Http\Response
      */
-    public function edit(Request $request)
+    public function update(Request $request) // se muestran las marcas con los campos completos listas para editar.
     {
       $reglas = [
       'name' => 'required|string|min:1|max:50',
@@ -90,21 +82,10 @@ class BrandController extends Controller
 
       $brands = Brand::all();
       $vac = compact('brands');
-      return view('/editbrands',$vac);
+      return view('/editbrand',$vac);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Brand  $brand
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Brand $brand)
-    {
-        //
-    }
-
+    
     /**
      * Remove the specified resource from storage.
      *
@@ -116,6 +97,6 @@ class BrandController extends Controller
       $brand = Brand::find($request->id);
       $brand->delete();
       $brands = Brand::All();
-      return view('/editbrands', compact('brands'));
+      return view('/editbrand', compact('brands'));
     }
 }
