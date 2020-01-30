@@ -73,7 +73,7 @@ Route::get('/editbrand', 'BrandController@edit');
 
 Route::post('/addbrand', 'BrandController@store');
 
-Route::put('/editbrand', 'BrandController@edit');
+Route::put('/editbrand', 'BrandController@update');
 
 Route::post('/deletebrand', 'BrandController@destroy');
 

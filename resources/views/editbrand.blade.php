@@ -7,7 +7,7 @@ form
     <h5 class="centrado titulo">Editar marca</h5>
     @foreach ($brands as $brand)
       <div class="form-signup">
-        <form class="form-signup" action='/editbrands' method="post" enctype="multipart/form-data">
+        <form class="form-signup" action='/editbrand' method="post" enctype="multipart/form-data">
           {{csrf_field()}}
           @method('put')
           <div class="row">
