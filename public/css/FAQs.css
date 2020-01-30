@@ -1,6 +1,13 @@
 body {
-  font-family: "IBM Plex Sans", sans-serif;
-  background-color: rgba(0,0,0,.1);
+  font-family: "Lato", sans-serif;
+  background-color: black;
+}
+
+div.FAQs {
+  background-color: white;
+  padding: 20px;
+  margin: 80px 20px 20px 20px;
+  border-radius: 12px;
 }
 
 h2 {
@@ -16,14 +23,19 @@ details {
   width: 75%;
   min-height: 5px;
   max-width: 700px;
-  padding: 45px 70px 45px 45px;
+  padding: 30px 20px;
   margin: 0 auto;
   position: relative;
   font-size: 22px;
+  background-color: papayawhip;
   border: 1px solid rgba(0,0,0,.1);
   border-radius: 15px;
   box-sizing: border-box;
   transition: all .3s;
+}
+
+details:hover {
+  cursor: pointer;
 }
 
 details + details {
@@ -37,8 +49,9 @@ details[open] {
 }
 
 details p {
-  color: #96999d;
+  color: #000000;
   font-weight: 300;
+  font-size: 16px;
 }
 
 summary {
@@ -51,7 +64,7 @@ summary {
 
 summary:focus {
   outline: none;
-  box-shadow: 0 0 0 4px #f6f7f8, 0 0 0 5px rebeccapurple;
+  /* box-shadow: 0 0 0 4px #f6f7f8, 0 0 0 5px rebeccapurple; */
 }
 
 summary::-webkit-details-marker {
@@ -59,7 +72,7 @@ summary::-webkit-details-marker {
 }
 
 .control-icon {
-  fill: rebeccapurple;
+  fill: black;
   transition: .3s ease;
   pointer-events: none;
 }
