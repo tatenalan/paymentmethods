@@ -19,6 +19,7 @@ class CreateProductsTable extends Migration
           $table->integer('price');
           $table->boolean('onSale')->default(false); // a prueba
           $table->integer('discount')->nullable();
+          $table->string('model', 50)->nullable();
 
           $table->bigInteger('genre_id')->nullable()->unsigned();
           $table->foreign('genre_id')->references('id')->on('genres')->onDelete('cascade')->onUpdate('cascade');

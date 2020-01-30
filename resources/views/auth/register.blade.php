@@ -44,8 +44,8 @@ form
   				</div>
 
           <div class="wrap-input100 validate-input" data-validate="">
-  					<label class="label-input100" for="password">Confirmar Contraseña *</label>
-  					<input id="password-confirm" class="input100" type="password-confirm" name="password-confirm" value="" placeholder="Confirma tu contraseña...">
+  					<label class="label-input100">Confirmar Contraseña *</label>
+  					<input id="password-confirm" class="input100" type="password" name="password_confirmation" value="" placeholder="Confirma tu contraseña...">
   					<span class="focus-input100"></span>
             @error('password-confirm')
               <p class="errorForm">{{ $message }}</p>

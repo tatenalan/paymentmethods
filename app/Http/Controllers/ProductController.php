@@ -20,7 +20,7 @@ class ProductController extends Controller
        $categories = Category::all();
        $images = Image::all();
        $vac = compact('products','categories','images');
-       return view('/index',$vac);
+       return view('/productos',$vac);
      }
 
    public function addProduct()
@@ -34,6 +34,6 @@ class ProductController extends Controller
    }
    public function store()
    {
-     
+
    }
 }
