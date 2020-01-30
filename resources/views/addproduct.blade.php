@@ -1,5 +1,5 @@
 @php
-  // dd($errors);
+  dd($errors);
 @endphp
 @extends('plantilla')
 @section('css')
@@ -36,7 +36,7 @@ form
     </div>
     <div class="discountDiv" hidden>
       <label>Descuento</label>
-      <input id="discount_id" type="number" name="discount" value="0" step="5" min="0" max="70">
+      <input id="discount_id" type="number" name="discount" value="0" step="5" max="80">
       @error('discount')
             <p class="errorForm">{{ $message }}</p>
       @enderror

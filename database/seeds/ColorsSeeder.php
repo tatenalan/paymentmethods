@@ -56,6 +56,9 @@ class ColorsSeeder extends Seeder
          ],
          [
            "name" => "Verde",
+         ],
+         [
+           "name" => "Multicolor",
          ]
        ]);
      }
