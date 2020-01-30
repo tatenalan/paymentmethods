@@ -27,12 +27,13 @@ class ProductController extends Controller
   {
     $product = Product::find($id);
     $genres = Genre::all();
+    $brands = Brand::all();
     $images = Image::where('product_id', '=', $id)->get();
     $categories = Category::all();
     $stock = Stock::find($id);
     $sizes = Size::all();
 
-    return view('/edit', compact('product','genres', 'categories','images' ,'sizes', 'stock'));
+    return view('/edit', compact('product','genres', 'categories','images' ,'sizes', 'stock','brands'));
   }
   public function deleteproduct(int $id){
       // llamamos al producto a eliminar mediante su id
@@ -68,7 +69,6 @@ class ProductController extends Controller
    }
    public function store(Request $request)
    {
-<<<<<<< HEAD
      $reglas = [
         'title' => 'required|string|min:1|max:50',
         'price' => 'required|integer|min:50|max:150000',
@@ -76,12 +76,12 @@ class ProductController extends Controller
         'genre' => 'required',
         "images" => "required|array|min:1",
         "images.*" => 'image|mimes:jpg,jpeg,png|max:2048',
-        'brand' => 'required',
+        'brand_id' => 'required',
         ];
         $mensajes = [
           "title.required" => "Ingrese el nombre del producto",
           "price.required" => "Ingrese el precio del producto",
-          "brand.required" => "Seleccione la marca del producto",
+          "brand_id.required" => "Seleccione la marca del producto",
           "genre.required" => "Seleccione el genero",
           'string' => "El campo :attribute debe ser un texto",
           "price.min" => "El precio debe ser mayor a $50",
@@ -96,7 +96,6 @@ class ProductController extends Controller
         ];
 
           $this->validate($request, $reglas, $mensajes);
-        // dd($request);
         $product = new Product();
         $product->name = $request->title; // alternativa $producto->name = $request->name;
         $product->price = $request->price;
@@ -149,9 +148,6 @@ class ProductController extends Controller
         return redirect('/')
         ->with('status', 'Producto creado exitosamente!!!')
         ->with('operation', 'success');
-=======
-
->>>>>>> 4d83ab0368470bb408efbf71b19bf26cdc5cf283
    }
   public function deleteImage(Request $request)
   {
@@ -165,6 +161,87 @@ class ProductController extends Controller
   }
   public function editproduct(Request $request, int $id)
   {
-    return view('edit');
+    $reglas = [
+       'name' => 'required|string|min:1|max:50',
+       'price' => 'required|integer|min:50|max:150000',
+       'discount' => 'integer|min:10|max:80',
+       "images" => "array",
+       "images.*" => 'image|mimes:jpg,jpeg,png|max:2048',
+       ];
+    $mensajes = [
+       "name.required" => "Ingrese el nombre del producto",
+       "price.required" => "Ingrese el precio del producto",
+       'string' => "El campo :attribute debe ser un texto",
+       "price.min" => "El precio debe ser mayor a $50",
+       "min" => "El campo :attribute tiene un minimo de :min caracteres",
+       "max" => "El campo :attribute tiene un maximo de :max caracteres",
+       "images.*.image" => "Debe ser un formato de imagen",
+       "mimes" => "Formato de imagen invalido",
+       "images.*.max" => 'La imagen es muy pesada',
+       "images.min" => "Debes subir al menos una imagen",
+       "discount.min" => "Debe tener al menos un 10% de descuento",
+       ];
+
+        $this->validate($request, $reglas, $mensajes);
+
+        $product = Product::find($id);
+        $product->name = $request->name;
+        $product->price = $request->price;
+        $product->onSale = $request->onSale;
+        $product->discount = $request->discount;
+        $product->genre_id = $request->genre;
+        $product->category_id = $request->category;
+        $product->brand_id = $request->brand;
+        $product->save();
+
+        $genres = Genre::all();
+        $images = Image::where('product_id', '=', $id)->get();
+        $categories = Category::all();
+        $stock = Stock::find($id);
+        $sizes = Size::all();
+        $brands = Brand::all();
+
+        return view('/edit', compact('product','genres', 'categories','images' ,'sizes', 'stock','brands'));
   }
+  public function addImage(Request $request){
+
+      $reglas = [
+        "images" => "required|array",
+        "images.*" => "image|mimes:jpeg,jpg,png|max:2000",
+      ];
+
+
+      $mensajes = [
+        "images.*.image" => "Debe ser un formato de imagen",
+        "mimes" => "Formato de imagen invalido",
+        "images.*.max" => 'La imagen es muy pesada',
+        "images.required" => "Debes subir una imagen"
+
+      ];
+
+      // Validamos
+      $this->validate($request, $reglas, $mensajes);
+      // si suben una o mas fotos, entonces comenzamos el proceso de guardado
+      if ($request->file('images')) {
+        // traigo las imagenes a agregar
+        $images = $request->file('images');
+        // recorro el array con un foreach
+        foreach ($images as $image) {
+          // guardo cada imagen en storage/public (no en la base de datos)
+          $file = $image->store('public');
+          // obtengo sus nombres
+          $path = basename($file);
+          // por cada imagen instancio un objeto de la clase imagen
+          $image = new Image;
+          // asigno las rutas correspondientes y asigno el id de la imagen que debe ser igual al id del ultimo producto creado
+          $image->product_id = $request->productid;
+          $image->path = $path;
+
+          // guardo el objeto imagen instanciado en la base de datos
+          $image->save();
+          // nos retorna a la ruta anterior
+          }
+        }
+        return back();
+      }
 }

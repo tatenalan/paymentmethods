@@ -35,7 +35,7 @@ form
     </div>
     <div class="discountDiv" hidden>
       <label for="discount">Descuento</label>
-      <input type="number" name="discount" value="0" step="5" min="0" max="70">
+      <input id="discount_id" type="number" name="discount" value="0" step="5" min="0" max="70">
       @error('discount')
             <p class="errorForm">{{ $message }}</p>
       @enderror

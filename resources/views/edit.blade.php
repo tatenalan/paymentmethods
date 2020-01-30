@@ -1,3 +1,6 @@
+{{-- @php
+  dd($errors);
+@endphp --}}
 @extends('plantilla')
 @section('css')
 form
@@ -73,6 +76,19 @@ form
               @endforeach
             </select>
             @error('category_id')
+              <p class="errorForm">{{ $message }}</p>
+            @enderror
+          </div>
+
+          <div class="col-6 col-lg-4 offset-lg-2 col-md-6 form-group">
+            <label for="">Marca: *</label>
+            <select class="form-control" name="brand_id">
+              <option value="">Seleccione una marca</option>
+              @foreach ($brands as $brand)
+                <option value="{{$brand->id}}" @if($brand->id == $product->brand_id) selected @endif>{{$brand->name}}</option>
+              @endforeach
+            </select>
+            @error('brand_id')
               <p class="errorForm">{{ $message }}</p>
             @enderror
           </div>

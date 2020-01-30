@@ -68,3 +68,5 @@ Route::put('/editproduct/{id}', 'ProductController@editproduct');
 Route::post('/delete/product/{id}', 'ProductController@deleteproduct');
 
 Route::post('/deleteimage', 'ProductController@deleteImage');
+
+Route::post('/agregarimagen', 'ProductController@addImage');
