@@ -105,7 +105,9 @@
             <ul class="navbar-nav">
 
             @if (Auth::user())
-
+              @if (Auth::user()->isAdmin == true)
+                <a class="nav-link" href="/controlpanel"><i class="fas fa-plus-circle"></i> Panel de Control</a>
+              @endif
               <li>
                 <a class="nav-link" href="/profile"><i class="fas fa-user"></i> {{auth::user()->name}} </a>
               </li>

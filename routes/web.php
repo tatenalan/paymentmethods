@@ -77,6 +77,13 @@ Route::put('/editbrand', 'BrandController@edit');
 
 Route::post('/deletebrand', 'BrandController@destroy');
 
+// isAdmin
+
+Route::get('/controlpanel', function() {
+  return view('controlpanel');
+});
+
+
 // Auth
 
 Auth::routes();
