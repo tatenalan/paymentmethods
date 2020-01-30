@@ -51,22 +51,25 @@ Route::get('/FAQs', function() {
 
 Route::get('/productos', 'ProductController@directory');
 
+Route::get('/addproduct', 'ProductController@new');
+
+Route::post('/addproduct', 'ProductController@store');
+
+Route::get('/producto/{id}', 'ProductController@show');
+
+Route::get('/editproduct/{id}', 'ProductController@edit');
+
+Route::put('/producto/{id}', 'ProductController@update');
+
+Route::post('/delete/product/{id}', 'ProductController@deleteproduct');
+
+Route::post('/addimage', 'ProductController@addImage');
+
+Route::post('/deleteimage', 'ProductController@deleteImage');
+
+
 // Auth
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
-Route::get('/addproduct', 'ProductController@addproduct');
-
-Route::post('/addproduct', 'ProductController@store');
-
-Route::get('/editproduct/{id}', 'ProductController@editview');
-
-Route::put('/editproduct/{id}', 'ProductController@editproduct');
-
-Route::post('/delete/product/{id}', 'ProductController@deleteproduct');
-
-Route::post('/deleteimage', 'ProductController@deleteImage');
-
-Route::post('/agregarimagen', 'ProductController@addImage');
