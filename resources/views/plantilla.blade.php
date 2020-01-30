@@ -193,7 +193,13 @@
                 </div>
 
             </div>
+<<<<<<< HEAD
+            <div class="modal-footer">
+              <button id="iniciarSesion" type="button" class="btn btn-secondary">INGRESAR</button>
+            </div>
+=======
           </form>
+>>>>>>> 4d83ab0368470bb408efbf71b19bf26cdc5cf283
           </div>
         </div> --}}
     </main>

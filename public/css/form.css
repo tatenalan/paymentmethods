@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+.errorForm{
+  color: red; 
+=======
 .remember-me {
   display: flex;
   align-items: center;
@@ -14,4 +18,5 @@ label.remember-me {
 
 .contact100-more {
   background-position: right;
+>>>>>>> 4d83ab0368470bb408efbf71b19bf26cdc5cf283
 }
