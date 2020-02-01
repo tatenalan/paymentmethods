@@ -77,6 +77,16 @@ Route::put('/editbrand', 'BrandController@update');
 
 Route::post('/deletebrand', 'BrandController@destroy');
 
+// users
+
+Route::get('/profile', 'UserController@show')->middleware('auth');
+
+Route::get('/edituser', 'UserController@edit')->middleware('auth');
+
+Route::post('/deleteuser', 'UserController@delete')->middleware('auth');
+
+Route::put('/profile', 'UserController@update')->middleware('auth');
+
 // isAdmin
 
 Route::get('/controlpanel', function() {

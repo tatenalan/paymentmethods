@@ -1,4 +1,46 @@
+.producto {
+
+}
+
 .img-productos {
-    width: 100%;
-    padding: 5px 0px;
+  width: 100%;
+  padding: 5px 0px;
+  max-height: 250px;
+  object-fit: cover;
+}
+
+.padding {
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+a.ordenar {
+  padding: 14px;
+  margin: 10px;
+  display: block;
+  min-width: 122px;
+  background-color: #977d2f9e;
+  border-radius: 11px;
+  color: white;
+  font-family: Montserrat-Bold;
+}
+
+a.ordenar:hover {
+  background: #404b46;
+}
+
+.hydrated {
+  vertical-align: middle;
+}
+
+.marca {
+  padding: 3px;
+}
+
+.nombre {
+  padding: 3px;
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }

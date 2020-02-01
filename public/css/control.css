@@ -1,0 +1,22 @@
+.controles {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 500px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+a.control {
+  padding: 14px;
+  margin: 10px;
+  background-color: #977d2f9e;
+  border-radius: 11px;
+  color: white;
+  font-family: Montserrat-Bold;
+}
+
+a.control:hover {
+  background: #404b46;
+}

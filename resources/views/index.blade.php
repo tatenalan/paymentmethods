@@ -9,7 +9,8 @@ home
 
   <div id="main" class="pimg1">
         <div class="ptext">
-          {{-- <span class="texto-parallax">IL NATO</span> --}}
+          {{-- <a class="texto-parallax" href="/productos">PRODUCTOS</a> --}}
+          {{-- <a class="texto-parallax" href="/productos">OFERTAS</a> --}}
         </div>
       </div>
       <section class="section section-light">

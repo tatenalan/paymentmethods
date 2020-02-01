@@ -39,6 +39,11 @@ ion-icon {
     font-size: 25px;
 }
 
+div.socialBar .closebar {
+	background-color: black;
+	color: white;
+}
+
 
 
 /* Media queries */

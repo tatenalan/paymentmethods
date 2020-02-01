@@ -217,12 +217,13 @@
           <span>Programacion y diseño <a class="creador" href="https://www.linkedin.com/in/rodriguez-alan/">Taten</a> - <a class="creador" href="https://www.linkedin.com/in/juliancaminaur/">Jcaminaur</a></span>
         </div>
       </div>
+      <div class="padre">
     </footer>
 
-    <div class="padre">
 
-        <div class="socialBar">
-          <ul>
+        <div  class="socialBar">
+          <button id="showhide" class="closebar" onclick="myFunction()">Hide</button>
+          <ul id="socialBar">
             <li><a href="https://api.whatsapp.com/send?phone=5491165966303&text=Hola, estoy contactandolos desde IL Nato Tienda Online" target="_blank" class="icon-whatsapp" data-toggle="tooltip" data-placement="right" data-original-title="Consulta por Whatsapp!"><ion-icon name="logo-whatsapp"></ion-icon></a></li>
             <li><a href="tel:+549-11-54126300" target="_blank"  class="icon-phone" data-toggle="tooltip" data-placement="right" data-original-title="Llamanos"><ion-icon name="call"></ion-icon></a></li>
             <li><a href="mailto:contacto@ilnato.com" class="icon-mail"><ion-icon name="mail"></ion-icon></a></li>
@@ -230,6 +231,7 @@
             <li><a href="https://www.instagram.com/il_nato/" target="_blank" class="icon-instagram"><ion-icon class="logo-instagram" name="logo-instagram"></ion-icon></a></li>
           </ul>
         </div>
+
 
       </div>
 

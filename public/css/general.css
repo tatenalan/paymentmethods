@@ -7,12 +7,12 @@
   scroll-behavior: smooth;
 }
 
-body {
-
-}
-
 main {
   margin-top: 66px;
+}
+
+.row {
+  align-items: center;
 }
 
 .titulo {
