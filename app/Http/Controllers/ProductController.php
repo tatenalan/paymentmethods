@@ -163,7 +163,6 @@ class ProductController extends Controller
 
       public function update(Request $request, int $id) // se muestra el producto con los campos completos listo para editar. A diferencia de guardar, update lleva tambien la variable $id
       {
-
           // Declaro las variables de validacion
 
         $reglas = [
@@ -210,9 +209,9 @@ class ProductController extends Controller
             $brands = Brand::all();
 
             // return view('/edit', compact('product','genres', 'categories','images' ,'sizes', 'stock','brands'));
-
+            $vac = compact('product','genres', 'categories','images' ,'sizes', 'stock','brands');
             // Redirijo
-            return redirect('/producto/'.$product->id, compact('product','genres', 'categories','images' ,'sizes', 'stock','brands'));
+            return \Redirect::back();
       }
 
 

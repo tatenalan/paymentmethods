@@ -14,7 +14,7 @@ class BrandController extends Controller
      */
 
 
-    public function edit() // se muestran los datos del producto elegido listo para editar
+    public function index() // se muestran los datos del producto elegido listo para editar
     {
       $brands = Brand::all();
       $vac = compact('brands');
@@ -85,7 +85,7 @@ class BrandController extends Controller
       return view('/editbrand',$vac);
     }
 
-    
+
     /**
      * Remove the specified resource from storage.
      *

@@ -1,6 +1,3 @@
-{{-- @php
-  dd($errors);
-@endphp --}}
 @extends('plantilla')
 @section('css')
 form
@@ -101,12 +98,12 @@ form
         <div class="form-group">
           @foreach ($sizes as $size)
             <label for="{{$size->name}}">{{$size->name}}</label>
-            <input type="number" name="{{$size->name}}" value="">
+            <input type="number" name="{{$size->name}}" value="{{$size->stocks[0]->quantity}}">
           @endforeach
         </div>
       </form>
 
-      <form class="" action="/agregarimagen" method="post" enctype="multipart/form-data">
+      <form class="" action="/addimage" method="post" enctype="multipart/form-data">
         @csrf
 
 

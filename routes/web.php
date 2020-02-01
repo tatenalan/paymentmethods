@@ -59,23 +59,13 @@ Route::get('/producto/{id}', 'ProductController@show');
 
 Route::get('/editproduct/{id}', 'ProductController@edit');
 
-Route::put('/producto/{id}', 'ProductController@update');
+Route::put('/editproduct/{id}', 'ProductController@update');
 
 Route::post('/delete/product/{id}', 'ProductController@deleteproduct');
 
 Route::post('/addimage', 'ProductController@addImage');
 
 Route::post('/deleteimage', 'ProductController@deleteImage');
-
-  // Marcas
-
-Route::get('/editbrand', 'BrandController@edit');
-
-Route::post('/addbrand', 'BrandController@store');
-
-Route::put('/editbrand', 'BrandController@update');
-
-Route::post('/deletebrand', 'BrandController@destroy');
 
 // users
 
@@ -86,6 +76,38 @@ Route::get('/edituser', 'UserController@edit')->middleware('auth');
 Route::post('/deleteuser', 'UserController@delete')->middleware('auth');
 
 Route::put('/profile', 'UserController@update')->middleware('auth');
+
+// Marcas
+
+Route::get('/editbrand', 'BrandController@index');
+
+Route::post('/addbrand', 'BrandController@store');
+
+Route::put('/editbrand', 'BrandController@update');
+
+Route::post('/deletebrand', 'BrandController@destroy');
+
+
+// Categorias
+
+Route::get('/editcategory', 'CategoryController@index');
+
+Route::post('/addcategory', 'CategoryController@store');
+
+Route::put('/editcategory', 'CategoryController@update');
+
+Route::post('/deletecategory', 'CategoryController@destroy');
+
+// Categorias
+
+Route::get('/editcolor', 'ColorController@index');
+
+Route::post('/addcolor', 'ColorController@store');
+
+Route::put('/editcolor', 'ColorController@update');
+
+Route::post('/deletecolor', 'ColorController@destroy');
+
 
 // isAdmin
 
