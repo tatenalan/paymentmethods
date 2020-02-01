@@ -82,7 +82,7 @@ form
 
   				<div class="wrap-input100 validate-input" data-validate="Ingresa tu nombre">
   					<label class="label-input100" for="name">Nombre completo *</label>
-  					<input id="name" class="input100" type="text" name="name" value="{{ old('name') }}" placeholder="Nombre completo...">
+  					<input id="name" class="input100" type="text" name="name" value="{{ old('name') }}" placeholder="Nombre completo..." autofocus>
   					<span class="focus-input100"></span>
             @error('name')
               <p class="errorForm">{{ $message }}</p>

@@ -8,7 +8,7 @@ form
 @section('scripts')
   {{-- registro/login --}}
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="registro/vendor/bootstrap/css/bootstrap.min.css">
+	{{-- <link rel="stylesheet" type="text/css" href="registro/vendor/bootstrap/css/bootstrap.min.css"> --}}
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="registro/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 <!--===============================================================================================-->

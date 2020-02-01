@@ -1,5 +1,4 @@
 /* Navbar */
-
 a.navbar-brand {
   display: flex;
   flex-direction: column;
@@ -7,7 +6,7 @@ a.navbar-brand {
 }
 
 nav {
-  background-color: rgb(37,38,42);
+  background-color: #25262a;
   box-shadow: 0 0 7px black;
 }
 
@@ -25,11 +24,11 @@ nav ul {
 
 .nav-link {
   color: white;
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   font-size: 16px;
 }
 
-.nav-link:hover, button span:hover {
+a:hover, button.nav-link:hover {
   color: #ffffffb5;
 }
 
@@ -38,16 +37,16 @@ nav ul {
 }
 
 span.logo-bebas {
-  font-family: 'Bebas Neue', cursive;
+  font-family: "Bebas Neue";
   font-size: 36px;
   color: white;
 }
 
 span.logo-permanent {
-  font-family: 'Permanent Marker', cursive;
+  font-family: "Permanent Marker";
   font-size: 18px;
   margin-left: 40px;
-  color: rgba(218, 162, 65, 1);
+  color: #daa241;
 }
 
 div.menu-principal {
@@ -65,7 +64,7 @@ div.modal-dialog {
 }
 
 div.modal-header {
-  background-image: url('/img/yeezy4.png');
+  background-image: url("/img/yeezy4.png");
   height: 99px;
   background-size: cover;
   background-position: center;
@@ -100,8 +99,6 @@ img.bag-icon {
   font-family: Poppins-Regular, sans-serif;
 }
 
-.form-text a: {color: #977d2f9e;}.form-text a:hover {color: #977d2f9e;opacity: 0.5;}
-
 .modal-title {
   color: white;
 }
@@ -129,9 +126,6 @@ button span {
   line-height: 1.2;
   text-transform: uppercase;
   letter-spacing: 1px;
-  -webkit-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  -moz-transition: all 0.4s;
   transition: all 0.4s;
   outline: none !important;
   border: none;
@@ -142,7 +136,7 @@ button span {
 }
 
 .btn-modal {
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   color: white;
   overflow: visible;
   width: auto;
@@ -159,19 +153,14 @@ button span {
 }
 
 .contact100-form {
-    padding: 0px 30px 55px 30px;
+  padding: 0px 30px 55px 30px;
 }
 
 .fas {
-color: white;
+  color: white;
 }
 
-/* button:hover {
-  color: #ffffffb5;
-} */
-
 @media (min-width: 992px) {
-
   .celu {
     display: none;
   }
@@ -183,6 +172,4 @@ color: white;
   div.modal-dialog {
     width: 55%;
   }
-
-
 }

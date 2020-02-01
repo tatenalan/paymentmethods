@@ -15,14 +15,14 @@
     <!-- Icono del logo en pestana --><link rel="icon" type="image/png" href="/img/ilnato.png">
     <!-- Mi css General --><link rel="stylesheet" href="/css/general.css">
     <!-- Mi css Socialbar --><link rel="stylesheet" href="/css/socialbar.css">
-    <!-- Mi css General --><link rel="stylesheet" href="/css/header.css">
-    <!-- Mi css General --><link rel="stylesheet" href="/css/footer.css">
+    <!-- Mi css Header --><link rel="stylesheet" href="/css/header.css">
+    <!-- Mi css Footer --><link rel="stylesheet" href="/css/footer.css">
     <title>@yield('titulo')</title>
     <link rel="stylesheet" href="/css/@yield('css').css">
 
     @yield('scripts')
     {{-- Scripts --}}
-    {{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script> --}}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
     <script type="text/javascript" src="/js/funciones.js"></script>
 
   </head>
