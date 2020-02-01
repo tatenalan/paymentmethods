@@ -1,6 +1,3 @@
-{{-- @php
-  dd($errors);
-@endphp --}}
 @extends('plantilla')
 @section('css')
 form
@@ -34,7 +31,7 @@ form
             <p class="errorForm">{{ $message }}</p>
       @enderror
     </div>
-    <div id="discount" @if (old('onSale') == 1) class="form-group" @else class="hidden" @endif>
+    <div id="discount" class="form-group" hidden>
       <label>Descuento</label>
       <input id="discount_id" type="number" name="discount" value="0" step="5" max="80">
       @error('discount')

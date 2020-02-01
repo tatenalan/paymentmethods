@@ -45,7 +45,7 @@ class ProductController extends Controller
         $reglas = [
           'title' => 'required|string|min:1|max:50',
           'price' => 'required|integer|min:50|max:150000',
-          'discount' => 'integer|min:10|max:80', // para hacer required discount hay que tenerlo hidden siempre
+          'discount' => 'integer|min:0|max:80', // para hacer required discount hay que tenerlo hidden siempre
           'genre_id' => 'required',
           'brand_id' => 'required',
           "images" => "required|array|min:1",
@@ -77,7 +77,12 @@ class ProductController extends Controller
           $product->name = $request->title; // alternativa $producto->name = $request->name;
           $product->price = $request->price;
           $product->onSale = $request->onSale;
-          $product->discount = $request->discount;
+          if ($request->onSale==1) {
+            $product->discount = $request->discount;
+          }
+          else {
+            $product->discount = null;
+          }
           $product->genre_id = $request->genre_id;
           $product->category_id = $request->category_id;
           $product->brand_id = $request->brand_id;
