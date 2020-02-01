@@ -43,6 +43,10 @@ a:hover, button.nav-link:hover {
   color: #ffffffb5;
 }
 
+button span:hover{
+  color: #ffffffb5;
+}
+
 span.logo-bebas {
   font-family: "Bebas Neue";
   font-size: 36px;
@@ -103,7 +107,7 @@ img.bag-icon {
 }
 
 .label-input100, .form-text, .form-text a, .modal-title {
-  font-family: Poppins-Regular, sans-serif;
+  font-family: 'Poppins-Regular, sans-serif';
 }
 
 .modal-title {
@@ -161,10 +165,6 @@ button span {
 
 .contact100-form {
   padding: 0px 30px 55px 30px;
-}
-
-.fas {
-  color: white;
 }
 
 @media (min-width: 992px) {
