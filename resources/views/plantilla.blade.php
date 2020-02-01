@@ -79,7 +79,7 @@
               <li class="nav-item">
                 <form class="" action="/logout" method="post">
                   @csrf
-                  <p class="cerrar-sesion-responsive"><button class="nav-link" type="submit" name="button"><i class="fas fa-sign-out-alt"></i><span> Cerrar Sesion</span></button></p>
+                  <button class="nav-link" type="submit" name="button"><i class="fas fa-sign-out-alt"></i><span> Cerrar Sesion</span></button>
                 </form>
               </li>
 
