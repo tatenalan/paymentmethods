@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-=======
-@php
-  dd($errors);
-@endphp
->>>>>>> 0784015616dd5385d4e84efd60cc5974b4e73f84
 @extends('plantilla')
 @section('css')
 form
