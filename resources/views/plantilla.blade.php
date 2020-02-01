@@ -12,44 +12,7 @@
     <!-- Bootstrap JS --><script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <!-- Bootstrap JS --><script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <!-- Google Fonts --><link href="https://fonts.googleapis.com/css?family=Bebas+Neue|Oswald|Permanent+Marker&display=swap" rel="stylesheet">
-    <!-- Icono del logo en pestana --><link rel="icon" type="image/png" href="/img/ilnato.png" />
-
-
-  {{-- registro --}}
-<!--===============================================================================================-->
-	{{-- <link rel="stylesheet" type="text/css" href="registro/vendor/bootstrap/css/bootstrap.min.css"> --}}
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="registro/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-<!--===============================================================================================-->
-	{{-- <link rel="stylesheet" type="text/css" href="registro/fonts/Linearicons-Free-v1.0.0/icon-font.min.css"> --}}
-<!--===============================================================================================-->
-	{{-- <link rel="stylesheet" type="text/css" href="registro/vendor/animate/animate.css"> --}}
-<!--===============================================================================================-->
-	{{-- <link rel="stylesheet" type="text/css" href="registro/vendor/css-hamburgers/hamburgers.min.css"> --}}
-<!--===============================================================================================-->
-	{{-- <link rel="stylesheet" type="text/css" href="registro/vendor/animsition/css/animsition.min.css"> --}}
-<!--===============================================================================================-->
-	{{-- <link rel="stylesheet" type="text/css" href="registro/vendor/select2/select2.min.css"> --}}
-<!--===============================================================================================-->
-	{{-- <link rel="stylesheet" type="text/css" href="registro/vendor/daterangepicker/daterangepicker.css"> --}}
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="registro/css/util.css">
-	<link rel="stylesheet" type="text/css" href="registro/css/main.css">
-<!--===============================================================================================-->
-
-  {{-- FORM CONTACTO --}}
-<!--===============================================================================================-->
-  {{-- <script src="vendor/jquery/jquery-3.2.1.min.js"></script> Comentado xq genera conflicto con menu hamburguesa --}}
-<!--===============================================================================================-->
-  {{-- <script src="vendor/bootstrap/js/popper.js"></script> --}}
-<!--===============================================================================================-->
-  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-<!--===============================================================================================-->
-  {{-- <script src="vendor/select2/select2.min.js"></script> --}}
-<!--===============================================================================================-->
-  {{-- <script src="js/main.js"></script> --}}
-
-
+    <!-- Icono del logo en pestana --><link rel="icon" type="image/png" href="/img/ilnato.png">
     <!-- Mi css General --><link rel="stylesheet" href="/css/general.css">
     <!-- Mi css Socialbar --><link rel="stylesheet" href="/css/socialbar.css">
     <!-- Mi css General --><link rel="stylesheet" href="/css/header.css">
@@ -57,8 +20,9 @@
     <title>@yield('titulo')</title>
     <link rel="stylesheet" href="/css/@yield('css').css">
 
+    @yield('scripts')
     {{-- Scripts --}}
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+    {{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script> --}}
     <script type="text/javascript" src="/js/funciones.js"></script>
 
   </head>

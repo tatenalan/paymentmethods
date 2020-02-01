@@ -1,3 +1,17 @@
+// Underline Effect
+
+$red: #daa241;
+$brown: #584E4A;
+$whitey: #f0f0f0;
+
+$duration: .2s;
+$distance: 8px;
+$easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.275);
+
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:700);
+
+// ends variables from underline effect
+
 /* Navbar */
 
 a.navbar-brand {
@@ -29,7 +43,7 @@ nav ul {
   font-size: 16px;
 }
 
-.nav-link:hover, button span:hover {
+.nav-link:hover button.nav-link:hover {
   color: #ffffffb5;
 }
 
@@ -100,7 +114,6 @@ img.bag-icon {
   font-family: Poppins-Regular, sans-serif;
 }
 
-.form-text a: {color: #977d2f9e;}.form-text a:hover {color: #977d2f9e;opacity: 0.5;}
 
 .modal-title {
   color: white;
@@ -166,10 +179,6 @@ button span {
 color: white;
 }
 
-/* button:hover {
-  color: #ffffffb5;
-} */
-
 @media (min-width: 992px) {
 
   .celu {
@@ -186,3 +195,46 @@ color: white;
 
 
 }
+
+// underline effect   https://speckyboy.com/underline-text-effects-css/ efecto 7. Just Dropping in
+
+// a.nav-link, button.nav-link{
+//   font-size: 20px;
+//   position: relative;
+//   text-decoration: none;
+//   padding-bottom: 8px;
+//
+//    &:before,
+//     &:after {
+//         content: '';
+//         position: absolute;
+//         bottom: 2px;
+//         left: 0; right: 0;
+//         height: 2px;
+//         background-color: $red;
+//     }
+//     &:before {
+//         opacity: 0;
+//         transform: translateY(- $distance);
+//         transition: transform 0s $easeOutBack, opacity 0s;
+//     }
+//     &:after {
+//         opacity: 0;
+//         transform: translateY($distance/2);
+//         transition: transform $duration $easeOutBack, opacity $duration;
+//     }
+//     &:hover,
+//     &:focus {
+//         &:before,
+//         &:after {
+//             opacity: 1;
+//             transform: translateY(0);
+//         }
+//         &:before {
+//             transition: transform $duration $easeOutBack, opacity $duration;
+//         }
+//         &:after {
+//             transition: transform 0s $duration $easeOutBack, opacity 0s $duration;
+//         }
+//     }
+// }
