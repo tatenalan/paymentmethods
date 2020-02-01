@@ -1,6 +1,6 @@
-{{-- @php
+@php
   dd($errors);
-@endphp --}}
+@endphp
 @extends('plantilla')
 @section('css')
 form
@@ -24,23 +24,22 @@ form
             <p class="errorForm">{{ $message }}</p>
       @enderror
     </div>
-    <div class="">
-      <label>¿Esta en oferta?</label>
-      <select id='oferta' class="" name="onSale">
-        <option value=0>No esta en oferta</option>
-        <option value=1>Esta en oferta</option>
+    <div class="col-6 col-lg-4 offset-lg-2 col-md-6 form-group">
+      <label for="">En oferta? : </label>
+      <select id='onSale' class="form-control" name="onSale">
+        <option value =0 {{(0 == old('onSale'))?'selected': ''}}>No esta en oferta</option>
+        <option value =1 {{(1 == old('onSale'))?'selected': ''}}>Esta en oferta</option>
       </select>
-      @error('onSale')
-            <p class="errorForm">{{ $message }}</p>
-      @enderror
     </div>
-    <div id="discount" @if (old('onSale') == 1) class="form-group" @else class="hidden" @endif>
+
+    <div id="discount" @if (old('onSale') == 1) class="col-6 col-lg-4 col-md-6 form-group" @else class="hidden col-6 col-lg-4 col-md-6 form-group" @endif>
       <label>Descuento</label>
-      <input id="discount_id" type="number" name="discount" value="0" step="5" max="80">
+      <input id="inputDiscount" class="cantidad form-control" type="number" name="discount" max="80" step="5" @if (old('discount') !== null) value="{{ old('discount') }}" @else value="" @endif >
       @error('discount')
             <p class="errorForm">{{ $message }}</p>
       @enderror
     </div>
+
     <div class="">
       <label for="genre_id">Genero</label>
       <select class="" name="genre_id">
@@ -105,5 +104,5 @@ form
           <br><br><small id="emailHelp" class="form-text text-muted">Los valores con un * son obligatorios.</small>
         </div>
   </form>
-  <script src="/js/agregarProducto.js" charset="utf-8"></script>
+  {{-- <script src="/js/agregarProducto.js" charset="utf-8"></script> --}}
 @endsection
