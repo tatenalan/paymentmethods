@@ -164,7 +164,6 @@ class ProductController extends Controller
       public function update(Request $request, int $id) // se muestra el producto con los campos completos listo para editar. A diferencia de guardar, update lleva tambien la variable $id
       {
           // Declaro las variables de validacion
-
         $reglas = [
            'name' => 'required|string|min:1|max:50',
            'price' => 'required|integer|min:50|max:150000',
@@ -201,6 +200,12 @@ class ProductController extends Controller
             $product->brand_id = $request->brand;
             $product->save();
 
+            $stocks = $product->stocks;
+
+            foreach ($stocks as $stock) {
+              $stock->quantity = $request[$stock->size->name];
+              $stock->save();
+            }
 
             $genres = Genre::all();
             $images = Image::where('product_id', '=', $id)->get();
