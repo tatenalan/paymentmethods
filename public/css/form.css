@@ -15,3 +15,7 @@ label.remember-me {
 .contact100-more {
   background-position: right;
 }
+
+.hidden {
+  display: none;
+}

@@ -4,7 +4,7 @@ Contactanos
 @endsection
 {{-- FORM CONTACTO --}}
 <!--===============================================================================================-->
-{{-- <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css"> --}}
+<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
 <!--===============================================================================================-->
 <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 <!--===============================================================================================-->
@@ -20,6 +20,28 @@ Contactanos
 @section('css')
 form
 @endsection('css')
+@section('scripts')
+  {{-- FORM CONTACTO --}}
+  <!--===============================================================================================-->
+  {{-- <script src="vendor/jquery/jquery-3.2.1.min.js"></script> Comentado xq genera conflicto con menu hamburguesa --}}
+  <!--===============================================================================================-->
+  <script src="vendor/bootstrap/js/popper.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+  <!--===============================================================================================-->
+  <script src="vendor/select2/select2.min.js"></script>
+  <!--===============================================================================================-->
+  <script src="js/main.js"></script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-23581568-13');
+  </script>
+@endsection('scripts')
 @section('main')
 
   <div class="bg-contact2" style="background-image: url('img/cross.jpg');">
@@ -59,23 +81,3 @@ form
 	</div>
 
 @endsection
-{{-- FORM CONTACTO --}}
-<!--===============================================================================================-->
-{{-- <script src="vendor/jquery/jquery-3.2.1.min.js"></script> Comentado xq genera conflicto con menu hamburguesa --}}
-<!--===============================================================================================-->
-<script src="vendor/bootstrap/js/popper.js"></script>
-<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-<!--===============================================================================================-->
-<script src="vendor/select2/select2.min.js"></script>
-<!--===============================================================================================-->
-<script src="js/main.js"></script>
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-
-gtag('config', 'UA-23581568-13');
-</script>

@@ -45,7 +45,7 @@ class ProductController extends Controller
         $reglas = [
           'title' => 'required|string|min:1|max:50',
           'price' => 'required|integer|min:50|max:150000',
-          'discount' => 'integer|min:0|max:80', // para hacer required discount hay que tenerlo hidden siempre
+          'discount' => 'integer|max:80|nullable', // para hacer required discount hay que tenerlo hidden siempre
           'genre_id' => 'required',
           'brand_id' => 'required',
           "images" => "required|array|min:1",
@@ -67,7 +67,7 @@ class ProductController extends Controller
             "images.*.max" => 'La imagen es muy pesada',
             "images.min" => "Debes subir al menos una imagen",
             "images.required" => "Sube una imagen del producto",
-            "discount.min" => "Debe tener al menos un 10% de descuento",
+            "discount.max" => "Debe tener como maximo 80% de descuento",
           ];
 
 
@@ -172,7 +172,7 @@ class ProductController extends Controller
         $reglas = [
            'name' => 'required|string|min:1|max:50',
            'price' => 'required|integer|min:50|max:150000',
-           'discount' => 'integer|min:10|max:80',
+           'discount' => 'integer|nullable|max:80',
            "images" => "array",
            "images.*" => 'image|mimes:jpg,jpeg,png|max:2048',
            ];
@@ -187,7 +187,6 @@ class ProductController extends Controller
            "mimes" => "Formato de imagen invalido",
            "images.*.max" => 'La imagen es muy pesada',
            "images.min" => "Debes subir al menos una imagen",
-           "discount.min" => "Debe tener al menos un 10% de descuento",
            ];
 
            // validamos
