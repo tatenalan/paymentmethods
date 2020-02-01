@@ -96,9 +96,9 @@ form
         </div>
 
         <div class="form-group">
-          @foreach ($sizes as $size)
-            <label for="{{$size->name}}">{{$size->name}}</label>
-            <input type="number" name="{{$size->name}}" value="{{$size->stocks[0]->quantity}}">
+          @foreach ($product->stocks as $stock)
+              <label for="{{$stock->size->name}}">{{$stock->size->name}}</label>
+              <input type="number" name="{{$stock->size->name}}" value="{{$stock->quantity}}">
           @endforeach
         </div>
       </form>

@@ -152,10 +152,10 @@ class ProductController extends Controller
         $brands = Brand::all();
         $images = Image::where('product_id', '=', $id)->get();
         $categories = Category::all();
-        $stock = Stock::find($id);
+        $stocks = Stock::where('product_id','=',$product->id)->get();
         $sizes = Size::all();
 
-        return view('/editproduct', compact('product','genres', 'categories','images' ,'sizes', 'stock','brands'));
+        return view('/editproduct', compact('product','genres', 'categories','images' ,'sizes', 'stocks','brands'));
       }
 
 
@@ -200,6 +200,7 @@ class ProductController extends Controller
             $product->category_id = $request->category;
             $product->brand_id = $request->brand;
             $product->save();
+
 
             $genres = Genre::all();
             $images = Image::where('product_id', '=', $id)->get();
