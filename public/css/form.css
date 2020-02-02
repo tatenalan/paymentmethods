@@ -19,3 +19,13 @@ label.remember-me {
 .hidden {
   display: none;
 }
+.input_form{
+  outline: auto;
+  border: 0.5px grey solid;
+}
+.main_form{
+  width: 80%;
+}
+h2{
+  text-align: center;
+}

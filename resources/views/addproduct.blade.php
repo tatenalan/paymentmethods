@@ -5,18 +5,25 @@ form
 @section('main')
 
   <h2>Agregar Producto</h2>
-  <form class="" action="/addproduct" method="post" enctype="multipart/form-data">
+  <form class="main_form" action="/addproduct" method="post" enctype="multipart/form-data">
     @csrf
-    <div class="">
+    <div class="col-6 col-lg-4 offset-lg-2 col-md-6 form-group">
       <label>Nombre: </label>
-      <input type="text" name="title" value="">
+      <input class="input_form" type="text" name="title" value="">
       @error('title')
             <p class="errorForm">{{ $message }}</p>
       @enderror
     </div>
-    <div class="">
+    <div class="col-6 col-lg-4 offset-lg-2 col-md-6 form-group">
+      <label>Modelo: </label>
+      <input class="input_form" type="text" name="model" value="">
+      @error('model')
+            <p class="errorForm">{{ $message }}</p>
+      @enderror
+    </div>
+    <div class="col-6 col-lg-4 offset-lg-2 col-md-6 form-group">
       <label>Precio: </label>
-      <input type="number" name="price" step="100" value="500" min="100">
+      <input class="input_form" type="number" name="price" step="100" value="500" min="100">
       @error('price')
             <p class="errorForm">{{ $message }}</p>
       @enderror
@@ -37,7 +44,7 @@ form
       @enderror
     </div>
 
-    <div class="">
+    <div class="col-6 col-lg-4 offset-lg-2 col-md-6 form-group">
       <label for="genre_id">Genero</label>
       <select class="" name="genre_id">
         <option value="">Seleccione una opcion</option>
@@ -49,7 +56,7 @@ form
             <p class="errorForm">{{ $message }}</p>
       @enderror
     </div>
-    <div class="">
+    <div class="col-6 col-lg-4 offset-lg-2 col-md-6 form-group">
       <label>Categoria: </label>
       <select class="" name="category_id">
         <option value="">Seleccione una categoria</option>
@@ -61,7 +68,7 @@ form
             <p class="errorForm">{{ $message }}</p>
       @enderror
     </div>
-    <div class="">
+    <div class="col-6 col-lg-4 offset-lg-2 col-md-6 form-group">
       <label for="brand_id">Marca</label>
       <select class="" name="brand_id">
         <option value="">Seleccione una marca</option>
@@ -73,7 +80,7 @@ form
             <p class="errorForm">{{ $message }}</p>
       @enderror
     </div>
-    <div class="">
+    <div class="col-6 col-lg-4 offset-lg-2 col-md-6 form-group">
       <label>Stock</label>
       @foreach ($sizes as $size)
         <label for="">{{$size->name}}</label>
@@ -84,7 +91,7 @@ form
       @enderror
       @endforeach
     </div>
-    <div class="">
+    <div class="col-6 col-lg-4 offset-lg-2 col-md-6 form-group">
           <label for="">Agregue la/s imagenes del producto:</label>
           <label for="file-upload" class="subir">
           <i class="fas fa-cloud-upload-alt"></i> Subir archivo

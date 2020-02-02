@@ -117,7 +117,30 @@ Productos
               <a class="ordenar" href="/">Ordenar!  <ion-icon name="cart"></ion-icon></a>
             </div>
           </div>
-
+          @foreach ($products as $product)
+            <div class="padding col-6 col-md-4 col-lg-3">
+              <div class="maincontainer">
+                @if (count($product->images)>1)
+                <div class="thecard">
+                  <figure>
+                    <a href="/"><img src="/storage/{{$product->images[0]->path}}" class="img-productos thefront"></a>
+                  </figure>
+                  <figure>
+                    <a href="/"><img src="/storage/{{$product->images[1]->path}}" class="img-productos theback"></a>
+                  </figure>
+                </div>
+                @else
+                  <a href="/"><img src="/storage/{{$product->images[0]->path}}" style="" class="img-productos"></a>
+                @endif
+              </div>
+              <div class="producto">
+                <p class="marca">{{$product->brand->name}}</p>
+                <p class="nombre">{{$product->name}}</p>
+                <a class="ordenar" href="/editproduct/{{$product->id}}">Editar Product</a>
+                <a class="ordenar" href="/">Ordenar!  <ion-icon name="cart"></ion-icon></a>
+              </div>
+            </div>
+          @endforeach
         </div>
       </section>
     </div>

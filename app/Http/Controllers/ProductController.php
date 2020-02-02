@@ -48,12 +48,14 @@ class ProductController extends Controller
           'discount' => 'integer|max:80|nullable', // para hacer required discount hay que tenerlo hidden siempre
           'genre_id' => 'required',
           'brand_id' => 'required',
+          'model' => 'max:50',
           "images" => "required|array|min:1",
           "images.*" => 'image|mimes:jpg,jpeg,png|max:2048',
           ];
 
 
           $mensajes = [
+            "model.max" => "El nombre del modelo es muy largo",
             "title.required" => "Ingrese el nombre del producto",
             "price.required" => "Ingrese el precio del producto",
             "brand_id.required" => "Debe seleccionar la marca",
@@ -72,11 +74,11 @@ class ProductController extends Controller
 
 
           $this->validate($request, $reglas, $mensajes);
-
           $product = new Product();
           $product->name = $request->title; // alternativa $producto->name = $request->name;
           $product->price = $request->price;
           $product->onSale = $request->onSale;
+          $product->model = $request->model;
           if ($request->onSale==1) {
             $product->discount = $request->discount;
           }
@@ -173,10 +175,12 @@ class ProductController extends Controller
            'name' => 'required|string|min:1|max:50',
            'price' => 'required|integer|min:50|max:150000',
            'discount' => 'integer|nullable|max:80',
+           'model' => 'max:50',
            "images" => "array",
            "images.*" => 'image|mimes:jpg,jpeg,png|max:2048',
            ];
         $mensajes = [
+           "model.max" => "El nombre del modelo es muy largo",
            "name.required" => "Ingrese el nombre del producto",
            "price.required" => "Ingrese el precio del producto",
            'string' => "El campo :attribute debe ser un texto",
@@ -196,12 +200,13 @@ class ProductController extends Controller
             $product = Product::find($id);
 
             $product->name = $request->name;
+            $product->model = $request->model;
             $product->price = $request->price;
             $product->onSale = $request->onSale;
             $product->discount = $request->discount;
-            $product->genre_id = $request->genre;
-            $product->category_id = $request->category;
-            $product->brand_id = $request->brand;
+            $product->genre_id = $request->genre_id;
+            $product->category_id = $request->category_id;
+            $product->brand_id = $request->brand_id;
             $product->save();
 
             $stocks = $product->stocks;

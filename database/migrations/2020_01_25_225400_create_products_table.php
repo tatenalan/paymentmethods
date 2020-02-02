@@ -17,7 +17,7 @@ class CreateProductsTable extends Migration
           $table->bigIncrements('id');
           $table->string('name', 50);
           $table->integer('price');
-          $table->boolean('onSale')->default(false); // a prueba
+          $table->boolean('onSale')->default(false);
           $table->integer('discount')->nullable();
           $table->string('model', 50)->nullable();
 
