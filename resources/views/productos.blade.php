@@ -12,7 +12,27 @@ Productos
         <div class="row">
           <div class="padding col-6 col-md-4 col-lg-3">
             <div class="producto">
-              <a href="/"><img src="/img/producto5a.jpg" style="" class="img-productos"></a>
+              <div id="carouselExampleFade" class="carousel slide " data-ride="carousel" data-interval="false">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="/img/producto5b.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="/img/producto5c.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="/img/producto5d.jpg" class="d-block w-100" alt="...">
+                  </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+                  <span><i class="fa fa-angle-left" aria-hidden="true"></i></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+                <span><i class="fa fa-angle-right" aria-hidden="true"></i></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
               <p class="marca">Zapatilla</p>
               <p class="nombre">Yeezy</p>
               <a class="ordenar" href="/">Ordenar!  <ion-icon name="cart"></ion-icon></a>
@@ -153,20 +173,24 @@ Productos
           @foreach ($products as $product)
             <div class="padding col-6 col-md-4 col-lg-3">
               <div class="producto">
-                @if (count($product->images)>1)
-                <div class="thecard">
-                  <figure>
-                    <a href="/"><img src="/storage/{{$product->images[0]->path}}" class="img-productos"></a>
-                  </figure>
-                  <figure>
-                    <a href="/"><img src="/storage/{{$product->images[1]->path}}" class="img-productos"></a>
-                  </figure>
-                </div>
-                @else
-                  <a href="/"><img src="/storage/{{$product->images[0]->path}}" style="" class="img-productos"></a>
-                @endif
-              </div>
-              <div class="producto">
+                  <div id="carouselExampleFade" class="carousel slide " data-ride="carousel" data-interval="false">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <a href="/product/{{$product->id}}"><img src="/img/{{$product->images[0]->path}}" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        {{-- <a href="/product/{{$product->id}}"><img src="/storage/{{$product->images[1]->path}}" class="d-block w-100" alt="..."> --}}
+                      </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+                      <span><i class="fa fa-angle-left" aria-hidden="true"></i></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+                    <span><i class="fa fa-angle-right" aria-hidden="true"></i></span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                  </div>
                 <p class="marca">{{$product->brand->name}}</p>
                 <p class="nombre">{{$product->name}}</p>
                 @if (Auth::user()->isAdmin == true)

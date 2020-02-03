@@ -45,6 +45,12 @@ a.ordenar:hover {
   overflow: hidden;
 }
 
+ /* flechas del carousel */
+
+.fa-angle-left, .fa-angle-right {
+  color: #000000bf;
+    font-size: 20px;
+}
 
 
 /* .maincontainer{
