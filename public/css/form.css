@@ -19,6 +19,7 @@ label.remember-me {
 .hidden {
   display: none;
 }
+
 .input_form{
   outline: auto;
   border: 0.5px grey solid;

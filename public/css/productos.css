@@ -15,7 +15,7 @@
 }
 
 a.ordenar {
-  padding: 14px;
+  padding: 8px;
   margin: 10px;
   display: block;
   min-width: 122px;
@@ -47,7 +47,7 @@ a.ordenar:hover {
 
 
 
-.maincontainer{
+/* .maincontainer{
   position: relative;
   height: 300px;
 }
@@ -81,4 +81,4 @@ figure{margin: 0;}
   height: 100%;
   backface-visibility: hidden;
   transform: rotateY(180deg);
-}
+} */

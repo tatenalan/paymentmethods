@@ -7,12 +7,12 @@ home
 @endsection('css')
 @section('main')
 
-  <div id="main" class="pimg1">
-        <div class="ptext">
+  {{-- <div id="main" class="pimg1">
+        <div class="ptext"> --}}
           {{-- <a class="texto-parallax" href="/productos">PRODUCTOS</a> --}}
           {{-- <a class="texto-parallax" href="/productos">OFERTAS</a> --}}
-        </div>
-      </div>
+        {{-- </div>
+      </div> --}}
       <section class="section section-light">
         <h2>Nuevo en Tienda</h2>
         <p>
@@ -21,10 +21,10 @@ home
       </section>
       <div class="pimg2">
         <div class="ptext">
-          <div class="twoLabels">
+          {{-- <div class="twoLabels"> --}}
             {{-- <span class="texto-parallax wide">HOMBRE</span>
             <span class="texto-parallax wide">MUJER</span> --}}
-          </div>
+          {{-- </div> --}}
         </div>
       </div>
       <section class="section section-light">
@@ -34,7 +34,8 @@ home
       </section>
       <div class="pimg3">
         <div class="ptext2">
-          <span class="texto-parallax"><a href="/ofertas">Ofertas</a></span>
+          <a class="texto-parallax" href="/productos">PRODUCTOS</a>
+          <a class="texto-parallax" href="/productos">OFERTAS</a>
         </div>
       </div>
       <section class="section section-light">

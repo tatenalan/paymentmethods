@@ -22,7 +22,6 @@ main {
 .container {
   margin: 25px auto;
   text-align: center;
-  background-color: mintcream;
 }
 
 .oferta {
@@ -32,8 +31,23 @@ main {
 
 .centrado {
   text-align: center;
+  margin: 0 auto;
 }
 
 .hidden {
   display: none;
+}
+
+.cantidad {
+  max-width: 100px;
+  height: 26px;
+}
+
+.errorForm  {
+  color: red;
+}
+
+/* para persistir las flechitas del input number sin necesidad de hacerle hover */
+input[type=number]::-webkit-inner-spin-button {
+    opacity: 1
 }

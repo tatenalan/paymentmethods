@@ -6,20 +6,35 @@ window.addEventListener('load',function(){
   boton_iniciar_sesion = document.getElementById('iniciarSesion')
 })
 
+// Toma el nombre del archivo que queremos subir y lo pone dentro del elemento con la clase info para que podamos verlo.
+// esta funcion la utilizamos para cambiar la fachada del input file y poder seguir viendo los nombres de los archivos subidos.
+
+function change(){
+  var pdrs = document.getElementById('file-upload').files[0].name;
+  document.getElementById('info').innerHTML = pdrs;
+}
 
 
 
 // Muestra o esconde la barra de redes sociales
-function myFunction() {
+function hideAndShowSocialBar() {
   var socialBar = document.getElementById("socialBar");
   if (socialBar.style.display === "none") {
     socialBar.style.display = "block";
-    document.getElementById("showhide").innerHTML = 'Hide';
+    document.getElementById("showhide").innerHTML = 'X';
   } else {
     socialBar.style.display = "none";
     document.getElementById("showhide").innerHTML = 'Show';
   }
 }
+
+function hideSocialBar() {
+  var socialBar = document.getElementById("socialBar");
+    socialBar.style.display = "none";
+     document.getElementById("showhide").innerHTML = '';
+}
+
+
 
 
 window.addEventListener('load',function(){

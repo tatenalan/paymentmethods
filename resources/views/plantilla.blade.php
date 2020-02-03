@@ -187,7 +187,7 @@
 
 
         <div  class="socialBar">
-          <button id="showhide" class="closebar" onclick="myFunction()">Hide</button>
+          <button id="showhide" class="closebar" onclick="hideSocialBar()">X</button>
           <ul id="socialBar">
             <li><a href="https://api.whatsapp.com/send?phone=5491165966303&text=Hola, estoy contactandolos desde IL Nato Tienda Online" target="_blank" class="icon-whatsapp" data-toggle="tooltip" data-placement="right" data-original-title="Consulta por Whatsapp!"><ion-icon name="logo-whatsapp"></ion-icon></a></li>
             <li><a href="tel:+549-11-54126300" target="_blank"  class="icon-phone" data-toggle="tooltip" data-placement="right" data-original-title="Llamanos"><ion-icon name="call"></ion-icon></a></li>
