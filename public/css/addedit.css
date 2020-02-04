@@ -42,6 +42,11 @@ button.enviar {
   font-family: Montserrat-Bold;
 }
 
+button.enviar:hover {
+  color: white;
+  background: #404b46;
+}
+
 button.eliminar {
   padding: 14px;
   margin: 10px;

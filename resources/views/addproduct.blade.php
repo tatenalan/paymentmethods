@@ -12,7 +12,7 @@ addedit
       <div class="row">
         <div class="col-md-4 offset-md-2 form-group">
           <label>Nombre: *</label>
-          <input class="form-control" type="text" name="title" value="" placeholder="Ingrese el nombre">
+          <input class="form-control" type="text" name="title" value="" placeholder="Ingrese el nombre" autofocus>
           @error('title')
                 <p class="errorForm">{{ $message }}</p>
           @enderror

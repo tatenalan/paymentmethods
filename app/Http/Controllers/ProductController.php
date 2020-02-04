@@ -130,7 +130,7 @@ class ProductController extends Controller
           $stock->save();
         }
 
-          return redirect('/')
+          return redirect('/productos')
           ->with('status', 'Producto creado exitosamente!!!')
           ->with('operation', 'success');
       }

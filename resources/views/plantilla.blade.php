@@ -57,7 +57,7 @@
 
         <div class="logo">
 
-          <a class="navbar-brand" href="/main"><span class="logo-bebas">IL NATO</span><span class="logo-permanent"> Urban Store</span></a>
+          <a class="navbar-brand" href="/"><span class="logo-bebas">IL NATO</span><span class="logo-permanent"> Urban Store</span></a>
 
         </div>
 

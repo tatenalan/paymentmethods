@@ -42,6 +42,7 @@ ion-icon {
 div.socialBar .closebar {
 	float: right;
 	color: white;
+	background-color: black;
 }
 
 

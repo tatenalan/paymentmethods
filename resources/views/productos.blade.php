@@ -15,7 +15,7 @@ Productos
               <div id="carouselExampleFade" class="carousel slide " data-ride="carousel" data-interval="false">
                 <div class="carousel-inner">
                   <div class="carousel-item active">
-                    <img src="/img/producto5b.jpg" class="d-block w-100" alt="...">
+                    <img src="/img/producto5a.jpg" class="d-block w-100" alt="...">
                   </div>
                   <div class="carousel-item">
                     <img src="/img/producto5c.jpg" class="d-block w-100" alt="...">
@@ -36,8 +36,10 @@ Productos
               <p class="marca">Zapatilla</p>
               <p class="nombre">Yeezy</p>
               <a class="ordenar" href="/">Ordenar!  <ion-icon name="cart"></ion-icon></a>
-              @if (Auth::user()->isAdmin == true)
-                <a class="ordenar" href="/">Editar Producto</a>
+              @if (Auth::user())
+                @if (Auth::user()->isAdmin == true)
+                  <a class="ordenar" href="/">Editar Producto</a>
+                @endif
               @endif
             </div>
           </div>
@@ -48,8 +50,10 @@ Productos
               <p class="marca">Zapatilla</p>
               <p class="nombre">Yeezy</p>
               <a class="ordenar" href="/">Ordenar!  <ion-icon name="cart"></ion-icon></a>
-              @if (Auth::user()->isAdmin == true)
-                <a class="ordenar" href="/">Editar Producto</a>
+              @if (Auth::user())
+                @if (Auth::user()->isAdmin == true)
+                  <a class="ordenar" href="/">Editar Producto</a>
+                @endif
               @endif
             </div>
           </div>
@@ -60,8 +64,10 @@ Productos
               <p class="marca">Zapatilla</p>
               <p class="nombre">Yeezy</p>
               <a class="ordenar" href="/">Ordenar!  <ion-icon name="cart"></ion-icon></a>
-              @if (Auth::user()->isAdmin == true)
-                <a class="ordenar" href="/">Editar Producto</a>
+              @if (Auth::user())
+                @if (Auth::user()->isAdmin == true)
+                  <a class="ordenar" href="/">Editar Producto</a>
+                @endif
               @endif
             </div>
           </div>
@@ -72,8 +78,10 @@ Productos
             <p class="marca">Zapatilla</p>
             <p class="nombre">Yeezy</p>
             <a class="ordenar" href="/">Ordenar!  <ion-icon name="cart"></ion-icon></a>
-            @if (Auth::user()->isAdmin == true)
-              <a class="ordenar" href="/">Editar Producto</a>
+            @if (Auth::user())
+              @if (Auth::user()->isAdmin == true)
+                <a class="ordenar" href="/">Editar Producto</a>
+              @endif
             @endif
             </div>
           </div>
@@ -84,8 +92,10 @@ Productos
               <p class="marca">Zapatilla</p>
               <p class="nombre">Yeezy</p>
               <a class="ordenar" href="/">Ordenar!  <ion-icon name="cart"></ion-icon></a>
-              @if (Auth::user()->isAdmin == true)
-                <a class="ordenar" href="/">Editar Producto</a>
+              @if (Auth::user())
+                @if (Auth::user()->isAdmin == true)
+                  <a class="ordenar" href="/">Editar Producto</a>
+                @endif
               @endif
             </div>
           </div>
@@ -96,8 +106,10 @@ Productos
               <p class="marca">Zapatilla</p>
               <p class="nombre">Yeezy</p>
               <a class="ordenar" href="/">Ordenar!  <ion-icon name="cart"></ion-icon></a>
-              @if (Auth::user()->isAdmin == true)
-                <a class="ordenar" href="/">Editar Producto</a>
+              @if (Auth::user())
+                @if (Auth::user()->isAdmin == true)
+                  <a class="ordenar" href="/">Editar Producto</a>
+                @endif
               @endif
             </div>
           </div>
@@ -108,8 +120,10 @@ Productos
               <p class="marca">Zapatilla</p>
               <p class="nombre">Yeezy</p>
               <a class="ordenar" href="/">Ordenar!  <ion-icon name="cart"></ion-icon></a>
-              @if (Auth::user()->isAdmin == true)
-                <a class="ordenar" href="/">Editar Producto</a>
+              @if (Auth::user())
+                @if (Auth::user()->isAdmin == true)
+                  <a class="ordenar" href="/">Editar Producto</a>
+                @endif
               @endif
             </div>
           </div>
@@ -120,8 +134,10 @@ Productos
               <p class="marca">Zapatilla</p>
               <p class="nombre">Yeezy</p>
               <a class="ordenar" href="/">Ordenar!  <ion-icon name="cart"></ion-icon></a>
-              @if (Auth::user()->isAdmin == true)
-                <a class="ordenar" href="/">Editar Producto</a>
+              @if (Auth::user())
+                @if (Auth::user()->isAdmin == true)
+                  <a class="ordenar" href="/">Editar Producto</a>
+                @endif
               @endif
             </div>
           </div>
@@ -132,8 +148,10 @@ Productos
                 <p class="marca">Zapatilla</p>
                 <p class="nombre">Yeezy</p>
                 <a class="ordenar" href="/">Ordenar!  <ion-icon name="cart"></ion-icon></a>
-                @if (Auth::user()->isAdmin == true)
-                  <a class="ordenar" href="/">Editar Producto</a>
+                @if (Auth::user())
+                  @if (Auth::user()->isAdmin == true)
+                    <a class="ordenar" href="/">Editar Producto</a>
+                  @endif
                 @endif
             </div>
           </div>
@@ -144,8 +162,10 @@ Productos
               <p class="marca">Zapatilla</p>
               <p class="nombre">Yeezy</p>
               <a class="ordenar" href="/">Ordenar!  <ion-icon name="cart"></ion-icon></a>
-              @if (Auth::user()->isAdmin == true)
-                <a class="ordenar" href="/">Editar Producto</a>
+              @if (Auth::user())
+                @if (Auth::user()->isAdmin == true)
+                  <a class="ordenar" href="/">Editar Producto</a>
+                @endif
               @endif
             </div>
           </div>
@@ -156,8 +176,10 @@ Productos
               <p class="marca">Zapatilla</p>
               <p class="nombre">Yeezy</p>
               <a class="ordenar" href="/">Ordenar!  <ion-icon name="cart"></ion-icon></a>
-              @if (Auth::user()->isAdmin == true)
-                <a class="ordenar" href="/">Editar Producto</a>
+              @if (Auth::user())
+                @if (Auth::user()->isAdmin == true)
+                  <a class="ordenar" href="/">Editar Producto</a>
+                @endif
               @endif
             </div>
           </div>
@@ -176,11 +198,13 @@ Productos
                   <div id="carouselExampleFade" class="carousel slide " data-ride="carousel" data-interval="false">
                     <div class="carousel-inner">
                       <div class="carousel-item active">
-                        <a href="/product/{{$product->id}}"><img src="/img/{{$product->images[0]->path}}" class="d-block w-100" alt="...">
+                          <a href="/product/{{$product->id}}"><img src="/storage/{{$product->images[0]->path}}" class="d-block w-100" alt="...">
                       </div>
+                    {{-- @if (isset($product->images[1]->path)) --}}
                       <div class="carousel-item">
-                        {{-- <a href="/product/{{$product->id}}"><img src="/storage/{{$product->images[1]->path}}" class="d-block w-100" alt="..."> --}}
+                        <a href="/product/{{$product->id}}"><img src="/img/producto5a.jpg" class="d-block w-100" alt="...">
                       </div>
+                    {{-- @endif --}}
                     </div>
                     <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
                       <span><i class="fa fa-angle-left" aria-hidden="true"></i></span>
@@ -193,8 +217,20 @@ Productos
                   </div>
                 <p class="marca">{{$product->brand->name}}</p>
                 <p class="nombre">{{$product->name}}</p>
-                @if (Auth::user()->isAdmin == true)
-                  <a class="ordenar" href="/editproduct/{{$product->id}}">Editar Producto</a>
+                @if($product->onSale==true && isset($product->discount))
+                  @php
+                    $onSalePrice = $product->price - $product->price/100*$product->discount; // precio * descuento / 100
+                  @endphp
+                  <span class="descuento">{{$product->discount}}% off</span> <!-- Pone un cartelito de descuento sobre la imagen del producto-->
+                  <span class="precioAnterior">${{$product->price}}</span> <!-- Muestra precio anterior tachado -->
+                  <span class="precio">${{$onSalePrice}}</span><p></p> <!-- Muestra el precio con el descuento incluido -->
+                @else
+                    <p class="precio">${{$product->price}}</p>
+                @endif
+                @if (Auth::user())
+                  @if (Auth::user()->isAdmin == true)
+                    <a class="ordenar" href="/editproduct/{{$product->id}}">Editar Producto</a>
+                  @endif
                 @endif
                 <a class="ordenar" href="/">Ordenar!  <ion-icon name="cart"></ion-icon></a>
               </div>
