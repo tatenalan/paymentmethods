@@ -131,10 +131,30 @@ section.imagenes {
 
 }
 
+div.imagen-principal {
+  position: relative;
+}
+
 img.imagen-principal {
   max-height: 450px;
   width: 100%;
   border-bottom: 1px #8080804f solid;
+}
+
+.descuento {
+  padding-top: 10px;
+  position: absolute;
+  right: 3%;
+  top: 25px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  vertical-align: middle;
+  display: table;
+  color: white;
+  line-height: 15px;
+  background-color: #c59258;
+  border-radius: 50px;
 }
 
 .imagen-producto-peque {
@@ -188,7 +208,7 @@ input:-ms-input-placeholder { color: #adadad;}
 .btn-ordenar {
   width: 100%;
   padding: 6px;
-  margin: 10px;
+  margin: 8px 0px;
   background-color: #977d2f9e;
   border-radius: 11px;
   color: white;

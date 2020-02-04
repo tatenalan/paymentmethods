@@ -226,7 +226,7 @@ class ProductController extends Controller
             // return view('/edit', compact('product','genres', 'categories','images' ,'sizes', 'stock','brands'));
             $vac = compact('product','genres', 'categories','images' ,'sizes', 'stock','brands');
             // Redirijo
-            return \Redirect::back();
+            return redirect('/producto/'.$product->id);
       }
 
 

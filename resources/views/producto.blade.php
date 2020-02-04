@@ -12,21 +12,22 @@ productos
       <section class="imagenes">
         <div class="imagen-principal">
           <img class="imagen-principal" src="/img/producto4a.jpg" alt="">
-          <span class="descuento"> {{$product->discount}} % off</span> <!-- Pone un cartelito de descuento sobre la imagen del producto-->
+          @if ($product->onSale==true && isset($product->discount))
+            <span class="descuento"> {{$product->discount}} % off</span> <!-- Pone un cartelito de descuento sobre la imagen del producto-->
+            @endif
         </div>
         <div class="imagenes-pequeñas">
-          <img class="imagen-producto-peque"src="/img/producto4a.jpg" alt="">
-          <img class="imagen-producto-peque"src="/img/producto4b.jpg" alt="">
-          <img class="imagen-producto-peque"src="/img/producto4c.jpg" alt="">
-          <img class="imagen-producto-peque"src="/img/producto4d.jpg" alt="">
+          @foreach ($product->images as $image)
+            <img class="imagen-producto-peque"src="/storage/{{$image->path}}" alt="">
+          @endforeach
         </div>
       </section>
 
       <section class="informacion">
 
         <div class="fila-uno">
-        <h3>Nike</h3>
-        <h4>AIR MAX</h4>
+        <h3>{{$product->brand->name}}</h3>
+        <h4>{{$product->name}}</h4>
         @if ($product->onSale==true && isset($product->discount))
               @php
                 $onSalePrice = $product->price - $product->price/100*$product->discount; // precio * descuento / 100
@@ -57,6 +58,20 @@ productos
               <button type="submit" class="btn btn-ordenar">Ordenar</button>
             </div>
           </form>
+
+          @if (Auth::user() && Auth::user()->isAdmin == true)
+
+          <div class="edicion">
+            <form class="" action="/editproduct/{{$product->id}}" method="get">
+              @csrf
+              <button type="submit" class="btn btn-ordenar">Editar producto</button>
+            </form>
+            <form class="" onclick="confirmar()" action="/delete/product/{{$product->id}}" method="post">
+              @csrf
+              <button type="submit" class="btn btn-ordenar">Eliminar producto</button>
+            </form>
+          </div>
+        @endif
         </div>
 
       </section>
