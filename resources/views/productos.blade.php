@@ -198,7 +198,7 @@ Productos
                   <div id="carouselExampleFade" class="carousel slide " data-ride="carousel" data-interval="false">
                     <div class="carousel-inner">
                       <div class="carousel-item active">
-                          <a href="/product/{{$product->id}}"><img src="/storage/{{$product->images[0]->path}}" class="d-block w-100" alt="...">
+                          <a href="/producto/{{$product->id}}"><img src="/storage/{{$product->images[0]->path}}" class="d-block w-100" alt="...">
                       </div>
                     {{-- @if (isset($product->images[1]->path)) --}}
                       <div class="carousel-item">

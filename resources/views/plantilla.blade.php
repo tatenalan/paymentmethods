@@ -14,7 +14,7 @@
     <!-- Google Fonts --><link href="https://fonts.googleapis.com/css?family=Bebas+Neue|Oswald|Permanent+Marker&display=swap" rel="stylesheet">
     <!-- Icono del logo en pestana --><link rel="icon" type="image/png" href="/img/ilnato.png">
     <!-- Mi css General --><link rel="stylesheet" href="/css/general.css">
-    <!-- Mi css hover lento --><link rel="stylesheet" type="text/css" href="registro/css/main.css">
+    <!-- Mi css hover lento --><link rel="stylesheet" type="text/css" href="/registro/css/main.css">
     <!-- Mi css Socialbar --><link rel="stylesheet" href="/css/socialbar.css">
     <!-- Mi css Header --><link rel="stylesheet" href="/css/header.css">
     <!-- Mi css Footer --><link rel="stylesheet" href="/css/footer.css">
@@ -117,53 +117,7 @@
 
       @yield('main')
 
-      <!-- Modal -->
-        {{-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog" role="document">
-            <form class="contact100-form validate-form" method="POST" action="{{ route('login') }}" enctype="multipart/form-data">
-              <div class="modal-content">
-                    @csrf
 
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">INICIAR SESION</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <div class="wrap-input100 validate-input" data-validate = "Ingresa un email valido: ex@abc.xyz">
-            					<label class="label-input100" for="email">Email *</label>
-            					<input id="correo" class="input100" type="text" name="email" value="{{ old('email') }}" placeholder="Ingresa tu email..." required autocomplete="email" autofocus>
-            					<span class="focus-input100"></span>
-                      @error('email')
-                        <p class="errorForm">{{ $message }}</p>
-                      @enderror
-            				</div>
-
-                    <div class="wrap-input100 validate-input" data-validate="">
-            					<label class="label-input100" for="password">Contraseña *</label>
-            					<input id="pass" class="input100" type="password" name="password" value="" placeholder="Ingresa tu contraseña..." required autocomplete="current-password">
-            					<span class="focus-input100"></span>
-                      @error('password')
-                        <p class="errorForm">{{ $message }}</p>
-                      @enderror
-            				</div>
-
-                    <small class="form-text text-muted">No tienes una cuenta? <a href="/register"> Crear cuenta</a></small>
-                    @if (Route::has('password.request'))
-                      <small class="form-text text-muted">Olvidaste tu password? <a href="{{ route('password.request') }}"> Recuperar password</a></small>
-                    @endif
-
-                  </div>
-                  <div class="modal-footer">
-                    <button type="submit" class="btn btn-secondary">INGRESAR</button>
-                  </div>
-
-              </div>
-
-            </form>
-          </div>
-        </div> --}}
     </main>
 
     {{-- <div class="toTop">
@@ -187,8 +141,8 @@
 
 
         <div  class="socialBar">
-          <button id="showhide" class="closebar" onclick="hideSocialBar()">X</button>
           <ul id="socialBar">
+            <li><button id="showhide" class="closebar" onclick="hideSocialBar()">X</button></li>
             <li><a href="https://api.whatsapp.com/send?phone=5491165966303&text=Hola, estoy contactandolos desde IL Nato Tienda Online" target="_blank" class="icon-whatsapp" data-toggle="tooltip" data-placement="right" data-original-title="Consulta por Whatsapp!"><ion-icon name="logo-whatsapp"></ion-icon></a></li>
             <li><a href="tel:+549-11-54126300" target="_blank"  class="icon-phone" data-toggle="tooltip" data-placement="right" data-original-title="Llamanos"><ion-icon name="call"></ion-icon></a></li>
             <li><a href="mailto:contacto@ilnato.com" class="icon-mail"><ion-icon name="mail"></ion-icon></a></li>

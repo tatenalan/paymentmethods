@@ -1,18 +1,19 @@
 @extends('plantilla')
 @section('css')
-form
+addedit
 @endsection
 @section('main')
+
   <div class="container">
-    <h5 class="centrado titulo">Editar Producto</h5>
+    <h2 class="centrado titulo">Editar Producto</h2>
 
         <!-- Vista de edicion del Producto-->
-      <form class="form-signup" action='/editproduct/{{$product['id']}}' method="post" enctype="multipart/form-data">
+      <form class="main_form" action='/editproduct/{{$product['id']}}' method="post" enctype="multipart/form-data">
         {{csrf_field()}}
         <input type="hidden" name="_method" value="PUT">  {{--<!-- alternativa @method('put') --}}
 
         <div class="row">
-          <div class="col-8 col-lg-4 offset-lg-2 col-md-6 form-group">
+          <div class="col-md-4 offset-md-2 form-group">
             <label for="">Nombre: *</label>
             <input type="text" class="form-control" name="name" value="{{ old('name',$product->name)}}"> <?php // Se le pone el old(name, product name) No solo para que agarre los datos del nombre sino para que tambien persistan los cambios ante un error ?>
             @error('name')
@@ -20,15 +21,7 @@ form
             @enderror
           </div>
 
-          <div class="col-4 col-lg-4 col-md-6 form-group">
-            <label for="">Modelo: *</label>
-            <input type="text" class="form-control" name="model" value="{{ old('model',$product->model)}}">
-            @error('model')
-              <p class="errorForm">{{ $message }}</p>
-            @enderror
-          </div>
-
-          <div class="col-8 col-lg-4 offset-lg-2 col-md-6 form-group">
+          <div class="col-md-4 form-group">
             <label for="">Precio: *</label>
             <input type="number" class="form-control" min="100" max="15000" step="100" name="price" value="{{ old('price',$product->price)}}">
             @error('price')
@@ -38,27 +31,20 @@ form
         </div>
 
         <div class="row">
-          <div class="col-6 col-lg-4 offset-lg-2 col-md-6 form-group">
-            <div class="form-group">
-              <label for="">En oferta? : </label>
-              <select id="onSale" class="form-control" name="onSale">
-                  <option value =0 @if($product->onSale == 0) selected @endif>No esta en oferta</option>
-                  <option value =1 @if($product->onSale == 1) selected @endif>Esta en oferta</option>
-              </select>
-            </div>
+          <div class="col-md-4 offset-md-2 form-group">
+            <label for="">Marca: *</label>
+            <select class="form-control" name="brand_id">
+              <option value="">Seleccione una marca</option>
+              @foreach ($brands as $brand)
+                <option value="{{$brand->id}}" @if($brand->id == $product->brand_id) selected @endif>{{$brand->name}}</option>
+              @endforeach
+            </select>
+            @error('brand_id')
+              <p class="errorForm">{{ $message }}</p>
+            @enderror
           </div>
 
-          <div id="discount" @if ($product->onSale == 1) class="col-6 col-lg-4 col-md-6 form-group" @else class="hidden col-4 col-lg-4 col-md-6 form-group" @endif>
-            <label for="">Descuento: </label>
-            <input id="inputDiscount" class="cantidad form-control" type="number" name="discount" min="0" max="80" step="5" value="{{ old('discount',$product->discount)}}">
-          </div>
-          @error('discount')
-            <p class="errorForm">{{ $message }}</p>
-          @enderror
-          </div>
-
-        <div class="row">
-          <div class="col-6 col-lg-4 offset-lg-2 col-md-6 form-group">
+          <div class="col-md-4 form-group">
             <label for="">Genero: *</label>
             <select class="form-control" name="genre_id">
               <option value="">Seleccione un genero</option>
@@ -70,9 +56,10 @@ form
               <p class="errorForm">{{ $message }}</p>
             @enderror
           </div>
+        </div>
 
-
-          <div id="categoria" class="col-6 col-lg-4 col-md-6 form-group">
+        <div class="row">
+          <div id="categoria" class="col-md-4 offset-md-2 form-group">
             <label for="">Categoria: *</label>
             <select id="categoryId" class="form-control" name="category_id">
               <option value="">Seleccione una categoria</option>
@@ -85,29 +72,49 @@ form
             @enderror
           </div>
 
-          <div class="col-6 col-lg-4 offset-lg-2 col-md-6 form-group">
-            <label for="">Marca: *</label>
-            <select class="form-control" name="brand_id">
-              <option value="">Seleccione una marca</option>
-              @foreach ($brands as $brand)
-                <option value="{{$brand->id}}" @if($brand->id == $product->brand_id) selected @endif>{{$brand->name}}</option>
-              @endforeach
-            </select>
-            @error('brand_id')
+          <div class="col-md-4 form-group">
+            <label for="">Modelo: *</label>
+            <input type="text" class="form-control" name="model" value="{{ old('model',$product->model)}}">
+            @error('model')
               <p class="errorForm">{{ $message }}</p>
             @enderror
           </div>
         </div>
 
-        <div class="form-group">
-          <button type="submit" hidden id="botongeneral" class="btn btn-info" value="Edit Product">Editar producto</button>
+        <div class="row">
+          <div class="col-md-4 offset-md-2 form-group">
+            <div class="form-group">
+              <label for="">En oferta? : </label>
+              <select id="onSale" class="form-control" name="onSale">
+                  <option value =0 @if($product->onSale == 0) selected @endif>No esta en oferta</option>
+                  <option value =1 @if($product->onSale == 1) selected @endif>Esta en oferta</option>
+              </select>
+            </div>
+          </div>
+
+          <div id="discount" @if ($product->onSale == 1) class="col-md-4 form-group" @else class="hidden col-md-4 form-group" @endif>
+            <label for="">Descuento: </label>
+            <input id="inputDiscount" class="cantidad form-control" type="number" name="discount" min="0" max="80" step="5" value="{{ old('discount',$product->discount)}}">
+          </div>
+          @error('discount')
+            <p class="errorForm">{{ $message }}</p>
+          @enderror
+          </div>
+
+
+        <label class='centrado'>Stock:</label>
+        <div class="row">
+
+          @foreach ($product->stocks as $stock)
+            <div class="col-4 col-lg-2 form-group">
+              <label for="{{$stock->size->name}}">{{$stock->size->name}}</label>
+              <input class="cantidad form-control" type="number" name="{{$stock->size->name}}" value="{{$stock->quantity}}">
+            </div>
+          @endforeach
         </div>
 
         <div class="form-group">
-          @foreach ($product->stocks as $stock)
-              <label for="{{$stock->size->name}}">{{$stock->size->name}}</label>
-              <input type="number" name="{{$stock->size->name}}" value="{{$stock->quantity}}">
-          @endforeach
+          <button type="submit" hidden id="botongeneral" class="btn enviar" value="Edit Product">Editar producto</button>
         </div>
       </form>
 
@@ -116,7 +123,7 @@ form
 
 
         <div class="row">
-          <div class="col-lg-4 offset-lg-2 col-md-6 form-group">
+          <div class="col-lg-4 offset-lg-2 col-md-6  form-group">
             <label for="">Agregar imagenes al producto</label><br>
             <label for="file-upload" class="subir"><i class="fas fa-cloud-upload-alt"></i> Subir archivo</label>
             <input type="file" id="file-upload" onchange='change()' style='display: none;' name="images[]" value="" multiple >
@@ -129,9 +136,10 @@ form
             @enderror
             <small id="emailHelp" class="form-text text-muted">Extensiones: jpg, jpeg, png. Peso maximo 2mb</small>
             <input type="hidden" name="productid" value="{{$product->id}}"><br>
-            <button type="submit" class="btn btn-success" value="">Agregar imagen</button>
+            <button type="submit" class="btn enviar" value="">Agregar imagen</button>
           </div>
         </div>
+
       </form>
 
 
@@ -148,10 +156,10 @@ form
 
         <br>
       <div class="flex">
-        <label class="btn btn-info" for="botongeneral">Editar producto</label>
+        <label class="btn enviar" for="botongeneral">Editar producto</label>
         <form class="" onclick="confirmar()" action="/delete/product/{{$product->id}}" method="post">
           @csrf
-          <button type="submit" class="btn btn-danger">Eliminar producto</button>
+          <button type="submit" class="eliminar">Eliminar producto</button>
         </form>
       </div>
 

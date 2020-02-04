@@ -6,6 +6,7 @@ addedit
 
   <div class="container">
     <h2 class="centrado titulo">Agregar Producto</h2>
+
     <form class="main_form" action="/addproduct" method="post" enctype="multipart/form-data">
       @csrf
 

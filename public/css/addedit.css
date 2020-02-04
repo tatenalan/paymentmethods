@@ -33,29 +33,72 @@
   flex-wrap: wrap;
 }
 
-button.enviar {
+.enviar {
   padding: 14px;
   margin: 10px;
   background-color: #977d2f9e;
   border-radius: 11px;
   color: white;
-  font-family: Montserrat-Bold;
+  font-family: 'Montserrat-Bold';
 }
 
-button.enviar:hover {
+.enviar:hover {
   color: white;
   background: #404b46;
 }
 
-button.eliminar {
+.eliminar {
   padding: 14px;
   margin: 10px;
   background-color: black;
   border-radius: 11px;
+  border: none;
   color: white;
-  font-family: Montserrat-Bold;
+  font-family: 'Montserrat-Bold';
+}
+
+.eliminar:hover {
+  background-color: #000000ab
 }
 
 .form-control:focus {
   box-shadow: 0 0 0 0.2rem #bf883575;
+}
+
+.flex {
+	display: flex;
+	justify-content: space-evenly;
+	text-align: center;
+}
+
+button.eliminar-imagen {
+	overflow: visible;
+	width: auto;
+  background: none;
+	margin: 0;
+	padding: 0;
+	border: none;
+  position: relative;
+	cursor: pointer;
+  -moz-user-select: text;
+	border-radius: 50px;
+	width: 23px;
+	background-color: red;
+	color: white;
+	top: -162px;
+  left: 94px;
+}
+
+.product-img {
+  width: 200px;
+}
+
+@media (max-width: 768px) {
+
+  .flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+  }
 }
