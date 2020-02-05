@@ -219,3 +219,7 @@ input:-ms-input-placeholder { color: #adadad;}
   color: white;
   background: #404b46;
 }
+
+.mensajeErrorP{
+  color:red;
+}

@@ -44,21 +44,26 @@ productos
           @csrf
           <div class="detalles">
               <label for="">Talle:</label>
-              <select class="talles" name="size">
-                <option value="34">34</option>
-                <option value="35">35</option>
-                <option value="36">36</option>
+              <select class="sizes__ talles" name="size">
+                @foreach ($product->stocks as $stock)
+                  <option value="{{$stock->size->name}}">{{$stock->size->name}}</option>
+                @endforeach
               </select>
               <label>Cantidad:</label>
-              <input class="cantidad" type="number" name="quantity" min="1" max="100" step="1" value="1">
+              <input class="cantidad inputCantidad" type="number" name="quantity" min="1" max="100" step="1" value="1">
               <input type="number" hidden name="id" value="1">
+            </div>
+            <div hidden class="mensajeErrorD">
+              <p class="mensajeErrorP"></p>
             </div>
 
             <div class="compra">
               <button type="submit" class="btn btn-ordenar">Ordenar</button>
             </div>
           </form>
-
+          @foreach ($product->stocks as $stock)
+            <input hidden type="number" name="{{$stock->size->name}}" id="hidden{{$stock->size->name}}" value={{$stock->quantity}}>
+          @endforeach
           @if (Auth::user() && Auth::user()->isAdmin == true)
 
           <div class="edicion">
@@ -79,5 +84,5 @@ productos
     </section>
   </div>
 
-
 @endsection
+<script src="/js/controlStock.js" charset="utf-8"></script>
