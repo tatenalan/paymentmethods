@@ -1,50 +1,72 @@
 window.addEventListener('load',function(){
-  var sizes = document.querySelector('.sizes__')
+  // select del talle
+  var inputSizes = document.querySelector('.sizes__')
+  // input de cantidad de producto a comprar
   var inputCantidad = document.querySelector('.inputCantidad')
-  console.log(sizes);
 
 
-sizes.addEventListener('change',function(){
-  var query = 'hidden' + this.value;
-  var errorStock = document.getElementById(query)
+inputSizes.addEventListener('change',function(){
+  // esto traeria por ejemplo hidden42
+  var idTalleMax = 'hidden' + this.value;
+  // traemos el input del limite de ese talle en particular
+  var limiteDeStock = document.getElementById(idTalleMax)
+  // almacenamos el stock maximo en una variable
+  var valorMaxStock = parseInt(limiteDeStock.value)
+
+
+  // almacenamos el valor del input en una variable
   var valorInput = parseInt(inputCantidad.value)
-  var valorMaxStock = parseInt(errorStock.value)
 
-  var div = document.querySelector('.mensajeErrorD')
-  var p = document.querySelector('.mensajeErrorP')
-  console.log(valorInput, valorMaxStock);
+
+  // traemos el div del mensaje de error
+  var div = document.querySelector('.divDeError')
+  // etiqueta p con el error
+  var p = document.querySelector('.mensajeError')
+
+  // si el valor del input es mayor a el valor maximo de ese stock en particular
   if (valorInput>valorMaxStock) {
-    mensaje = 'El stock maximo de este producto es ' + errorStock.value
+    // creamos el mensaje de errror
+    mensaje = 'El stock maximo de este producto es ' + limiteDeStock.value
+    // removemos el atributo hidden al div
     div.removeAttribute('hidden')
+    // Agregamos el mensaje a la etiqueta p
     p.innerHTML = mensaje;
-    console.log(mensaje);
   }
+  // caso contrario
   else {
+    // ocultamos el div
     div.setAttribute('hidden','true')
+    // vaciamos la etiqueta P
     p.innerHTML = ''
-    console.log(p, div);
   }
 })
 
 inputCantidad.addEventListener('change', function(){
-  var query = 'hidden' + sizes.value;
-  var errorStock = document.getElementById(query)
-  var valorInput = parseInt(this.value)
-  var valorMaxStock = parseInt(errorStock.value)
+  // creamos una var con el id del error del talle en particular
+  var idTalleMax = 'hidden' + inputSizes.value;
+  // traemos el input del limite de ese talle en particular
+  var limiteDeStock = document.getElementById(idTalleMax)
 
-  var div = document.querySelector('.mensajeErrorD')
-  var p = document.querySelector('.mensajeErrorP')
-  console.log(valorInput, valorMaxStock);
+  // Nos trae la cantidad maxima de stock de ese talle en particular
+  var valorMaxStock = parseInt(limiteDeStock.value)
+
+  // almacenamos el valor del input en una variable
+  var valorInput = parseInt(this.value)
+
+  // div del error
+  var div = document.querySelector('.divDeError')
+  // etiqueta p del error
+  var p = document.querySelector('.mensajeError')
+
+  // si el valor del input es mayor a el valor maximo de ese stock en particular
   if (valorInput>valorMaxStock) {
-    mensaje = 'El stock maximo de este producto es ' + errorStock.value
+    mensaje = 'El stock maximo de este producto es ' + limiteDeStock.value
     div.removeAttribute('hidden')
     p.innerHTML = mensaje;
-    console.log(mensaje);
   }
   else {
     div.setAttribute('hidden','true')
     p.innerHTML = ''
-    console.log(p, div);
   }
 })
 

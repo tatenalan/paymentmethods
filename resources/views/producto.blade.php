@@ -53,15 +53,17 @@ productos
               <input class="cantidad inputCantidad" type="number" name="quantity" min="1" max="100" step="1" value="1">
               <input type="number" hidden name="id" value="1">
             </div>
-            <div hidden class="mensajeErrorD">
-              <p class="mensajeErrorP"></p>
+            <div hidden class="divDeError">
+              <p class="mensajeError"></p>
             </div>
 
             <div class="compra">
               <button type="submit" class="btn btn-ordenar">Ordenar</button>
             </div>
           </form>
+          {{-- Hacemos un foreach por cada valor de stock de ese producto en particular--}}
           @foreach ($product->stocks as $stock)
+            {{-- con $stock traemos el nombre del talle relacionado con ese stock en particular 34,35--}}
             <input hidden type="number" name="{{$stock->size->name}}" id="hidden{{$stock->size->name}}" value={{$stock->quantity}}>
           @endforeach
           @if (Auth::user() && Auth::user()->isAdmin == true)
