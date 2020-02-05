@@ -137,7 +137,9 @@ div.imagen-principal {
 
 img.imagen-principal {
   max-height: 450px;
+  max-width: 500px;
   width: 100%;
+  object-fit: cover;
   border-bottom: 1px #8080804f solid;
 }
 
@@ -174,13 +176,14 @@ img.imagen-principal {
 }
 
 .talles {
-  width: 47px;
+  width: 65px;
   height: 26px;
   margin: 0px 8px
 }
 
 .cantidad {
-  width: 47px;
+  width: 55px;
+  padding: 8px;
   height: 26px;
   margin: 0px 11px;
   border: grey solid 1px;

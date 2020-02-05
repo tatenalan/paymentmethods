@@ -1,3 +1,6 @@
+{{-- @php
+  dd($product->images)
+@endphp --}}
 @extends('plantilla')
 @section('titulo')
 Producto
@@ -11,7 +14,7 @@ productos
 
       <section class="imagenes">
         <div class="imagen-principal">
-          <img class="imagen-principal" src="/img/producto4a.jpg" alt="">
+          <img class="imagen-principal" src="/storage/{{$product->images[0]->path}}" alt="">
           @if ($product->onSale==true && isset($product->discount))
             <span class="descuento"> {{$product->discount}} % off</span> <!-- Pone un cartelito de descuento sobre la imagen del producto-->
             @endif
