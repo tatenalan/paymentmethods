@@ -115,6 +115,9 @@ Route::get('/controlpanel', function() {
   return view('controlpanel');
 });
 
+// cart
+
+Route::post('/addToCart', 'CartController@addToCart');
 
 // Auth
 

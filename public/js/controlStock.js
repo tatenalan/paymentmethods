@@ -42,7 +42,7 @@ inputSizes.addEventListener('change',function(){
 })
 
 inputCantidad.addEventListener('change', function(){
-  // creamos una var con el id del error del talle en particular
+  // creamos una var con el id del talle maximo en particular
   var idTalleMax = 'hidden' + inputSizes.value;
   // traemos el input del limite de ese talle en particular
   var limiteDeStock = document.getElementById(idTalleMax)
@@ -65,9 +65,31 @@ inputCantidad.addEventListener('change', function(){
     p.innerHTML = mensaje;
   }
   else {
-    div.setAttribute('hidden','true')
-    p.innerHTML = ''
+    div.setAttribute('hidden','true');
+    p.innerHTML = '';
   }
 })
 
+// ubicamos el boton de submit
+var botonSubmit = document.querySelector('.buttonSubmit')
+
+botonSubmit.addEventListener('click', function(event){
+    // creamos una var con el id del talle maximo en particular
+    var idTalleMax = 'hidden' + inputSizes.value;
+    // traemos el input del limite de ese talle en particular
+    var limiteDeStock = document.getElementById(idTalleMax);
+
+    // Nos trae la cantidad maxima de stock de ese talle en particular
+    var valorMaxStock = parseInt(limiteDeStock.value);
+
+    // almacenamos el valor del input en una variable
+    var valorInput = parseInt(inputCantidad.value);
+
+
+  if (valorInput>valorMaxStock) {
+    botonSubmit.classList.add('animated');
+    botonSubmit.classList.add('shake');
+    event.preventDefault();
+  }
+})
 })

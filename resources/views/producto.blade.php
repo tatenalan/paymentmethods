@@ -29,7 +29,7 @@ productos
       <section class="informacion">
 
         <div class="fila-uno">
-        <h3>{{$product->brand->name}}</h3>
+        <h3 class="">{{$product->brand->name}}</h3>
         <h4>{{$product->name}}</h4>
         @if ($product->onSale==true && isset($product->discount))
               @php
@@ -61,7 +61,7 @@ productos
             </div>
 
             <div class="compra">
-              <button type="submit" class="btn btn-ordenar">Ordenar</button>
+              <button type="submit" class="btn btn-ordenar buttonSubmit">Ordenar</button>
             </div>
           </form>
           {{-- Hacemos un foreach por cada valor de stock de ese producto en particular--}}
