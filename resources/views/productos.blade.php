@@ -46,7 +46,7 @@ Productos
                   </a>
                 </div>
                 <p class="marca">{{$product->brand->name}}</p>
-                <p class="nombre">{{$product->name}}</p>
+                <p class="nombre wow fadeInDown">{{$product->name}}</p>
                 @if($product->onSale==true && isset($product->discount))
                   @php
                     $onSalePrice = $product->price - $product->price/100*$product->discount; // precio * descuento / 100

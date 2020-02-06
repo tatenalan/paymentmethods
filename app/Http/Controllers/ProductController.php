@@ -18,9 +18,7 @@ class ProductController extends Controller
       public function directory(Product $product)
       {
        $products = Product::all();
-       $categories = Category::all();
-       $images = Image::all();
-       $vac = compact('products','categories','images');
+       $vac = compact('products');
        return view('/productos',$vac);
       }
 
@@ -306,6 +304,11 @@ class ProductController extends Controller
 
       public function deleteImage(Request $request)
       {
+
+        $images = Image::where('product_id', '=', $request->productoid)->get();
+
+        // Verificamos que no sea la unica imagen del producto
+        if (count($images)!=1) {
           // traigo la imagen del request imagenid (name del file)
           $image = Image::find($request->imagenid);
           // elimina las imagenes de storage
@@ -314,5 +317,10 @@ class ProductController extends Controller
           $image->delete();
           // nos retorna a la ruta anterior
           return back();
+        }
+        // $errorUnicaImagen = 'No puedes eliminar la unica imagen';
+        // Si es la unica imagen del producto, nos redirige automaticamente sin borrarla
+        return back();
       }
+
 }

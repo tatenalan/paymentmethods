@@ -1,6 +1,3 @@
-{{-- @php
-  dd($product->images)
-@endphp --}}
 @extends('plantilla')
 @section('titulo')
 Producto
