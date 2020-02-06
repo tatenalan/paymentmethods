@@ -14,7 +14,7 @@ home
         {{-- </div>
       </div> --}}
       <section class="section section-light">
-        <h2>Nuevo en Tienda</h2>
+        <h2 class="wow fadeInDown">Nuevo en Tienda</h2>
         <p>
           Commodi, vitae. Minima soluta tempt optio aliquam et, dolorem a cupiditate nihil fuga laboriosam fugiat placeat dignissimos! Unde eveniet placeat quisquam blanditiis ore ex, omnis!
         </p>
@@ -28,19 +28,21 @@ home
         </div>
       </div>
       <section class="section section-light">
-        <h2>Tendencias</h2>
+        <h2 class="bounceInLeft">Tendencias</h2>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, laudantium, quibusdam? Nobis, delectus, commodi, fugit amet tempor
+        </p>
       </section>
-      <div class="pimg3">
+      <div class="wow animated bounceInRight pimg3">
         <div class="ptext2">
           <a class="texto-parallax" href="/productos">PRODUCTOS</a>
           <a class="texto-parallax" href="/productos">OFERTAS</a>
         </div>
       </div>
       <section class="section section-light">
-        <h2>En liquidacion</h2>
-        <p>
+        <h2 class="wow animated bounceInLeft">En liquidacion</h2>
+        <p class="">
           Lorem ipsum dolor sit amet, co provident dolorem modi cumque illo enim quuisquam quasi cum
+        </p>
       </section>
 @endsection('main')

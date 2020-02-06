@@ -18,6 +18,7 @@
     <!-- Mi css Socialbar --><link rel="stylesheet" href="/css/socialbar.css">
     <!-- Mi css Header --><link rel="stylesheet" href="/css/header.css">
     <!-- Mi css Footer --><link rel="stylesheet" href="/css/footer.css">
+    <!-- Mi css Animate --><link rel="stylesheet" href="css/animate.css">
     <title>@yield('titulo')</title>
     <link rel="stylesheet" href="/css/@yield('css').css">
 
@@ -25,6 +26,8 @@
     {{-- Scripts --}}
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
     <script type="text/javascript" src="/js/funciones.js"></script>
+    <script src="/js/wow.min.js"></script>
+    <script>new WOW().init();</script>
 
   </head>
   <body>
@@ -120,9 +123,8 @@
 
     </main>
 
-    {{-- <div class="toTop">
-      <a onclick="scrollToTop()" class="toTop" title="Go to top"><i class="fas fa-angle-double-up"></i></a>
-    </div> --}}
+    <script src="/js/wow.min.js"></script>
+    <script>new WOW().init();</script>
 
     <footer>
       <div class="copyright">
@@ -140,7 +142,7 @@
     </footer>
 
 
-        <div  class="socialBar">
+        <div class="wow animated bounceInRight socialBar">
           <ul id="socialBar">
             <li><button id="showhide" class="closebar" onclick="hideSocialBar()">X</button></li>
             <li><a href="https://api.whatsapp.com/send?phone=5491165966303&text=Hola, estoy contactandolos desde IL Nato Tienda Online" target="_blank" class="icon-whatsapp" data-toggle="tooltip" data-placement="right" data-original-title="Consulta por Whatsapp!"><ion-icon name="logo-whatsapp"></ion-icon></a></li>
