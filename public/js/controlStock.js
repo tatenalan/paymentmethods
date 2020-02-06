@@ -92,4 +92,28 @@ botonSubmit.addEventListener('click', function(event){
     event.preventDefault();
   }
 })
+
+  // traemos al conjunto de imagenes
+  imagenesPeque = document.querySelectorAll('.imagen-producto-peque')
+
+  for (imagen of imagenesPeque) {
+
+    // a cada imagen le agregamos un evento on click
+    imagen.addEventListener('click', function(){
+      // Reseteamos los cambios en las imagenes
+      for (imagen of imagenesPeque) {
+        imagen.style.border = 'none';
+        imagen.style.opacity = 1;
+      }
+
+      //Traemos la imagen princial
+      imagenGrande = document.querySelector('.imagen_grande')
+      //modificamos su src con el de la imagen seleccionada
+      imagenGrande.src = this.src;
+
+      // le aplicamos los cambios a la imagen seleccionada
+      this.style.border = '3px #25262a solid';
+      this.style.opacity = 0.8;
+    })
+  }
 })

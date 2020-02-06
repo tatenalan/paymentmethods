@@ -11,7 +11,7 @@ productos
 
       <section class="imagenes">
         <div class="imagen-principal">
-          <img class="imagen-principal" src="/storage/{{$product->images[0]->path}}" alt="">
+          <img class="imagen-principal imagen_grande" src="/storage/{{$product->images[0]->path}}" alt="">
           @if ($product->onSale==true && isset($product->discount))
             <span class="descuento"> {{$product->discount}} % off</span> <!-- Pone un cartelito de descuento sobre la imagen del producto-->
             @endif
