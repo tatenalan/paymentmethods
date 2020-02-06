@@ -19,6 +19,9 @@ class CartController extends Controller
       return back();
     }
     else {
+      // agregamos al cart el producto
+
+      // devolvemos la vista del carrito
       return view('/cart');
     }
   }

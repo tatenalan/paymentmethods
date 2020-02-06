@@ -150,9 +150,9 @@ addedit
             <input type="hidden" name="imagenid" value="{{$image->id}}">
             <input type="hidden" name="productoid" value="{{$product->id}}">
             <button type="submit" class="eliminar-imagen" name="">X</button>
-            @if (isset($_COOKIE['errorUnicaImagen']))
-              <p>{{$_COOKIE['errorUnicaImagen']}}</p>
-            @endif
+            <div hidden class="divErrorImagen">
+              <p class="mensajeErrorImagen"></p>
+            </div>
           </form>
         @endforeach
       </div>
@@ -168,3 +168,4 @@ addedit
 
   </div>
 @endsection
+<script src="/js/editProduct.js" charset="utf-8"></script>

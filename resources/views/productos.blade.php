@@ -27,7 +27,7 @@ Productos
                       {{-- @dd($image->path,$images->first()->path) --}}
                       @if ($image->path != $product->images->first()->path)
                         <div class="carousel-item">
-                          <a href="/product/{{$product->id}}"><img src="/storage/{{$image->path}}" class="d-block w-100" alt="...">
+                          <a href="/producto/{{$product->id}}"><img src="/storage/{{$image->path}}" class="d-block w-100" alt="...">
                         </div>
                       @endif
 
