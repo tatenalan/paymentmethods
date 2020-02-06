@@ -18,7 +18,7 @@
     <!-- Mi css Socialbar --><link rel="stylesheet" href="/css/socialbar.css">
     <!-- Mi css Header --><link rel="stylesheet" href="/css/header.css">
     <!-- Mi css Footer --><link rel="stylesheet" href="/css/footer.css">
-    <!-- Mi css Animate --><link rel="stylesheet" href="css/animate.css">
+    <!-- Mi css Animate --><link rel="stylesheet" href="/css/animate.css">
     <title>@yield('titulo')</title>
     <link rel="stylesheet" href="/css/@yield('css').css">
 

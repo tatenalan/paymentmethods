@@ -149,7 +149,11 @@ addedit
             @csrf
             <img class="product-img" style="margin-bottom:10px;margin-top:10px;" src="/storage/{{$image->path}}" alt=""><br>
             <input type="hidden" name="imagenid" value="{{$image->id}}">
+            <input type="hidden" name="productoid" value="{{$product->id}}">
             <button type="submit" class="eliminar-imagen" name="">X</button>
+            {{-- @if (isset($errorUnicaImagen))
+              <p>{{$errorUnicaImagen}}</p>
+            @endif --}}
           </form>
         @endforeach
       </div>
