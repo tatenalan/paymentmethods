@@ -320,6 +320,7 @@ class ProductController extends Controller
         }
         // $errorUnicaImagen = 'No puedes eliminar la unica imagen';
         // Si es la unica imagen del producto, nos redirige automaticamente sin borrarla
+        // return redirect()->to('/editproduct/'.$request->productoid.'?'. http_build_query(['errorUnicaImagen'=>$errorUnicaImagen]));
         return back();
       }
 

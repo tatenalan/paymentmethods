@@ -3,7 +3,6 @@
 addedit
 @endsection
 @section('main')
-
   <div class="container">
     <h2 class="centrado titulo">Editar Producto</h2>
 
@@ -151,9 +150,9 @@ addedit
             <input type="hidden" name="imagenid" value="{{$image->id}}">
             <input type="hidden" name="productoid" value="{{$product->id}}">
             <button type="submit" class="eliminar-imagen" name="">X</button>
-            {{-- @if (isset($errorUnicaImagen))
-              <p>{{$errorUnicaImagen}}</p>
-            @endif --}}
+            @if (isset($_COOKIE['errorUnicaImagen']))
+              <p>{{$_COOKIE['errorUnicaImagen']}}</p>
+            @endif
           </form>
         @endforeach
       </div>
