@@ -25,18 +25,22 @@ productos
 
       <section class="informacion">
 
-        <div class="fila-uno">
-        <h3 class="">{{$product->brand->name}}</h3>
-        <h4>{{$product->name}}</h4>
-        @if ($product->onSale==true && isset($product->discount))
-              @php
-                $onSalePrice = $product->price - $product->price/100*$product->discount; // precio * descuento / 100
-              @endphp
-              <span class="precioAnterior">${{$product->price}}</span> <!-- Muestra precio anterior tachado -->
-              <span class="precio">${{$onSalePrice}}</span><p></p> <!-- Muestra el precio con el descuento incluido -->
-            @else
-              <p class="precio">${{$product->price}}</p>
-            @endif
+        <div class="detalles-producto">
+          <h3 class="">{{$product->brand->name}}</h3>
+          <h4>{{$product->name}}</h4>
+          @if ($product->onSale==true && isset($product->discount))
+                @php
+                  $onSalePrice = $product->price - $product->price/100*$product->discount; // precio * descuento / 100
+                @endphp
+                <span class="precioAnterior">${{$product->price}}</span> <!-- Muestra precio anterior tachado -->
+                <span class="precio">${{$onSalePrice}}</span><p></p> <!-- Muestra el precio con el descuento incluido -->
+              @else
+                <p class="precio">${{$product->price}}</p>
+              @endif
+          <h6 class="disponibilidad">EN STOCK</h6>
+          @if (isset($product->model))
+            <h6>SKU: {{$product->model}}</h6>
+          @endif
         </div>
 
         <div class="detalles-compra">
@@ -79,6 +83,10 @@ productos
             </form>
           </div>
         @endif
+        </div>
+
+        <div class="solicitar-stock">
+          <a href="https://api.whatsapp.com/send?phone=5491156000588&text=Hola, estoy contactandolos desde IL Nato Tienda Online para solicitarles stock del producto {{$product->model}}" target="_blank" class="solicitar-stock" data-toggle="tooltip" data-placement="right" data-original-title="Consulta por Whatsapp!">Solicitar Stock por Whatsapp <ion-icon class="solicitar-stock" name="logo-whatsapp"></ion-icon></a></li>
         </div>
 
       </section>

@@ -13,7 +13,7 @@ addedit
       <div class="row">
         <div class="col-md-4 offset-md-2 form-group">
           <label>Nombre: *</label>
-          <input class="form-control" type="text" name="title" value="" placeholder="Ingrese el nombre" autofocus>
+          <input class="form-control" type="text" name="title" value="{{ old('title') }}" placeholder="Ingrese el nombre" autofocus>
           @error('title')
                 <p class="errorForm">{{ $message }}</p>
           @enderror
@@ -21,7 +21,7 @@ addedit
 
         <div class="col-md-4 form-group">
           <label>Precio: *</label>
-          <input class="form-control" type="number" name="price" step="100" value="500" min="100">
+          <input class="form-control" type="number" min="100" name="price" step="100" @if (old('price') !== null) value="{{ old('price') }}" @else value="0" @endif>
           @error('price')
             <p class="errorForm">{{ $message }}</p>
           @enderror
@@ -71,8 +71,8 @@ addedit
         </div>
 
         <div class="col-md-4 form-group">
-          <label>Modelo: </label>
-          <input class="form-control" type="text" name="model" value="" placeholder="Ingrese el modelo">
+          <label>Modelo: *</label>
+          <input class="form-control" type="text" name="model" @if (old('model') !== null) value="{{ old('model') }}" @else value="" @endif placeholder="Ingrese el modelo">
           @error('model')
                 <p class="errorForm">{{ $message }}</p>
           @enderror
@@ -103,7 +103,7 @@ addedit
         @foreach ($sizes as $size)
           <div class="col-4 col-lg-2 form-group">
             <label for="">{{$size->name}}</label>
-            <input class="cantidad form-control" type="number" name="{{$size->name}}" min=0 value="0">
+            <input class="cantidad form-control" type="number" name="{{$size->name}}" min=0 @if (old($size->name) !== null) value="{{ old($size->name) }}" @else value="0" @endif>
             <br>
           @error('{{$size->name}}')
                 <p class="errorForm">{{ $message }}</p>
@@ -125,9 +125,9 @@ addedit
           @error('images')
             <p class="errorForm">{{ $message }}</p>
           @enderror
-          @error('images.*')
+          {{-- @error('images.*')
             <p class="errorForm">{{ $message }}</p>
-          @enderror
+          @enderror --}}
           <small id="emailHelp" class="form-text text-muted">Extensiones: jpg, jpeg, png. Peso maximo 2MB</small><br>
           <button type="submit" class="btn enviar" value="Add Product">Agregar producto</button>
           <br><br><small id="emailHelp" class="form-text text-muted">Los valores con un * son obligatorios.</small>

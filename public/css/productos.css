@@ -33,6 +33,7 @@ a.ordenar:hover {
   vertical-align: middle;
 }
 
+
 .marca {
   padding: 3px;
 }
@@ -44,6 +45,7 @@ a.ordenar:hover {
   white-space: nowrap;
   overflow: hidden;
 }
+
 
  /* flechas del carousel */
 
@@ -166,7 +168,25 @@ img.imagen-principal {
   margin-top: 10px;
 }
 
-.detalles-compra {
+div.detalles-producto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.disponibilidad {
+  padding: 0 5px;
+  height: 13px;
+  margin: 0;
+  text-align: -webkit-center;
+  color: white;
+  max-width: 64px;
+  background-color: #18BC9C;
+  font-size: 10px;
+}
+
+div.detalles-compra {
   display: flex;
   flex-direction: column;
 }
@@ -222,6 +242,27 @@ input:-ms-input-placeholder { color: #adadad;}
 .btn-ordenar:hover {
   color: white;
   background: #404b46;
+}
+
+div.solicitar-stock {
+  border: solid 2px #977d2f9e;
+  width: 100%;
+  padding: 6px;
+  margin: 8px 0px;
+  border-radius: 11px;
+}
+
+a.solicitar-stock {
+  color: black;
+  font-family: Montserrat-Bold;
+}
+
+ion-icon.solicitar-stock {
+  color: green;
+}
+
+div.icon-inner {
+  color: green;
 }
 
 .mensajeErrorP{

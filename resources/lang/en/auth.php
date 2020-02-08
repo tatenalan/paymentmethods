@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'failed' => 'El email o la clave son incorrectos.',
+    'failed' => 'El email o la clave es incorrecta.',
     'throttle' => 'Muchos intentos fallidos, prueba en unos minutos.',
 
 ];

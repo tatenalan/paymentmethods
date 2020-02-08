@@ -39,14 +39,14 @@ class ProductController extends Controller
       public function store(Request $request) // agrega un producto y te redirige a la lista de productos
       {
 
-
+// dd($ request);
         $reglas = [
           'title' => 'required|string|min:1|max:50',
           'price' => 'required|integer|min:50|max:150000',
           'discount' => 'integer|max:80|nullable', // para hacer required discount hay que tenerlo hidden siempre
           'genre_id' => 'required',
           'brand_id' => 'required',
-          'model' => 'max:50',
+          'model' => "max:5|required|",
           "images" => "required|array|min:1",
           "images.*" => 'image|mimes:jpg,jpeg,png|max:2048',
           ];
@@ -58,6 +58,7 @@ class ProductController extends Controller
             "price.required" => "Ingrese el precio del producto",
             "brand_id.required" => "Debe seleccionar la marca",
             "genre_id.required" => "Debe seleccionar el genero",
+            "model.required" => "Debe ingresar el Modelo",
             'string' => "El campo :attribute debe ser un texto",
             "price.min" => "El precio debe ser mayor a $50",
             "min" => "El campo :attribute tiene un minimo de :min caracteres",
@@ -173,7 +174,7 @@ class ProductController extends Controller
            'name' => 'required|string|min:1|max:50',
            'price' => 'required|integer|min:50|max:150000',
            'discount' => 'integer|nullable|max:80',
-           'model' => 'max:50',
+           'model' => 'max:50|required',
            "images" => "array",
            "images.*" => 'image|mimes:jpg,jpeg,png|max:2048',
            ];
@@ -181,6 +182,7 @@ class ProductController extends Controller
            "model.max" => "El nombre del modelo es muy largo",
            "name.required" => "Ingrese el nombre del producto",
            "price.required" => "Ingrese el precio del producto",
+           "model.required" => "Debe ingresar el modelo",
            'string' => "El campo :attribute debe ser un texto",
            "price.min" => "El precio debe ser mayor a $50",
            "min" => "El campo :attribute tiene un minimo de :min caracteres",
