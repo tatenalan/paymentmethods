@@ -50,7 +50,7 @@ productos
               <label for="">Talle:</label>
               <select class="sizes__ talles" name="size">
                 @foreach ($product->stocks as $stock)
-                  <option value="{{$stock->size->name}}">{{$stock->size->name}}@if ($stock->quantity = 0) No hay stock @elseif ($stock->quantity < 3) Pocas unidades @endif</option>
+                  <option value="{{$stock->size->name}}">{{$stock->size->name}}@if ($stock->quantity == 0) No hay stock @elseif ($stock->quantity < 3) Pocas unidades @endif</option>
                 @endforeach
               </select>
               <label>Cantidad:</label>

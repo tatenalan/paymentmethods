@@ -22,3 +22,11 @@ PREGUNTAS A JUANCA
 
 Mercadopago 5 cuentas
 Como manejo el tema de las imagenes con distinto aspect ratio??
+Laravel 5.8 & 6 diferencias
+
+
+Objetivo semanal
+- Averiguar lo del active item
+- Carrito
+- Mercadopago
+- Boton de stock por whatsapp

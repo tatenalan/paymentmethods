@@ -67,6 +67,7 @@ Route::post('/addimage', 'ProductController@addImage');
 
 Route::post('/deleteimage', 'ProductController@deleteImage');
 
+Route::get('/productos/talle/{talle}', 'ProductController@searchBySize');
 // users
 
 Route::get('/profile', 'UserController@show')->middleware('auth');

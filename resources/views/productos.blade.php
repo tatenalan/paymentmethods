@@ -8,6 +8,11 @@ Productos
 @section('main')
 
   <div class="container">
+    <div class="buscarTalle">
+          @foreach ($sizes as $size)
+            <a href="/productos/talle/{{$size->name}}">Talle: {{$size->name}}</a>
+          @endforeach
+    </div>
     <section class="productos">
         <div class="row">
           @foreach ($products as $product)

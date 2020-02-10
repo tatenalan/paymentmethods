@@ -13,6 +13,18 @@ inputSizes.addEventListener('change',function(){
   // almacenamos el stock maximo en una variable
   var valorMaxStock = parseInt(limiteDeStock.value)
 
+  // console.log("idTalleMax: " + idTalleMax, "litimeDeStock: " + limiteDeStock, "valorMaxStock: " + valorMaxStock);
+  console.log(inputSizes.textContent);
+
+
+  // acceso a inputs individuales de sizes
+
+  // for (var input of inputSizes) {
+  //   console.log(input);
+  //   input.innerHTML = "red";
+  //   input.style.color = "red"l;
+  // }
+
 
   // almacenamos el valor del input en una variable
   var valorInput = parseInt(inputCantidad.value)

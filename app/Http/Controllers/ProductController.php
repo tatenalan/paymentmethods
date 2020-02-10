@@ -18,7 +18,8 @@ class ProductController extends Controller
       public function directory(Product $product)
       {
        $products = Product::all();
-       $vac = compact('products');
+       $sizes = Size::all();
+       $vac = compact('products','sizes');
        return view('/productos',$vac);
       }
 
@@ -139,14 +140,11 @@ class ProductController extends Controller
       public function show($id)  // se muestran los datos del producto elegido
       {
         $product = Product::find($id);
-        $genres = Genre::all();
-        $brands = Brand::all();
-        $images = Image::where('product_id', '=', $id)->get();
-        $categories = Category::all();
-        $stock = Stock::find($id);
-        $sizes = Size::all();
+        // $images = Image::where('product_id', '=', $id)->get();
+        // $stock = Stock::find($id);
+        // $sizes = Size::all();
 
-        return view('/producto', compact('product','genres', 'categories','images' ,'sizes', 'stock','brands'));
+        return view('/producto', compact('product'));
       }
 
 
@@ -324,6 +322,33 @@ class ProductController extends Controller
         // Si es la unica imagen del producto, nos redirige automaticamente sin borrarla
         // return redirect()->to('/editproduct/'.$request->productoid.'?'. http_build_query(['errorUnicaImagen'=>$errorUnicaImagen]));
         return back();
+      }
+
+      public function searchBySize($talle)  // se muestran los datos del producto elegido
+      {
+
+        // la variable talle es = $size->name
+        // Traemo el size donde su nombre sea igual al de la query
+        $sizes = Size::where('name','=',$talle)->get();
+
+        // Con el sizes->first() accedemos al array que nos trae el where:: , que va a tener
+        // una sola posicion, la primera.
+
+        // traemos los stock donde el size_id sea igual al talle de la query
+        $stocks = Stock::where('size_id','=',$sizes->first()->id)
+        // y tambien que haya por lo menos 1 producto de stock
+        ->where('quantity','>',0)
+        ->get();
+        
+        // generamos un array vacio de productos para que solo traiga los que tienen stock del talle seleccionado
+        $products=[];
+        foreach ($stocks as $stock) {
+          // cada uno lo sumamos al array
+          $products[]=$stock->product;
+        }
+
+        $sizes = Size::all();
+        return view('/productos', compact('products','sizes'));
       }
 
 }
