@@ -46,7 +46,7 @@ class ProductController extends Controller
           'discount' => 'integer|max:80|nullable', // para hacer required discount hay que tenerlo hidden siempre
           'genre_id' => 'required',
           'brand_id' => 'required',
-          'model' => "max:5|required|",
+          'model' => "max:255|required|",
           "images" => "required|array|min:1",
           "images.*" => 'image|mimes:jpg,jpeg,png|max:2048',
           ];
@@ -174,7 +174,7 @@ class ProductController extends Controller
            'name' => 'required|string|min:1|max:50',
            'price' => 'required|integer|min:50|max:150000',
            'discount' => 'integer|nullable|max:80',
-           'model' => 'max:50|required',
+           'model' => 'max:255|required',
            "images" => "array",
            "images.*" => 'image|mimes:jpg,jpeg,png|max:2048',
            ];

@@ -47,7 +47,7 @@
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="/FAQs">Ayuda</a>
+                <a class="nav-link" href="/FAQs">FAQs</a>
               </li>
 
               <li class="nav-item">
@@ -115,7 +115,7 @@
 
       </nav>
     </header>
-    <main>
+    <main id="main">
 
 
       @yield('main')

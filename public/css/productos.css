@@ -56,6 +56,7 @@ a.ordenar:hover {
 
 .precio {
   font-weight: 600;
+  font-size: 20px;
 }
 
 .descuento {
@@ -176,9 +177,9 @@ div.detalles-producto {
 }
 
 .disponibilidad {
-  padding: 0 5px;
+  padding: 1px 5px;
   height: 13px;
-  margin: 0;
+  margin: 10px;
   text-align: -webkit-center;
   color: white;
   max-width: 64px;
@@ -245,7 +246,6 @@ input:-ms-input-placeholder { color: #adadad;}
 }
 
 div.solicitar-stock {
-  border: solid 2px #977d2f9e;
   width: 100%;
   padding: 6px;
   margin: 8px 0px;
@@ -255,6 +255,10 @@ div.solicitar-stock {
 a.solicitar-stock {
   color: black;
   font-family: Montserrat-Bold;
+}
+
+a.solicitar-stock:hover {
+  opacity: 0.6;
 }
 
 ion-icon.solicitar-stock {
@@ -268,3 +272,25 @@ div.icon-inner {
 .mensajeErrorP{
   color:red;
 }
+
+.separador {
+  border-bottom: 1px solid #607d8b63;
+  padding: 10px;
+  margin: 0 auto;
+  width: 80%;
+}
+
+ul.redes {
+  display: flex;
+  justify-content: center;
+  margin-top: 12px;
+}
+
+ul.redes li {
+  padding: 2px;
+}
+
+.i-instagram:hover {color: #E03064;}
+.i-Whatsapp:hover {color: #25d366;}
+.i-mail:hover {color: #D74A2F;}
+.i-phone:hover {color: #444444;}
