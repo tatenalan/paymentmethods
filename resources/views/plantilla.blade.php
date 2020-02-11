@@ -36,10 +36,10 @@
 
         <div class="menu-principal collapse navbar-collapse" id="navbarSupportedContent">
 
-            <ul class="navbar-nav">
+            <ul class="navbar-nav" id="navbar-nav">
 
               <li class="nav-item">
-                <a class="nav-link" href="/productos">Productos</a>
+                <a class="nav-link active" href="/productos">Productos</a>
               </li>
 
               <li class="nav-item">
