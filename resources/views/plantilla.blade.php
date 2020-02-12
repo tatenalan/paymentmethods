@@ -32,26 +32,26 @@
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-expand-lg">
+      <nav class="navbar navbar-expand-lg" id="navbar">
 
         <div class="menu-principal collapse navbar-collapse" id="navbarSupportedContent">
 
-            <ul class="navbar-nav" id="navbar-nav">
+            <ul class="navbar-nav">
 
               <li class="nav-item">
-                <a class="nav-link active" href="/productos">Productos</a>
+                <a class="nav-link {{ request()->is('productos') ? 'active' : '' }}" href="/productos">Productos</a>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="/nosotros">Nosotros</a>
+                <a class="nav-link {{ request()->is('nosotros') ? 'active' : '' }}" href="/nosotros">Nosotros</a>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="/FAQs">FAQs</a>
+                <a class="nav-link {{ request()->is('FAQs') ? 'active' : '' }}" href="/FAQs">FAQs</a>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="/contacto">Contactanos</a>
+                <a class="nav-link {{ request()->is('contacto') ? 'active' : '' }}" href="/contacto">Contactanos</a>
               </li>
 
             </ul>
@@ -74,10 +74,10 @@
 
             @if (Auth::user())
               @if (Auth::user()->isAdmin == true)
-                <a class="nav-link" href="/controlpanel"><i class="fas fa-plus-circle"></i> Panel de Control</a>
+                <a class="nav-link {{ request()->is('controlpanel') ? 'active' : '' }}" href="/controlpanel"><i class="fas fa-plus-circle"></i> Panel de Control</a>
               @endif
               <li>
-                <a class="nav-link" href="/profile"><i class="fas fa-user"></i> {{auth::user()->name}} </a>
+                <a class="nav-link {{ request()->is('profile') ? 'active' : '' }}" href="/profile"><i class="fas fa-user"></i> {{auth::user()->name}} </a>
               </li>
 
               <li class="nav-item">
@@ -89,11 +89,11 @@
 
             @else
               <li class="nav-item">
-                <a class="nav-link" href="/register"><i class="fas fa-user-plus"></i> Registrarse</a>
+                <a class="nav-link {{ request()->is('register') ? 'active' : '' }}" href="/register"><i class="fas fa-user-plus"></i> Registrarse</a>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="/login"><i class="fas fa-sign-in-alt"></i> Iniciar Sesion</a>
+                <a class="nav-link {{ request()->is('login') ? 'active' : '' }}" href="/login"><i class="fas fa-sign-in-alt"></i> Iniciar Sesion</a>
               </li>
 
               {{-- <li class="nav-item"> --}}
