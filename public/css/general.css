@@ -11,6 +11,9 @@ main {
   margin-top: 66px;
 }
 
+a:hover {
+  color: #2424257a;
+}
 .row {
   align-items: center;
 }

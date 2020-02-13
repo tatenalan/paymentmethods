@@ -339,7 +339,7 @@ class ProductController extends Controller
         // y tambien que haya por lo menos 1 producto de stock
         ->where('quantity','>',0)
         ->get();
-        
+
         // generamos un array vacio de productos para que solo traiga los que tienen stock del talle seleccionado
         $products=[];
         foreach ($stocks as $stock) {
@@ -350,5 +350,13 @@ class ProductController extends Controller
         $sizes = Size::all();
         return view('/productos', compact('products','sizes'));
       }
+
+      public function ofertas(Product $product)
+    {
+      $products = Product::where('onSale', '=', true)->orderBy('price')->get();
+      $sizes = Size::all();
+      $vac = compact('products','sizes');
+      return view('ofertas',$vac);
+    }
 
 }

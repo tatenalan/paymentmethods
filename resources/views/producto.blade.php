@@ -1,14 +1,16 @@
 @extends('plantilla')
 @section('titulo')
-Producto
+IL Nato Producto
 @endsection
 @section('css')
 productos
 @endsection('css')
 @section('main')
   <div class="container">
+    <div class="links-ayuda">
+      <a href="/productos">Productos</a> >> <a href="{{ URL::previous() }}">Volver</a>
+    </div>
     <section class="producto">
-
       <section class="imagenes">
         <div class="imagen-principal">
           <img class="imagen-principal imagen_grande" src="/storage/{{$product->images[0]->path}}" alt="">

@@ -134,10 +134,15 @@ figure{margin: 0;}
   transform: rotateY(180deg);
 } */
 
+div.links-ayuda {
+  text-align: left;
+  margin-top: 80px;
+}
+
 section.producto {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 70px;
+  /* margin-top: 70px; */
   justify-content: space-evenly;
 }
 

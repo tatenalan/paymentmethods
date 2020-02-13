@@ -35,7 +35,7 @@ button.nav-link {
 
 }
 
-.active, a:hover, button.nav-link:hover {
+.active, a.nav-link:hover, button.nav-link:hover {
   color: #ffffffb5;
 }
 

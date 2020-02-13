@@ -14,7 +14,7 @@ home
         {{-- </div>
       </div> --}}
       <section class="section section-light">
-        <h2 class="wow fadeInDown">Nuevo en Tienda</h2>
+        <h2 class="wow fadeInDown slow delay-2s" data-wow-offset="100">Nuevo en Tienda</h2>
         <p>
           Commodi, vitae. Minima soluta tempt optio aliquam et, dolorem a cupiditate nihil fuga laboriosam fugiat placeat dignissimos! Unde eveniet placeat quisquam blanditiis ore ex, omnis!
         </p>
@@ -33,14 +33,14 @@ home
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, laudantium, quibusdam? Nobis, delectus, commodi, fugit amet tempor
         </p>
       </section>
-      <div class="wow animated bounceInRight pimg3">
+      <div class="wow animated bounceInRight pimg3" data-wow-offset="100">
         <div class="ptext2">
           <a class="texto-parallax" href="/productos">PRODUCTOS</a>
-          <a class="texto-parallax" href="/productos">OFERTAS</a>
+          <a class="texto-parallax" href="/ofertas">OFERTAS</a>
         </div>
       </div>
       <section class="section section-light">
-        <h2 class="wow animated bounceInLeft">En liquidacion</h2>
+        <h2 class="wow animated bounceInLeft" data-wow-offset="100">En liquidacion</h2>
         <p class="">
           Lorem ipsum dolor sit amet, co provident dolorem modi cumque illo enim quuisquam quasi cum
         </p>

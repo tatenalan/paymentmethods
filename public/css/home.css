@@ -80,6 +80,10 @@ body, html{
   padding:20px;
 }
 
+.texto-parallax:hover {
+  color: #ccb0b05e;
+}
+
 .ptext .texto-parallax.trans{
   background-color:transparent;
 }

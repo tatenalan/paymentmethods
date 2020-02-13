@@ -51,6 +51,8 @@ Route::get('/FAQs', function() {
 
 Route::get('/productos', 'ProductController@directory');
 
+Route::get('/ofertas', 'ProductController@ofertas');
+
 Route::get('/addproduct', 'ProductController@new');
 
 Route::post('/addproduct', 'ProductController@store');

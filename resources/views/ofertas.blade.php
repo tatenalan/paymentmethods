@@ -1,6 +1,6 @@
 @extends('plantilla')
 @section('titulo')
-IL Nato Productos
+IL Nato Ofertas
 @endsection
 @section('css')
 Productos
@@ -75,5 +75,5 @@ Productos
         </div>
       </section>
     </div>
-
+    
 @endsection
