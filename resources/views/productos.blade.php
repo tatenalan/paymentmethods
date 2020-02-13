@@ -8,9 +8,10 @@ Productos
 @section('main')
 
   <div class="container">
+    <h4 class="titulo">Filtrar productos por talle</h4>
     <div class="buscarTalle">
           @foreach ($sizes as $size)
-            <a href="/productos/talle/{{$size->name}}">Talle: {{$size->name}}</a>
+            <a class="mostrarTalles {{ request()->is('productos/talle/' . $size->name) ? 'active' : '' }}" href="/productos/talle/{{$size->name}}">{{$size->name}}</a>
           @endforeach
     </div>
     <section class="productos">

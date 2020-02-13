@@ -26,7 +26,5 @@ Laravel 5.8 & 6 diferencias
 
 
 Objetivo semanal
-- Averiguar lo del active item
 - Carrito
 - Mercadopago
-- Boton de stock por whatsapp

@@ -1,12 +1,27 @@
-.producto {
-
+div.buscarTalle {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
+.mostrarTalles {
+  border: 1px solid grey;
+  border-radius: 10px;
+  padding: 7px;
+  margin: 2px;
+  flex-direction: row;
+  width: 40px;
+}
+
+div.buscarTalle .active, .mostrarTalles:hover {
+  color: grey;
+  background-color: #7c7c8033;
+}
+
+
 .img-productos {
-  max-width: 80%;
-  padding: 5px 0px;
-  max-height: 250px;
-  object-fit: cover;
+  height: 200px;
+  object-fit: contain;
 }
 
 .padding {
@@ -18,7 +33,7 @@ a.ordenar {
   padding: 8px;
   margin: 10px;
   display: block;
-  min-width: 122px;
+  min-width: 134px;
   background-color: #977d2f9e;
   border-radius: 11px;
   color: white;
@@ -57,22 +72,22 @@ a.ordenar:hover {
 .precio {
   font-weight: 600;
   font-size: 20px;
+  color: #666666;
 }
 
 .descuento {
-  padding-top: 10px;
+  padding: 1px;
   position: absolute;
-  right: -16px;
-  top: -20px;
-  width: 50px;
-  height: 50px;
+  right: 6%;
+  top: 25px;
+  min-width: 60px;
+  height: 17px;
   text-align: center;
   vertical-align: middle;
   display: table;
   color: white;
   line-height: 15px;
-  background-color: red;
-  border-radius: 50px;
+  background-color: #c59258;
 }
 
 .precioAnterior {
@@ -146,22 +161,6 @@ img.imagen-principal {
   border-bottom: 1px #8080804f solid;
 }
 
-.descuento {
-  padding-top: 10px;
-  position: absolute;
-  right: 3%;
-  top: 25px;
-  width: 50px;
-  height: 50px;
-  text-align: center;
-  vertical-align: middle;
-  display: table;
-  color: white;
-  line-height: 15px;
-  background-color: #c59258;
-  border-radius: 50px;
-}
-
 .imagen-producto-peque {
   width: 100px;
   margin-left: 5px;
@@ -198,7 +197,7 @@ div.detalles-compra {
 }
 
 .talles {
-  width: 65px;
+  width: 47px;
   height: 26px;
   margin: 0px 8px
 }
