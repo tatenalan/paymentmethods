@@ -39,7 +39,7 @@
             <ul class="navbar-nav">
 
               <li class="nav-item">
-                <a class="nav-link {{ request()->is('producto/*') ? 'active' : '' }} {{ request()->is('productos/*') ? 'active' : '' }}" href="/productos">Productos</a>
+                <a class="nav-link {{ request()->is('productos') ? 'active' : '' }} {{ request()->is('producto/*') ? 'active' : '' }} {{ request()->is('productos/*') ? 'active' : '' }}" href="/productos">Productos</a>
               </li>
 
               <li class="nav-item">
