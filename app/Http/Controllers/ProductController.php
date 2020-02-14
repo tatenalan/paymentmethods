@@ -352,11 +352,37 @@ class ProductController extends Controller
       }
 
       public function ofertas(Product $product)
-    {
-      $products = Product::where('onSale', '=', true)->orderBy('price')->get();
-      $sizes = Size::all();
-      $vac = compact('products','sizes');
-      return view('ofertas',$vac);
-    }
+      {
+        $products = Product::where('onSale', '=', true)->orderBy('price')->get();
+        $sizes = Size::all();
+        $vac = compact('products','sizes');
+        return view('ofertas',$vac);
+      }
+
+      public function showallproducts(Product $product)
+      {
+       $products = Product::all();
+       $sizes = Size::all();
+       $vac = compact('products','sizes');
+       return view('/searchproduct',$vac);
+      }
+
+      public function searchProductByName(Request $request)
+      {
+        $products = Product::where('name', 'like', '%'. $request->name . '%')->orderBy('price','desc')->get();
+        return view('/searchproduct', compact('products', 'request'));
+      }
+
+      public function searchProductByModel(Request $request)
+      {
+        $products = Product::where('model', 'like', '%'. $request->model . '%')->orderBy('price','desc')->get();
+        return view('/searchproduct', compact('products', 'request'));
+      }
+
+      // public function searchProductByBrand(Product $product)
+      // {
+      //   $products = Product::where(, 'like', '%'. $_GET['brand'] . '%')->orderBy('price','desc')->get();
+      //   return view('/searchproduct', compact('products'));
+      // }
 
 }

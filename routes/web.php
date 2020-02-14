@@ -70,6 +70,16 @@ Route::post('/addimage', 'ProductController@addImage');
 Route::post('/deleteimage', 'ProductController@deleteImage');
 
 Route::get('/productos/talle/{talle}', 'ProductController@searchBySize');
+
+Route::get('/searchproduct', 'ProductController@showallproducts');
+
+Route::get('/searchproduct/search', 'ProductController@searchProductByName');
+
+Route::get('/searchproduct/search', 'ProductController@searchProductByModel');
+
+// Route::get('/searchproduct/search', 'ProductController@searchProductByBrand');
+
+
 // users
 
 Route::get('/profile', 'UserController@show')->middleware('auth');

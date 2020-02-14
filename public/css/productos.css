@@ -298,3 +298,25 @@ ul.redes li {
 .i-Whatsapp:hover {color: #25d366;}
 .i-mail:hover {color: #D74A2F;}
 .i-phone:hover {color: #444444;}
+
+/* Buscador */
+
+.page-header {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+
+.search-bar {
+  width: 50%;
+  margin: 20px auto
+}
+
+.input-group {
+  border-radius: 0px;
+}
+
+.input-group-append {
+  background-color: white;
+  background-color: #eae2e2;
+}
