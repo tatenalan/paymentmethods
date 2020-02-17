@@ -1,0 +1,144 @@
+.container {
+  text-align: left;
+  padding: 30px;
+  margin-bottom: 50px;
+}
+
+/* div.product-img {
+  width: 200px;
+} */
+
+div.img {
+  display: flex;
+  align-items: center;
+}
+
+div.img img {
+  width: 150px;
+}
+
+div.product-info {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  padding-left: 7px;
+}
+
+.productos {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.producto {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-top: 1px solid grey;
+  text-align: left;
+  position: relative;
+}
+
+p {
+  font-style: oblique;
+  font-size: 18px;
+  color: grey;
+}
+
+.name {
+
+}
+
+.cat-gen-size-quan {
+
+}
+
+
+.linea-separadora {
+    border-bottom: 2px solid #607d8b;
+    padding: 10px;
+    margin: 0 auto;
+    width: 80%;
+}
+
+div.total {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-weight: bold;
+}
+
+.precio {
+  font-weight: 600;
+}
+
+.descuento {
+    padding: 1px;
+    position: absolute;
+    left: 10px;
+    top: 5px;
+    min-width: 60px;
+    height: 17px;
+    text-align: center;
+    vertical-align: middle;
+    display: table;
+    color: white;
+    line-height: 15px;
+    background-color: #c59258;
+}
+
+.precioAnterior {
+  font-weight: 600;
+  text-decoration: line-through;
+  color: red;
+  padding-right: 6px;
+}
+
+.sinStock {
+  color:red;
+  font-weight: bold;
+}
+
+.sacar-carrito{
+  padding: 5px 10px;
+  position: absolute;
+  top: 8px;
+  right: 5px;
+  color: #fff;
+  background-color: #6c757d;
+  border-color: #6c757d;
+  border-radius: 1.25rem;
+}
+
+.sacar-carrito:hover{
+  color:black;
+	/* background-color: #cdcecf; */
+	opacity: 0.75;
+}
+
+.btn-ordenar {
+  text-align: center;
+  min-width: 180px;
+  padding: 6px;
+  margin: 8px 0px;
+  background-color: #977d2f9e;
+  border-radius: 11px;
+  color: white;
+  font-family: Montserrat-Bold;
+}
+
+.btn-ordenar:hover {
+  color: white;
+  background: #404b46;
+}
+
+/* Media queries */
+/* Cuando la resolucion sea menor o igual a 425 va a pasar lo siguiente */
+@media (min-width: 600px) {
+
+  .producto{
+    flex-direction: row;
+  }
+
+}

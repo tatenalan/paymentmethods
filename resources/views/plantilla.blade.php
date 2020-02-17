@@ -106,7 +106,7 @@
             @endif
 
               <li class="nav-item">
-                <a class="nav-link" href="#clientes"><img class="bag-icon" src="/img/shopbag2.ico" alt=""></a>
+                <a class="nav-link" href="/cart"><img class="bag-icon" src="/img/shopbag2.ico" alt=""></a>
               </li>
 
             </ul>

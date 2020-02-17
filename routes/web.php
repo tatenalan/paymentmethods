@@ -128,7 +128,11 @@ Route::get('/controlpanel', function() {
   return view('controlpanel');
 });
 
-// cart
+// carts
+
+Route::get('/cart', function() {
+  return view('cart');
+});
 
 Route::post('/addToCart', 'CartController@addToCart');
 
