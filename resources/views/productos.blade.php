@@ -61,14 +61,40 @@ Productos
                   <span class="precioAnterior">${{$product->price}}</span> <!-- Muestra precio anterior tachado -->
                   <span class="precio">${{$onSalePrice}}</span><p></p> <!-- Muestra el precio con el descuento incluido -->
                 @else
-                    <p class="precio">${{$product->price}}</p>
+                  <p class="precio">${{$product->price}}</p>
                 @endif
                 @if (Auth::user())
                   @if (Auth::user()->isAdmin == true)
                     <a class="ordenar" href="/editproduct/{{$product->id}}">Editar Producto</a>
                   @endif
                 @endif
-                <a class="ordenar" href="/">Ordenar!  <ion-icon name="cart"></ion-icon></a>
+
+
+                {{-- En caso de que no haya stock en ningun talle del producto --}}
+
+                {{-- Creo una variable que me va a servir como contador --}}
+                @php
+                $cantidadstock=0;
+                @endphp
+
+                {{-- Por cada stock del producto me fijo si la cantidad es mayor a 0 y en tal caso le sumo 1 a la variable creada --}}
+                @foreach ($product->stocks as $stock)
+                  @if ($stock->quantity > 0)
+                    @php
+                    $cantidadstock=$cantidadstock+1
+                    @endphp
+                  @endif
+                @endforeach
+{{-- @php
+  dd($product->stocks);
+@endphp --}}
+                {{-- Si al final del foreach la cantidad de stock me da menor a 1 muestro que no hay stock y creo el boton solicitar stock, si me da  --}}
+                @if ($cantidadstock == 0)
+                  <p>No hay stock de este producto</p>
+                @else
+                  <a class="ordenar" href="/">Ordenar!  <ion-icon name="cart"></ion-icon></a>
+                @endif
+
               </div>
             </div>
           @endforeach
