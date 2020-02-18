@@ -124,8 +124,8 @@ Route::post('/deletecolor', 'ColorController@destroy');
 
 // isAdmin
 
-Route::get('/controlpanel', function() {
-  return view('controlpanel');
+Route::get('/adminpanel', function() {
+  return view('adminpanel');
 });
 
 // carts

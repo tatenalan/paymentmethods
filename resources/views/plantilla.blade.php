@@ -74,7 +74,7 @@
 
             @if (Auth::user())
               @if (Auth::user()->isAdmin == true)
-                <a class="nav-link {{ request()->is('controlpanel') ? 'active' : '' }}" href="/controlpanel"><i class="fas fa-plus-circle"></i> Panel de Control</a>
+                <a class="nav-link {{ request()->is('adminpanel') ? 'active' : '' }}" href="/adminpanel"><i class="fas fa-plus-circle"></i> Panel de Control</a>
               @endif
               <li>
                 <a class="nav-link {{ request()->is('profile') ? 'active' : '' }}" href="/profile"><i class="fas fa-user"></i> {{auth::user()->name}} </a>
