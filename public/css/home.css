@@ -64,14 +64,17 @@ body, html{
 }
 
 .ptext2{
-  position:absolute;
-  top:88%;
-  width:100%;
-  text-align:center;
-  color:#000;
-  font-size:27px;
-  letter-spacing:8px;
-  text-transform:uppercase;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* position: absolute; */
+  /* top: 92%; */
+  width: 100%;
+  text-align: center;
+  color: #000;
+  font-size: 27px;
+  letter-spacing: 8px;
+  text-transform: uppercase;
 }
 
 .texto-parallax{

@@ -3,7 +3,7 @@
 IL Nato Productos
 @endsection
 @section('css')
-Productos
+productos
 @endsection('css')
 @section('main')
 
