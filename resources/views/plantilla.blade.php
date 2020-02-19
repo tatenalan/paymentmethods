@@ -132,7 +132,7 @@
           <span>Copyright ®</span>
         </div>
         <div>
-          <span>IL Nato © 2020</span>
+          <span>IL Nato © <?php echo date("Y"); ?></span>
         </div>
         <div>
           <span>Programacion y diseño <a class="creador" href="https://www.linkedin.com/in/rodriguez-alan/">Taten</a> - <a class="creador" href="https://www.linkedin.com/in/juliancaminaur/">Jcaminaur</a></span>

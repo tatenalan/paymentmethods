@@ -17,10 +17,10 @@ class ProductController extends Controller
 
       public function directory(Product $product)
       {
-       $products = Product::all();
-       $sizes = Size::all();
-       $vac = compact('products','sizes');
-       return view('/productos',$vac);
+        $products = Product::all();
+        $sizes = Size::all();
+        $vac = compact('products','sizes');
+        return view('/productos',$vac);
       }
 
 
