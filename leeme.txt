@@ -19,10 +19,10 @@ http://ifnet.com.ar/
 
 
 PREGUNTAS A JUANCA
-
-Mercadopago 5 cuentas
+5 cuentas mercadopago
 Como manejo el tema de las imagenes con distinto aspect ratio??
 Laravel 5.8 & 6 diferencias
+Como debugear un foreach?
 
 
 Objetivo semanal
