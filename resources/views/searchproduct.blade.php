@@ -13,7 +13,7 @@ productos
         <div class="page-header">
           <h1>Busqueda de Productos</h1>
 
-          <form class="search-bar" action="/searchproduct/search" method="get">
+          <form class="search-bar" action="/searchproduct/searchName" method="get">
             <div class="input-group">
               <input type="text" class="form-control" placeholder="Buscar por nombre" name="name">
 
@@ -23,7 +23,7 @@ productos
             </div>
           </form>
 
-          <form class="search-bar" action="/searchproduct/search" method="get">
+          <form class="search-bar" action="/searchproduct/searchModel" method="get">
             <div class="input-group">
               <input type="text" class="form-control" placeholder="Buscar por modelo" name="model">
 
@@ -33,10 +33,15 @@ productos
             </div>
           </form>
 
-          <form class="search-bar" action="/searchproduct/search" method="get">
+          <form class="search-bar" action="/searchproduct/searchBrand" method="get">
             <div class="input-group">
-              <input type="text" class="form-control" placeholder="Buscar por marca" name="brand">
-              
+              {{-- <input type="text" class="form-control" placeholder="Buscar por marca" name="brand"> --}}
+              <select class="form-control" name="brand">
+                <option value="">Seleccione una marca</option>
+                @foreach ($brands as $brandonStark)
+                  <option value="{{$brandonStark->id}}">{{$brandonStark->name}}</option>
+                @endforeach
+              </select>
               <div class="input-group-append">
                 <button type="submit" class="btn btn-outline-ligth"><i class="fas fa-search"></i></button>
               </div>
@@ -46,7 +51,7 @@ productos
 
       </div>
 
-
+    </div>
     <section class="productos">
         <div class="row">
           @foreach ($products as $product)

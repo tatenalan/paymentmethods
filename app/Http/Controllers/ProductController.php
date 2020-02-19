@@ -363,26 +363,30 @@ class ProductController extends Controller
       {
        $products = Product::all();
        $sizes = Size::all();
-       $vac = compact('products','sizes');
+       $brands = Brand::all();
+       $vac = compact('products','brands','sizes');
        return view('/searchproduct',$vac);
       }
 
       public function searchProductByName(Request $request)
       {
         $products = Product::where('name', 'like', '%'. $request->name . '%')->orderBy('price','desc')->get();
-        return view('/searchproduct', compact('products', 'request'));
+        $brands = Brand::all();
+        return view('/searchproduct', compact('products', 'request','brands'));
       }
 
       public function searchProductByModel(Request $request)
       {
         $products = Product::where('model', 'like', '%'. $request->model . '%')->orderBy('price','desc')->get();
-        return view('/searchproduct', compact('products', 'request'));
+        $brands = Brand::all();
+        return view('/searchproduct', compact('products', 'request','brands'));
       }
 
-      // public function searchProductByBrand(Product $product)
-      // {
-      //   $products = Product::where(, 'like', '%'. $_GET['brand'] . '%')->orderBy('price','desc')->get();
-      //   return view('/searchproduct', compact('products'));
-      // }
+      public function searchProductByBrand(Product $product)
+      {
+        $products = Product::where('brand_id', 'like', '%'. $_GET['brand'] . '%')->orderBy('price','desc')->get();
+        $brands = Brand::all();
+        return view('/searchproduct', compact('products','brands'));
+      }
 
 }

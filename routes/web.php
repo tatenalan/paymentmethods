@@ -73,11 +73,11 @@ Route::get('/productos/talle/{talle}', 'ProductController@searchBySize');
 
 Route::get('/searchproduct', 'ProductController@showallproducts');
 
-Route::get('/searchproduct/search', 'ProductController@searchProductByName');
+Route::get('/searchproduct/searchName', 'ProductController@searchProductByName');
 
-Route::get('/searchproduct/search', 'ProductController@searchProductByModel');
+Route::get('/searchproduct/searchModel', 'ProductController@searchProductByModel');
 
-// Route::get('/searchproduct/search', 'ProductController@searchProductByBrand');
+Route::get('/searchproduct/searchBrand', 'ProductController@searchProductByBrand');
 
 
 // users
