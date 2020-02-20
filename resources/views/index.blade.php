@@ -14,7 +14,7 @@ home
         {{-- </div>
       </div> --}}
       <section class="section section-light">
-        <h2 class="wow fadeInDown slow delay-2s" data-wow-offset="100">Nuevo en Tienda</h2>
+        <h2 class="wow fadeInDown slow delay-1s" data-wow-offset="100">Nuevo en Tienda</h2>
         <p>
           Commodi, vitae. Minima soluta tempt optio aliquam et, dolorem a cupiditate nihil fuga laboriosam fugiat placeat dignissimos! Unde eveniet placeat quisquam blanditiis ore ex, omnis!
         </p>

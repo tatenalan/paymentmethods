@@ -111,7 +111,7 @@ form
 
 
 
-  				<div class="contact100-form-social flex-c-m">
+  				{{-- <div class="contact100-form-social flex-c-m">
   					<a href="register/#" class="contact100-form-social-item flex-c-m bg1 m-r-5">
   						<i class="fa fa-facebook-f" aria-hidden="true"></i>
   					</a>
@@ -123,7 +123,7 @@ form
   					<a href="register/#" class="contact100-form-social-item flex-c-m bg3">
   						<i class="fa fa-youtube-play" aria-hidden="true"></i>
   					</a>
-  				</div>
+  				</div> --}}
   			</form>
 
   			<div class="contact100-more flex-col-c-m" style="background-image: url('/img/nikeairmax.jpg');">

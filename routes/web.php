@@ -53,31 +53,31 @@ Route::get('/productos', 'ProductController@directory');
 
 Route::get('/ofertas', 'ProductController@ofertas');
 
-Route::get('/addproduct', 'ProductController@new');
+Route::get('/addproduct', 'ProductController@new')->middleware('admin');
 
-Route::post('/addproduct', 'ProductController@store');
+Route::post('/addproduct', 'ProductController@store')->middleware('admin');
 
 Route::get('/producto/{id}', 'ProductController@show');
 
-Route::get('/editproduct/{id}', 'ProductController@edit');
+Route::get('/editproduct/{id}', 'ProductController@edit')->middleware('admin');
 
-Route::put('/editproduct/{id}', 'ProductController@update');
+Route::put('/editproduct/{id}', 'ProductController@update')->middleware('admin');
 
-Route::post('/delete/product/{id}', 'ProductController@deleteproduct');
+Route::post('/delete/product/{id}', 'ProductController@deleteproduct')->middleware('admin');
 
-Route::post('/addimage', 'ProductController@addImage');
+Route::post('/addimage', 'ProductController@addImage')->middleware('admin');
 
-Route::post('/deleteimage', 'ProductController@deleteImage');
+Route::post('/deleteimage', 'ProductController@deleteImage')->middleware('admin');
 
 Route::get('/productos/talle/{talle}', 'ProductController@searchBySize');
 
-Route::get('/searchproduct', 'ProductController@showallproducts');
+Route::get('/searchproduct', 'ProductController@showallproducts')->middleware('admin');
 
-Route::get('/searchproduct/searchName', 'ProductController@searchProductByName');
+Route::get('/searchproduct/searchName', 'ProductController@searchProductByName')->middleware('admin');
 
-Route::get('/searchproduct/searchModel', 'ProductController@searchProductByModel');
+Route::get('/searchproduct/searchModel', 'ProductController@searchProductByModel')->middleware('admin');
 
-Route::get('/searchproduct/searchBrand', 'ProductController@searchProductByBrand');
+Route::get('/searchproduct/searchBrand', 'ProductController@searchProductByBrand')->middleware('admin');
 
 
 // users
@@ -92,49 +92,51 @@ Route::put('/profile', 'UserController@update')->middleware('auth');
 
 // Marcas
 
-Route::get('/editbrand', 'BrandController@index');
+Route::get('/editbrand', 'BrandController@index')->middleware('admin');
 
-Route::post('/addbrand', 'BrandController@store');
+Route::post('/addbrand', 'BrandController@store')->middleware('admin');
 
-Route::put('/editbrand', 'BrandController@update');
+Route::put('/editbrand', 'BrandController@update')->middleware('admin');
 
-Route::post('/deletebrand', 'BrandController@destroy');
+Route::post('/deletebrand', 'BrandController@destroy')->middleware('admin');
 
-
-// Categorias
-
-Route::get('/editcategory', 'CategoryController@index');
-
-Route::post('/addcategory', 'CategoryController@store');
-
-Route::put('/editcategory', 'CategoryController@update');
-
-Route::post('/deletecategory', 'CategoryController@destroy');
 
 // Categorias
 
-Route::get('/editcolor', 'ColorController@index');
+Route::get('/editcategory', 'CategoryController@index')->middleware('admin');
 
-Route::post('/addcolor', 'ColorController@store');
+Route::post('/addcategory', 'CategoryController@store')->middleware('admin');
 
-Route::put('/editcolor', 'ColorController@update');
+Route::put('/editcategory', 'CategoryController@update')->middleware('admin');
 
-Route::post('/deletecolor', 'ColorController@destroy');
+Route::post('/deletecategory', 'CategoryController@destroy')->middleware('admin');
+
+// Colores
+
+Route::get('/editcolor', 'ColorController@index')->middleware('admin');
+
+Route::post('/addcolor', 'ColorController@store')->middleware('admin');
+
+Route::put('/editcolor', 'ColorController@update')->middleware('admin');
+
+Route::post('/deletecolor', 'ColorController@destroy')->middleware('admin');
 
 
 // isAdmin
 
 Route::get('/adminpanel', function() {
   return view('adminpanel');
-});
+})->middleware('admin');
 
 // carts
 
 Route::get('/cart', function() {
   return view('cart');
+
+Route::get('/cart', 'CartController@show')->middleware('auth');
 });
 
-Route::post('/addToCart', 'CartController@addToCart');
+Route::post('/addToCart', 'CartController@addToCart')->middleware('auth');;
 
 // Auth
 
