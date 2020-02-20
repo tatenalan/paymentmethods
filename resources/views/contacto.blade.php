@@ -47,7 +47,7 @@ form
   <div class="bg-contact2" style="background-image: url('img/cross.jpg');">
 		<div class="container-contact2">
 			<div class="wrap-contact2">
-				<form class="contact2-form validate-form" action="{{ url('/') }}" method="post">
+				<form class="contact2-form validate-form" action="{{ url('/contacto') }}" method="post">
           @csrf
 					<span class="contact2-form-title">
 						Contactanos

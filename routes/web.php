@@ -1,6 +1,8 @@
 <?php
 
-use illuminate\Http\Request; // Por el formulario de contacto
+use Illuminate\Http\Request; // Por el formulario de contacto
+use App\Mail\ContactMail; // Por el formulario de contacto
+use Illuminate\Support\Facades\Mail; // Por el formulario de contacto
 
 /*
 |--------------------------------------------------------------------------
