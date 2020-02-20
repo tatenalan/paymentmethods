@@ -48,6 +48,7 @@ form
 		<div class="container-contact2">
 			<div class="wrap-contact2">
 				<form class="contact2-form validate-form" action="{{ url('/') }}" method="post">
+          @csrf
 					<span class="contact2-form-title">
 						Contactanos
 					</span>
@@ -70,7 +71,7 @@ form
 					<div class="container-contact2-form-btn">
 						<div class="wrap-contact2-form-btn">
 							<div class="contact2-form-bgbtn"></div>
-							<button class="contact2-form-btn">
+							<button type="submit" class="contact2-form-btn">
 								Enviar Mensaje
 							</button>
 						</div>

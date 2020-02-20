@@ -1,5 +1,7 @@
 <?php
 
+use illuminate\Http\Request; // Por el formulario de contacto
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -34,10 +36,10 @@ Route::get('/contacto', function() {
   return view('contacto');
 });
 
-// Route::post('/contacto', function(Request $request){
-//   Mail::send(new ContactMail($request));
-//   return redirect ('/');
-// });
+Route::post('/contacto', function(Request $request){
+  Mail::send(new ContactMail($request));
+  return redirect ('/');
+});
 
 Route::get('/nosotros', function() {
   return view('nosotros');
