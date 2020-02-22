@@ -25,3 +25,13 @@
     cursor: pointer;
     text-align: center;
 }
+
+.contactanos {
+  color: white;
+  text-decoration: underline;
+  font-size: 12px;
+}
+
+.contactanos:hover {
+  color: #ffffffb5;
+}

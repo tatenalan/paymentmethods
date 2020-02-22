@@ -47,7 +47,7 @@ Route::get('/nosotros', function() {
   return view('nosotros');
 });
 
-Route::get('/FAQs', function() {
+Route::get('/PreguntasFrecuentes', function() {
   return view('FAQs');
 });
 

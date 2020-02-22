@@ -24,7 +24,7 @@ FAQs
 
     <details open>
       <summary>
-        Does this product have what I need?
+        Cual es mi talle?
         <svg class="control-icon control-icon-expand" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#expand-more" /></svg>
         <svg class="control-icon control-icon-close" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close" /></svg>
       </summary>
@@ -34,7 +34,7 @@ FAQs
     <details>
 
       <summary>
-        Can I use it all the time?
+        Puedo solicitar stock?
         <svg class="control-icon control-icon-expand" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#expand-more" /></svg>
         <svg class="control-icon control-icon-close" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close" /></svg>
       </summary>
@@ -43,7 +43,34 @@ FAQs
 
     <details>
       <summary>
-        Are there any restrictions?
+        Politica de cambios
+        <svg class="control-icon control-icon-expand" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#expand-more" /></svg>
+        <svg class="control-icon control-icon-close" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close" /></svg>
+      </summary>
+      <p>Only your imagination my friend. Go forth!</p>
+    </details>
+
+    <details>
+      <summary>
+        Garantia
+        <svg class="control-icon control-icon-expand" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#expand-more" /></svg>
+        <svg class="control-icon control-icon-close" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close" /></svg>
+      </summary>
+      <p>Only your imagination my friend. Go forth!</p>
+    </details>
+
+    <details>
+      <summary>
+        Promociones
+        <svg class="control-icon control-icon-expand" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#expand-more" /></svg>
+        <svg class="control-icon control-icon-close" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close" /></svg>
+      </summary>
+      <p>Only your imagination my friend. Go forth!</p>
+    </details>
+
+    <details>
+      <summary>
+        Horarios de Atencion y showroom
         <svg class="control-icon control-icon-expand" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#expand-more" /></svg>
         <svg class="control-icon control-icon-close" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close" /></svg>
       </summary>

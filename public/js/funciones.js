@@ -32,10 +32,18 @@ function hideAndShowSocialBar() {
   }
 }
 
+// Solo oculta la barra de redes sociales
 function hideSocialBar() {
   var socialBar = document.getElementById("socialBar");
     socialBar.style.display = "none";
      document.getElementById("showhide").innerHTML = '';
+}
+
+// Muestra o esconde la barra de promocion
+function hidePromocion() {
+  var socialBar = document.getElementById("promocion");
+    socialBar.style.display = "none";
+     document.getElementById("showhidePromocion").innerHTML = '';
 }
 
 

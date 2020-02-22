@@ -5,7 +5,11 @@ IL Nato Home
 @section('css')
 nosotros
 @endsection('css')
+@section('scripts')
+<script src="js/map.js"></script>
+@endsection('scripts')
 @section('main')
+
 
   <section class="map">
     <div class="">

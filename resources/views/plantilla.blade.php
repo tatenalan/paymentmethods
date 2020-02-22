@@ -47,7 +47,7 @@
               </li>
 
               <li class="nav-item">
-                <a class="nav-link {{ request()->is('FAQs') ? 'active' : '' }}" href="/FAQs">FAQs</a>
+                <a class="nav-link {{ request()->is('PreguntasFrecuentes') ? 'active' : '' }}" href="/PreguntasFrecuentes">Preguntas Frecuentes</a>
               </li>
 
               <li class="nav-item">
@@ -114,6 +114,10 @@
         </div>
 
       </nav>
+      <div id="promocion" class="promocion">
+      <span class="textoPromocion">Ofrecemos descuento por pago en efectivo - Selecciona "efectivo" al final de tu compra</span>
+        <span id="showhidePromocion" class="close" onclick="hidePromocion()">X</span>
+      </div>
     </header>
     <main id="main">
 
@@ -127,12 +131,16 @@
     <script>new WOW().init();</script>
 
     <footer>
+
       <div class="copyright">
         <div>
-          <span>Copyright ®</span>
+          <span>Llamanos | </span><a class="contactanos" href="tel:+549-11-54126300" target="_blank"  class="icon-phone" data-toggle="tooltip" data-placement="right" data-original-title="Llamanos">1165966303</a>
         </div>
         <div>
-          <span>IL Nato © <?php echo date("Y"); ?></span>
+          <span>Visitanos de Lunes a Sábado de 16hs a 20 hs | <a class="contactanos" href="https://www.google.com.ar/maps/place/A.+Rojas+36,+B1842ACB+Monte+Grande,+Buenos+Aires/@-34.816599,-58.4709892,17z/data=!3m1!4b1!4m5!3m4!1s0x95bcd1640042a561:0x2558d9dc766ab0a8!8m2!3d-34.816599!4d-58.4688005">A. Rojas 36 1er piso, Monte Grande</a></span>
+        </div>
+        <div>
+          <span>Copyright ® IL Nato © <?php echo date("Y"); ?></span>
         </div>
         <div>
           <span>Programacion y diseño <a class="creador" href="https://www.linkedin.com/in/rodriguez-alan/">Taten</a> - <a class="creador" href="https://www.linkedin.com/in/juliancaminaur/">Jcaminaur</a></span>
@@ -144,7 +152,8 @@
 
         <div class="wow animated bounceInRight socialBar">
           <ul id="socialBar">
-            <li><button id="showhide" class="closebar" onclick="hideSocialBar()">X</button></li>
+            <span id="showhide" class="close" onclick="hideSocialBar()">X</span>
+            {{-- <li><button id="showhide" class="closebar" onclick="hideSocialBar()">X</button></li> --}}
             <li><a href="https://api.whatsapp.com/send?phone=5491165966303&text=Hola, estoy contactandolos desde IL Nato Tienda Online" target="_blank" class="icon-whatsapp" data-toggle="tooltip" data-placement="right" data-original-title="Consulta por Whatsapp!"><ion-icon name="logo-whatsapp"></ion-icon></a></li>
             <li><a href="tel:+549-11-54126300" target="_blank"  class="icon-phone" data-toggle="tooltip" data-placement="right" data-original-title="Llamanos"><ion-icon name="call"></ion-icon></a></li>
             <li><a href="mailto:contacto@ilnato.com" class="icon-mail"><ion-icon name="mail"></ion-icon></a></li>

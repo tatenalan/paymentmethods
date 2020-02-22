@@ -26,5 +26,9 @@ Como debugear un foreach?
 
 
 Objetivo semanal
+- Iconito del google maps de IL NATO
+- Agregar tabla de talles
+- Lograr que la barra de promociones no se muestre en la ruta home y que al cerrarla no vuelva a aparecer mas
+- Que la social bar se pueda volver a mostrar luego de ocultarla
 - Carrito
 - Mercadopago

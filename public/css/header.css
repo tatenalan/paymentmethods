@@ -68,7 +68,33 @@ div.panel-usuario {
   justify-content: flex-end;
 }
 
+.promocion {
+  position: fixed;
+  top: 63px;
+  right: 0;
+  left: 0;
+  z-index: 100;
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid grey;
+}
+
+.textoPromocion {
+  font-size: 12px;
+}
+
+.close {
+  color: grey;
+  cursor: pointer;
+  font-size: 15px;
+  align-self: center;
+  margin-right: 5px;
+
+}
+
 div.modal-dialog {
+  max-width: 1200px;
   position: relative;
   width: 90%;
   top: 100px;
@@ -84,6 +110,10 @@ div.modal-header {
 .modal-content {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+}
+
+img.tabladetalles {
+  width: 100%;
 }
 
 div.logo {

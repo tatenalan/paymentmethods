@@ -46,6 +46,7 @@ div.socialBar .closebar {
 	/* background-color: black; */
 	border: none;
 	margin: 5px;
+	cursor: pointer;
 }
 
 

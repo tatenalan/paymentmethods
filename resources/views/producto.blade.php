@@ -52,7 +52,7 @@ productos
               <label for="">Talle:</label>
               <select class="sizes__ talles" name="size">
                 @foreach ($product->stocks as $stock)
-                  <option value="{{$stock->size->name}}">{{$stock->size->name}}@if ($stock->quantity == 0) No hay stock @elseif ($stock->quantity < 3) Pocas unidades @endif</option>
+                  <option value="{{$stock->size->name}}">{{$stock->size->name}}@if ($stock->quantity == 0) Sin stock @elseif ($stock->quantity < 3) Pocas unidades @endif</option>
                 @endforeach
               </select>
               <label>Cantidad:</label>
@@ -88,8 +88,38 @@ productos
         </div>
         <p>No hay stock del talle que buscas??</p>
         <div class="solicitar-stock">
-          <a href="https://api.whatsapp.com/send?phone=5491156000588&text=Hola, estoy contactandolos desde IL Nato Tienda Online para solicitarles stock del producto {{$product->model}}" target="_blank" class="solicitar-stock" data-toggle="tooltip" data-placement="right" data-original-title="Consulta por Whatsapp!">Click aqui para solicitar Stock por Whatsapp <ion-icon class="solicitar-stock" name="logo-whatsapp"></ion-icon></a></li>
+          <a href="https://api.whatsapp.com/send?phone=5491165966303&text=Hola, estoy contactandolos desde IL Nato Tienda Online para solicitarles stock del producto {{$product->model}}" target="_blank" class="solicitar-stock" data-toggle="tooltip" data-placement="right" data-original-title="Consulta por Whatsapp!">Click aqui para solicitar Stock por Whatsapp <ion-icon class="solicitar-stock" name="logo-whatsapp"></ion-icon></a></li>
         </div>
+
+        {{-- Modal tabla de talles --}}
+
+        <!-- Button trigger modal -->
+        <button class="botontabladetalles" data-toggle="modal" data-target="#exampleModal">
+          Ver tabla de talles
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                {{-- <h5 class="modal-title" id="exampleModalLabel">Tabla de talles</h5> --}}
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <img class="tabladetalles" src="/img/tabladetalles.jpeg" alt="">
+              </div>
+              {{-- <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div> --}}
+            </div>
+          </div>
+        </div>
+
+
 
         <div class="separador">
 

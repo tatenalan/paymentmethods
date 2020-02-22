@@ -148,5 +148,7 @@ form
   	</div>
 @endsection
 
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDHFCr38CvRV44vjcCIV5rBzLWsG5oQGZQ&callback=initMap"> </script>
 <!--===============================================================================================-->
 	{{-- <script src="registro/vendor/jquery/jquery-3.2.1.min.js"></script> lo comente porque me generaba conflicto con el menu hamburguesa--}}
