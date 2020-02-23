@@ -1,17 +1,15 @@
 function initMap() {
+  var myLatLng = {lat: -34.816530, lng: -58.468796};
 
-  var uluru = {lat: -34.816530, lng: -58.468796};
   var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 13,
-    center: uluru,
-    scrollwheel: false,
+    zoom: 4,
+    center: myLatLng
   });
+
   var marker = new google.maps.Marker({
-    position: uluru,
+    position: myLatLng,
     map: map,
-    icon: 'http://merloestucasa.com/images/map-point.png'
+    title: 'Hello World!',
+    icon: 'https://image.freepik.com/iconos-gratis/pin-geolocalizacion_318-9542.jpg'
   });
 }
-
-
-// sparkpost-key 8a6e049ac2998ac94f1f056af4fa962435274e96

@@ -114,10 +114,12 @@
         </div>
 
       </nav>
+      @if (request()->is('cart') || request()->is('producto/*'))    
       <div id="promocion" class="promocion">
-      <span class="textoPromocion">Ofrecemos descuento por pago en efectivo - Selecciona "efectivo" al final de tu compra</span>
+      <span class="textoPromocion">Promocion | Descuento por pago en efectivo al final de tu compra</span>
         <span id="showhidePromocion" class="close" onclick="hidePromocion()">X</span>
       </div>
+      @endif
     </header>
     <main id="main">
 
@@ -126,9 +128,6 @@
 
 
     </main>
-
-    <script src="/js/wow.min.js"></script>
-    <script>new WOW().init();</script>
 
     <footer>
 
@@ -156,7 +155,7 @@
             {{-- <li><button id="showhide" class="closebar" onclick="hideSocialBar()">X</button></li> --}}
             <li><a href="https://api.whatsapp.com/send?phone=5491165966303&text=Hola, estoy contactandolos desde IL Nato Tienda Online" target="_blank" class="icon-whatsapp" data-toggle="tooltip" data-placement="right" data-original-title="Consulta por Whatsapp!"><ion-icon name="logo-whatsapp"></ion-icon></a></li>
             <li><a href="tel:+549-11-54126300" target="_blank"  class="icon-phone" data-toggle="tooltip" data-placement="right" data-original-title="Llamanos"><ion-icon name="call"></ion-icon></a></li>
-            <li><a href="mailto:contacto@ilnato.com" class="icon-mail"><ion-icon name="mail"></ion-icon></a></li>
+            <li><a href="mailto:info@ilnato.com" class="icon-mail"><ion-icon name="mail"></ion-icon></a></li>
             <li><a href="https://www.facebook.com/Il-nato-197855791106400/" target="_blank" class="icon-facebook"><ion-icon name="logo-facebook"></ion-icon></a></li>
             <li><a href="https://www.instagram.com/il_nato/" target="_blank" class="icon-instagram"><ion-icon class="logo-instagram" name="logo-instagram"></ion-icon></a></li>
           </ul>
@@ -165,5 +164,7 @@
 
       </div>
 
+      <script src="/js/wow.min.js"></script>
+      <script>new WOW().init();</script>
   </body>
 </html>

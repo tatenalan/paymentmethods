@@ -82,23 +82,21 @@ addedit
 
         <div class="row">
           <div class="col-md-4 offset-md-2 form-group">
-            <div class="form-group">
               <label for="">En oferta? : </label>
               <select id="onSale" class="form-control" name="onSale">
                   <option value =0 @if($product->onSale == 0) selected @endif>No esta en oferta</option>
                   <option value =1 @if($product->onSale == 1) selected @endif>Esta en oferta</option>
               </select>
-            </div>
           </div>
 
           <div id="discount" @if ($product->onSale == 1) class="col-md-4 form-group" @else class="hidden col-md-4 form-group" @endif>
             <label for="">Descuento: </label>
-            <input id="inputDiscount" class="cantidad form-control" type="number" name="discount" min="0" max="80" step="5" value="{{ old('discount',$product->discount)}}">
-          </div>
+            <input id="inputDiscount" class="form-control" type="number" name="discount" min="0" max="80" step="5" value="{{ old('discount',$product->discount)}}">
           @error('discount')
             <p class="errorForm">{{ $message }}</p>
           @enderror
           </div>
+        </div>
 
 
         <label class='centrado'>Stock:</label>
