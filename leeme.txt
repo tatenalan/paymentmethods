@@ -30,5 +30,5 @@ Objetivo semanal
 - Agregar tabla de talles
 - Lograr que la barra de promociones no se muestre en la ruta home y que al cerrarla no vuelva a aparecer mas
 - Que la social bar se pueda volver a mostrar luego de ocultarla
-- Carrito
-- Mercadopago
+- Boton realizar compra del carrito -> Mercadopago
+- Manejar cookies con laravel (Lograr que la barra de promociones no se muestre al cerrarla y recargar la pagina)

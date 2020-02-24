@@ -134,13 +134,16 @@ Route::get('/adminpanel', function() {
 
 // carts
 
-Route::get('/cart', function() {
-  return view('cart');
 
 Route::get('/cart', 'CartController@show')->middleware('auth');
-});
 
-Route::post('/addToCart', 'CartController@addToCart')->middleware('auth');;
+Route::post('/addToCart', 'CartController@addToCart')->middleware('auth');
+
+Route::post('/deleteFromCart', 'CartController@deleteFromCart')->middleware('auth');
+
+Route::post('/deleteEntireCart', 'CartController@deleteEntireCart')->middleware('auth');
+
+Route::post('/successfullPurchase','CartController@bought')->middleware('auth');
 
 // Auth
 

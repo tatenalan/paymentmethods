@@ -57,7 +57,8 @@ productos
               </select>
               <label>Cantidad:</label>
               <input class="cantidad inputCantidad" type="number" name="quantity" min="1" max="100" step="1" value="1">
-              <input type="number" hidden name="id" value="1">
+              {{-- Este input es necesario para enviar el id del producto en la request --}}
+              <input type="number" hidden name="id" value="{{$product->id}}">
             </div>
             <div hidden class="divDeError">
               <p class="mensajeError"></p>
