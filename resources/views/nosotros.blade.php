@@ -19,8 +19,8 @@ nosotros
     </div>
   </section>
 
-<script src="js/map.js"></script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA234teh9tQP8gvhZyawKAhREW2sulHgHU&callback=initMap" type="text/javascript"></script>
+{{-- <script src="js/map.js"></script> --}}
+{{-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCCiOC1F95ef7rGN9KkpvQ35xmkWbxi4yc&callback=initMap" type="text/javascript"></script> --}}
 
 
 @endsection

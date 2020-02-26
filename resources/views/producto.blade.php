@@ -6,6 +6,23 @@ IL Nato Producto
 productos
 @endsection('css')
 @section('main')
+
+  {{-- Puede ocurrir que no haya stock en ningun talle del producto --}}
+  {{-- Para determinar eso creo una variable que me va a servir como contador --}}
+  @php
+  $cantidadstock=0;
+  @endphp
+
+  {{-- Por cada stock del producto me fijo si la cantidad es mayor a 0 y en tal caso le sumo 1 a la variable contador --}}
+  @foreach ($product->stocks as $stock)
+    @if ($stock->quantity > 0)
+      @php
+      $cantidadstock=$cantidadstock+1
+      @endphp
+    @endif
+  @endforeach
+
+
   <div class="container">
     <div class="links-ayuda">
       <a href="/productos">Productos</a> >> <a href="{{ URL::previous() }}">Volver</a>
@@ -13,14 +30,26 @@ productos
     <section class="producto">
       <section class="imagenes">
         <div class="imagen-principal">
-          <img class="imagen-principal imagen_grande" src="/storage/{{$product->images[0]->path}}" alt="">
+
+          {{-- Si no hay stock de ningun talle, muestro las fotos con opacidad --}}
+          @if ($cantidadstock == 0)
+            <img class="opacity imagen-principal imagen_grande" src="/storage/{{$product->images[0]->path}}" alt="">
+          @else
+            <img class="imagen-principal imagen_grande" src="/storage/{{$product->images[0]->path}}" alt="">
+          @endif
+
+          {{-- <img class="imagen-principal imagen_grande" src="/storage/{{$product->images[0]->path}}" alt=""> --}}
           @if ($product->onSale==true && isset($product->discount))
             <span class="descuento"> {{$product->discount}} % off</span> <!-- Pone un cartelito de descuento sobre la imagen del producto-->
             @endif
         </div>
         <div class="imagenes-pequeñas">
           @foreach ($product->images as $image)
-            <img class="imagen-producto-peque"src="/storage/{{$image->path}}" alt="">
+            @if ($cantidadstock == 0)
+              <img class="opacity imagen-producto-peque"src="/storage/{{$image->path}}" alt="">
+            @else
+              <img class="imagen-producto-peque"src="/storage/{{$image->path}}" alt="">
+            @endif
           @endforeach
         </div>
       </section>
@@ -31,15 +60,23 @@ productos
           <h3 class="">{{$product->brand->name}}</h3>
           <h4>{{$product->name}}</h4>
           @if ($product->onSale==true && isset($product->discount))
-                @php
-                  $onSalePrice = $product->price - $product->price/100*$product->discount; // precio * descuento / 100
-                @endphp
-                <span class="precioAnterior">${{$product->price}}</span> <!-- Muestra precio anterior tachado -->
-                <span class="precio">${{$onSalePrice}}</span><p></p> <!-- Muestra el precio con el descuento incluido -->
-              @else
-                <p class="precio">${{$product->price}}</p>
-              @endif
-          <h6 class="disponibilidad">EN STOCK</h6>
+            @php
+              $onSalePrice = $product->price - $product->price/100*$product->discount; // precio * descuento / 100
+            @endphp
+            <span class="precioAnterior">${{$product->price}}</span> <!-- Muestra precio anterior tachado -->
+            <span class="precio">${{$onSalePrice}}</span><p></p> <!-- Muestra el precio con el descuento incluido -->
+          @else
+            <p class="precio">${{$product->price}}</p>
+          @endif
+
+            {{-- Si al final del foreach la cantidad de stock me da menor a 1 muestro que no hay stock y creo el boton solicitar stock, si me da  --}}
+            @if ($cantidadstock == 0)
+              <h6 class="sindisponibilidad">SIN STOCK</h6>
+            @else
+              <h6 class="disponibilidad">EN STOCK</h6>
+            @endif
+
+
           @if (isset($product->model))
             <h6>SKU: {{$product->model}}</h6>
           @endif

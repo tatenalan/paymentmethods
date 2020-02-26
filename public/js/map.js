@@ -6,10 +6,10 @@ function initMap() {
     center: myLatLng
   });
 
-  var marker = new google.maps.Marker({
-    position: myLatLng,
-    map: map,
-    title: 'Hello World!',
-    icon: 'https://image.freepik.com/iconos-gratis/pin-geolocalizacion_318-9542.jpg'
-  });
+  // var marker = new google.maps.Marker({
+  //   position: myLatLng,
+  //   map: map,
+  //   title: 'Hello World!',
+  //   icon: 'https://image.freepik.com/iconos-gratis/pin-geolocalizacion_318-9542.jpg'
+  // });
 }

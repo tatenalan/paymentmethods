@@ -40,8 +40,11 @@ productos
                     @endforeach
                   </div>
 
-                  {{-- Aqui empiezan los botones de previous y next, debo ponerles como href el id de cada producto
-                  ya que debe ser distinto para cada carousel. Ver explicacion linea 21 --}}
+                  {{-- Si el producto tiene mas de una imagen, mostramos las flechas de next y previous --}}
+                  @if (isset($product->images[1]))
+
+                    {{-- Aqui empiezan los botones de previous y next, debo ponerles como href el id de cada producto
+                    ya que debe ser distinto para cada carousel. Ver explicacion linea 21 --}}
                   <a class="carousel-control-prev" href="#carouselExampleFade{{$product->id}}" role="button" data-slide="prev">
                     <span><i class="fa fa-angle-left" aria-hidden="true"></i></span>
                     <span class="sr-only">Previous</span>
@@ -50,6 +53,8 @@ productos
                   <span><i class="fa fa-angle-right" aria-hidden="true"></i></span>
                     <span class="sr-only">Next</span>
                   </a>
+
+                  @endif
                 </div>
                 <p class="marca">{{$product->brand->name}}</p>
                 <p class="nombre wow fadeInDown">{{$product->name}}</p>

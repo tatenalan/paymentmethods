@@ -164,6 +164,10 @@ div.imagen-principal {
   position: relative;
 }
 
+.opacity {
+  opacity: 0.6;
+}
+
 img.imagen-principal {
   max-height: 450px;
   max-width: 500px;
@@ -197,6 +201,17 @@ div.detalles-producto {
   font-size: 10px;
 }
 
+.sindisponibilidad {
+  padding: 1px 5px;
+  height: 13px;
+  margin: 10px;
+  text-align: -webkit-center;
+  color: white;
+  max-width: 64px;
+  background-color: red;
+  font-size: 10px;
+}
+
 div.detalles-compra {
   display: flex;
   flex-direction: column;
@@ -208,7 +223,7 @@ div.detalles-compra {
 }
 
 .talles {
-  width: 47px;
+  min-width: 120px;
   height: 26px;
   margin: 0px 8px
 }

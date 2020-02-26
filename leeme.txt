@@ -20,7 +20,7 @@ http://ifnet.com.ar/
 
 PREGUNTAS A JUANCA
 5 cuentas mercadopago
-Como manejo el tema de las imagenes con distinto aspect ratio??
+usar cookie para el cartel fixed de promociones y para el cartel de allow cookies
 Laravel 5.8 & 6 diferencias
 Como debugear un foreach?
 
@@ -28,7 +28,6 @@ Como debugear un foreach?
 Objetivo semanal
 - Iconito del google maps de IL NATO
 - Agregar tabla de talles
-- Lograr que la barra de promociones no se muestre en la ruta home y que al cerrarla no vuelva a aparecer mas
 - Que la social bar se pueda volver a mostrar luego de ocultarla
 - Boton realizar compra del carrito -> Mercadopago
-- Manejar cookies con laravel (Lograr que la barra de promociones no se muestre al cerrarla y recargar la pagina)
+- Manejar cookies con laravel (Lograr que la barra de promociones no se muestre al cerrarla y recargar la pagina) setcookie
