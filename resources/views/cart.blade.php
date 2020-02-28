@@ -29,7 +29,7 @@ cart
       </div>
       <div class="product-info">
         <div class="name">
-          <p>{{$cart->product->name}}</p>
+          <p>{{$cart->product->name}}, {{$cart->product->genre->name}}</p>
         </div>
         <div class="cat-gen-size-quan">
           <p>

@@ -24,9 +24,15 @@ usar cookie para el cartel fixed de promociones y para el cartel de allow cookie
 Laravel 5.8 & 6 diferencias
 Como debugear un foreach?
 
+EXTRAS:
+- Iconito del google maps de IL NATO
+- cookie consent https://www.youtube.com/watch?v=ht3isi42BS4&list=WL&index=9&t=0s
+- Recuperar password https://www.youtube.com/watch?v=rw48FfNvGz4&list=WL&index=4&t=0s
+- Verificar email al crear cuenta https://www.youtube.com/watch?v=o_KhH2dZCKQ&list=WL&index=1
+
 
 Objetivo semanal
-- Iconito del google maps de IL NATO
+
 - Agregar tabla de talles
 - Que la social bar se pueda volver a mostrar luego de ocultarla
 - Boton realizar compra del carrito -> Mercadopago

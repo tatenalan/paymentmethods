@@ -59,6 +59,7 @@ productos
         <div class="detalles-producto">
           <h3 class="">{{$product->brand->name}}</h3>
           <h4>{{$product->name}}</h4>
+          <h5>{{$product->genre->name}}</h5>
           @if ($product->onSale==true && isset($product->discount))
             @php
               $onSalePrice = $product->price - $product->price/100*$product->discount; // precio * descuento / 100
