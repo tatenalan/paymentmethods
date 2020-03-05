@@ -114,7 +114,7 @@
         </div>
 
       </nav>
-      @if (request()->is('cart') || request()->is('producto/*'))    
+      @if (request()->is('cart') || request()->is('producto/*'))
       <div id="promocion" class="promocion">
       <span class="textoPromocion">Promocion | Descuento por pago en efectivo al final de tu compra</span>
         <span id="showhidePromocion" class="close" onclick="hidePromocion()">X</span>
@@ -123,6 +123,27 @@
     </header>
     <main id="main">
 
+      <div class="container">
+                @if (isset($errors) && $errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
+
+                @if (session()->has('success'))
+                    <div class="alert alert-success">
+                        <ul>
+                            @foreach (session()->get('success') as $message)
+                                <li>{{ $message }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
+            </div>
 
       @yield('main')
 
