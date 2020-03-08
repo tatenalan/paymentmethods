@@ -12,14 +12,21 @@ class PaymentPlatformsTableSeeder extends Seeder
      */
     public function run()
     {
+      DB::table('payment_platforms')->truncate();
+
       PaymentPlatform::create([
         'name' => 'Paypal',
-        'image' => 'img/payment-payment-platforms/paypal.jpg',
+        'image' => 'img/payment-platforms/paypal.jpg',
       ]);
 
       PaymentPlatform::create([
         'name' => 'Stripe',
-        'image' => 'img/payment-payment-platforms/stripe.jpg',
-      ]); 
+        'image' => 'img/payment-platforms/stripe.jpg',
+      ]);
+
+      PaymentPlatform::create([
+        'name' => 'MercadoPago',
+        'image' => 'img/payment-platforms/mercadopago.jpg',
+      ]);
     }
 }

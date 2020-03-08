@@ -9,7 +9,7 @@ class Currency extends Model
 
   protected $primaryKey = "iso";
 
-  public $incrementing = "false";
+  public $incrementing = false;
 
   /**
    * The attributes that are mass assignable.

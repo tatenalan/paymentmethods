@@ -1,6 +1,6 @@
-@php
+{{-- @php
 dd($currencies);
-@endphp
+@endphp --}}
 
 @extends('layouts.app')
 
@@ -12,12 +12,12 @@ dd($currencies);
                 <div class="card-header">Make a payment</div>
 
                 <div class="card-body">
-                  <form class="" action="#" method="post" id="paymentForm">
+                  <form class="" action="{{ route('pay') }}" method="post" id="paymentForm">
                     @csrf
                     <div class="row">
                       <div class="col-auto">
                         <label for="">Cuanto queres pagar?</label>
-                        <input type="number" name="valor" min="5" step="0.01" class="form-control" value="{{ mt_rand(500, 100000) / 100 }}" required autofocus>
+                        <input type="number" name="value" min="5" step="0.01" class="form-control" value="{{ mt_rand(500, 100000) / 100 }}" required autofocus>
                         <small class="fomr-text text-muted">Utilicen valores decimales separados por "."</small>
                       </div>
                       <div class="col-auto">
@@ -29,6 +29,32 @@ dd($currencies);
                                 </option>
                             @endforeach
                         </select>
+                      </div>
+                    </div>
+                    <div class="row mt-3">
+                      <div class="col">
+                        <label for="">Selecciona la plataforma de pago</label>
+
+
+                        <div class="form-group" id="toggler">
+                          <div class="btn-group btn-group-toggle" data-toggle="buttons">
+
+
+                            {{-- Genera un input con la imagen de cada metodo de pago --}}
+                            @foreach ($paymentPlatforms as $paymentPlatform)
+                              <label class="btn btn-outline-secondary rounded m-2 p-1" data-target="#{{ $paymentPlatform->name }}Collapse" data-toggle="collapse">
+                                <input type="radio" name="payment_platform" value="{{ $paymentPlatform->id }}" required><img class="img-thumbnail" src="{{ asset($paymentPlatform->image)}}">
+                              </label>
+                            @endforeach
+                          </div>
+
+                          {{-- Lo que va a aparecer dependiendo que imagen de metodo de pago se clickee --}}
+                          @foreach ($paymentPlatforms as $paymentPlatform)
+                            <div id="{{ $paymentPlatform->name }}Collapse" class="collapse" data-parent="#toggler">
+                              @includeIf('components.' . strtolower($paymentPlatform->name) . '-collapse')
+                            </div>
+                          @endforeach
+                        </div>
                       </div>
                     </div>
                     <div class="text-center mt-3">
