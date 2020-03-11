@@ -26,13 +26,12 @@ return [
     ],
 
     'mercadopago' => [
-      'base_uri' => env('MERCADOPAGO_BASE_URI'),
-      'key' => env('MERCADOPAGO_KEY'),
-      'secret' => env('MERCADOPAGO_KEY'),
-      'class' => App\Services\MercadoPagoService::class,
-      'base_currency' => 'arp',
+        'base_uri' => env('MERCADOPAGO_BASE_URI'),
+        'key' => env('MERCADOPAGO_KEY'),
+        'secret' => env('MERCADOPAGO_SECRET'),
+        'base_currency' => 'ars',
+        'class' => App\Services\MercadoPagoService::class,
     ],
-
 
     'postmark' => [
         'token' => env('POSTMARK_TOKEN'),

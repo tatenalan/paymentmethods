@@ -58,7 +58,7 @@ dd($currencies);
                       </div>
                     </div>
                     <div class="text-center mt-3">
-                      <button type="submit" id="bayButton" class="btn btn-primary btn-lg">Pagar</button>
+                      <button type="submit" id="payButton" class="btn btn-primary btn-lg">Pay</button>
                     </div>
                   </form>
                 </div>
